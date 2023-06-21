@@ -14,6 +14,8 @@
 		A4624D0A2A41E27F0044F260 /* GooglePlaces.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4624D092A41E27F0044F260 /* GooglePlaces.bundle */; };
 		A4624D0C2A41E2D60044F260 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4624D0B2A41E2D60044F260 /* GoogleMaps.bundle */; };
 		A491D56A2A418447000E6BF2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A491D5692A418447000E6BF2 /* Lottie */; };
+		A491E3E12A42D6F700829A6D /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A491E3E02A42D6F700829A6D /* ResultViewController.swift */; };
+		A491E3E32A42DAD800829A6D /* GooglePlacesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A491E3E22A42DAD800829A6D /* GooglePlacesManager.swift */; };
 		A4A0A1052A3C8B7F008ABA86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0A1042A3C8B7F008ABA86 /* AppDelegate.swift */; };
 		A4A0A1072A3C8B7F008ABA86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0A1062A3C8B7F008ABA86 /* SceneDelegate.swift */; };
 		A4A0A1092A3C8B7F008ABA86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0A1082A3C8B7F008ABA86 /* ViewController.swift */; };
@@ -59,6 +61,8 @@
 		A4624D072A41E2410044F260 /* GooglePlaces.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GooglePlaces.xcframework; sourceTree = "<group>"; };
 		A4624D092A41E27F0044F260 /* GooglePlaces.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = "GooglePlaces.xcframework/ios-arm64_x86_64-simulator/GooglePlaces.framework/Resources/GooglePlaces.bundle"; sourceTree = "<group>"; };
 		A4624D0B2A41E2D60044F260 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = "GoogleMaps.xcframework/ios-arm64/GoogleMaps.framework/Resources/GoogleMaps.bundle"; sourceTree = "<group>"; };
+		A491E3E02A42D6F700829A6D /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		A491E3E22A42DAD800829A6D /* GooglePlacesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesManager.swift; sourceTree = "<group>"; };
 		A4A0A1012A3C8B7F008ABA86 /* sporApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sporApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A0A1042A3C8B7F008ABA86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4A0A1062A3C8B7F008ABA86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -217,6 +221,7 @@
 				A4E0A3CB2A3DAA8000E7E3EF /* Kategoriler.swift */,
 				A4E0A3D82A3DC8D100E7E3EF /* AltBaslik.swift */,
 				A4B5BF272A4093C3005FB70A /* Place.swift */,
+				A491E3E22A42DAD800829A6D /* GooglePlacesManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -233,6 +238,7 @@
 				A4E0A3D32A3DBDAE00E7E3EF /* AltBaslikTableViewCell.swift */,
 				A4A0A1082A3C8B7F008ABA86 /* ViewController.swift */,
 				A4B5BEF22A40409B005FB70A /* NavigationViewController.swift */,
+				A491E3E02A42D6F700829A6D /* ResultViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -321,6 +327,8 @@
 				A4E0A3D02A3DBC0F00E7E3EF /* FavorilerViewController.swift in Sources */,
 				A4B5BEF32A40409B005FB70A /* NavigationViewController.swift in Sources */,
 				A4E0A3D92A3DC8D100E7E3EF /* AltBaslik.swift in Sources */,
+				A491E3E32A42DAD800829A6D /* GooglePlacesManager.swift in Sources */,
+				A491E3E12A42D6F700829A6D /* ResultViewController.swift in Sources */,
 				A4A0A1092A3C8B7F008ABA86 /* ViewController.swift in Sources */,
 				A4E0A3CE2A3DBBE300E7E3EF /* AyarlarViewController.swift in Sources */,
 				A4A0A1052A3C8B7F008ABA86 /* AppDelegate.swift in Sources */,

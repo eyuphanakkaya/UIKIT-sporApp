@@ -2,95 +2,54 @@ import UIKit
 import GoogleMaps
 import GooglePlaces
 import MapKit
+import CoreLocation
 
-class denemeViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
-    @IBOutlet weak var searchBar: UISearchBar!
-    //@IBOutlet weak var mapView: GMSMapView!
-    @IBOutlet weak var mapView: GMSMapView!
+class denemeViewController: UIViewController, UISearchResultsUpdating {
     
-    var locationManager: CLLocationManager!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var adressLabel: UILabel!
+    @IBOutlet weak var mapView: MKMapView!
+    let searchVC = UISearchController(searchResultsController: ResultViewController())
     
-    private var placesClient: GMSPlacesClient!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Konum yöneticisini başlat
-        locationManager = CLLocationManager()
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-        
-        placesClient = GMSPlacesClient.shared()
-        
-        // Harita görünümünü oluştur
-        let camera = GMSCameraPosition.camera(withLatitude: 0, longitude: 0, zoom: 15.0)
-        mapView = GMSMapView.map(withFrame: view.bounds, camera: camera)
-        mapView.isMyLocationEnabled = true
-        mapView.delegate = self
-        view.addSubview(mapView)
-        
-        placesSettings()
+        searchVC.searchResultsUpdater = self
+        navigationItem.searchController = searchVC
+        searchVC.searchBar.backgroundColor = .secondarySystemBackground
+       
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        // Konum güncellemelerini başlat
-        locationManager.startUpdatingLocation()
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        
-        // Konum güncellemelerini durdur
-        locationManager.stopUpdatingLocation()
-    }
-    
-    // Konum güncellendiğinde çalışacak metod
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let currentLocation = locations.last else { return }
-        
-        // Haritayı güncelle
-        let camera = GMSCameraPosition.camera(withTarget: currentLocation.coordinate, zoom: 15.0)
-        mapView.animate(to: camera)
-        
-        // Mevcut konumun işaretini ekle
-        let marker = GMSMarker()
-        marker.position = currentLocation.coordinate
-        marker.title = "Mevcut Konum"
-        marker.map = mapView
-    }
-    
-    // Hata durumlarını işle
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("Konum güncellenirken hata oluştu: \(error.localizedDescription)")
-    }
-    
-    func placesSettings() {
-        let placeFields: GMSPlaceField = [.name, .formattedAddress]
-        placesClient.findPlaceLikelihoodsFromCurrentLocation(withPlaceFields: placeFields) { [weak self] (placeLikelihoods, error) in
-            guard let strongSelf = self else {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let query = searchController.searchBar.text ,
+              !query.trimmingCharacters(in: .whitespaces).isEmpty,
+              let resultsVC = searchController.searchResultsController as? ResultViewController else{
                 return
+              }
+        
+        resultsVC.delegate = self
+        
+        GooglePlacesManager.shared.findPlaces(query: query) { result in
+            switch result {
+            case .success(let places):
+                DispatchQueue.main.async {
+                    resultsVC.update(with: places)
+                }
+            case .failure(let error):
+                print(error)
             }
-            
-            guard error == nil else {
-                print("Current place error: \(error?.localizedDescription ?? "")")
-                return
-            }
-            
-            guard let place = placeLikelihoods?.first?.place else {
-                strongSelf.nameLabel.text = "No current place"
-                strongSelf.adressLabel.text = ""
-                return
-            }
-            
-            strongSelf.nameLabel.text = place.name
-            strongSelf.adressLabel.text = place.formattedAddress
         }
     }
     
-    @IBAction func buttonTiklandi(_ sender: Any) {
+}
+extension denemeViewController: ResultViewControllerDelegate {
+    func didTapPlace(with coordinate: CLLocationCoordinate2D) {
+        searchVC.searchBar.resignFirstResponder()
+        
+        
+        let pin = MKPointAnnotation()
+        pin.coordinate = coordinate
+        mapView.addAnnotation(pin)
+        mapView.setRegion(MKCoordinateRegion(center: coordinate, span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)), animated: true)
+
     }
+    
+    
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ofV-xa-eh0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tKG-fV-YuC">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -273,17 +273,17 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="KategoriCell" id="q9H-DR-JXc" customClass="KategoriCVCell" customModule="sporApp">
-                                        <rect key="frame" x="91.666666666666671" y="0.0" width="210" height="230"/>
+                                        <rect key="frame" x="91.666666666666671" y="0.0" width="210" height="280"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DDW-8e-yKK">
-                                            <rect key="frame" x="0.0" y="0.0" width="210" height="230"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="210" height="280"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gym" translatesAutoresizingMaskIntoConstraints="NO" id="FWD-UU-VzZ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="210" height="230"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="210" height="280"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fitness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FaG-Yd-uft">
-                                                    <rect key="frame" x="58.666666666666657" y="97" width="93" height="36"/>
+                                                    <rect key="frame" x="58.666666666666657" y="122" width="93" height="36"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -298,7 +298,7 @@
                                                 <constraint firstItem="FaG-Yd-uft" firstAttribute="centerX" secondItem="DDW-8e-yKK" secondAttribute="centerX" id="zAF-4W-ENI"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="210" height="230"/>
+                                        <size key="customSize" width="210" height="280"/>
                                         <connections>
                                             <outlet property="imageView" destination="FWD-UU-VzZ" id="4zt-Ze-YeL"/>
                                             <outlet property="kategoriAdLabel" destination="FaG-Yd-uft" id="pAf-FI-Eaq"/>
@@ -313,7 +313,7 @@
                     <tabBarItem key="tabBarItem" title="Ana Sayfa" image="homekit" catalog="system" selectedImage="homekit" id="wQD-yH-78N"/>
                     <connections>
                         <outlet property="kategoriCollectionView" destination="jZV-Kw-R9F" id="3pq-LW-6ZN"/>
-                        <segue destination="G1M-Q3-JVt" kind="show" identifier="toAltBaslik" id="XOV-Fu-2XW"/>
+                        <segue destination="G1M-Q3-JVt" kind="show" identifier="toAltBaslik" id="ugR-IA-Jvd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mdD-So-gBk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -323,23 +323,25 @@
         <!--Alt Baslik View Controller-->
         <scene sceneID="ayt-qx-O8D">
             <objects>
-                <viewController id="G1M-Q3-JVt" customClass="AltBaslikViewController" customModule="sporApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="G1M-Q3-JVt" customClass="AltBaslikViewController" customModule="sporApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GFv-p6-nW5">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HVe-m2-6iY">
-                                <rect key="frame" x="0.0" y="59" width="393" height="724"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HVe-m2-6iY">
+                                <rect key="frame" x="0.0" y="110" width="393" height="742"/>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" systemColor="systemGroupedBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="altBaslikCell" rowHeight="75" id="Kkz-du-5sW" customClass="AltBaslikTableViewCell" customModule="sporApp" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="55.333332061767578" width="353" height="75"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="altBaslikCell" rowHeight="100" id="Kkz-du-5sW" customClass="AltBaslikTableViewCell" customModule="sporApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.333332061767578" width="393" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kkz-du-5sW" id="TQt-ms-xYG">
-                                            <rect key="frame" x="0.0" y="0.0" width="353" height="75"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bench Press" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7go-JE-NVW">
-                                                    <rect key="frame" x="112" y="23" width="129" height="29"/>
+                                                    <rect key="frame" x="132" y="35.666666666666664" width="129" height="28.999999999999993"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <color key="textColor" systemColor="systemYellowColor"/>
                                                     <nil key="highlightedColor"/>
@@ -358,29 +360,101 @@
                                 </prototypes>
                                 <sections/>
                             </tableView>
+                            <searchBar contentMode="redraw" placeholder="Arama Yap" translatesAutoresizingMaskIntoConstraints="NO" id="WBk-BK-Spd">
+                                <rect key="frame" x="0.0" y="59" width="398" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="G1M-Q3-JVt" id="cwj-So-oaR"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="379-JH-dxh"/>
                         <color key="backgroundColor" red="0.1411764771" green="0.12549020350000001" blue="0.1294117719" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="HVe-m2-6iY" firstAttribute="top" secondItem="379-JH-dxh" secondAttribute="top" id="5TC-M0-2OG"/>
+                            <constraint firstItem="WBk-BK-Spd" firstAttribute="top" secondItem="379-JH-dxh" secondAttribute="top" id="21V-Fr-Dcx"/>
+                            <constraint firstItem="HVe-m2-6iY" firstAttribute="top" secondItem="379-JH-dxh" secondAttribute="top" constant="51" id="5TC-M0-2OG"/>
                             <constraint firstItem="379-JH-dxh" firstAttribute="trailing" secondItem="HVe-m2-6iY" secondAttribute="trailing" id="AVX-Vn-JYH"/>
-                            <constraint firstItem="379-JH-dxh" firstAttribute="bottom" secondItem="HVe-m2-6iY" secondAttribute="bottom" id="Rs7-TC-luy"/>
+                            <constraint firstItem="HVe-m2-6iY" firstAttribute="top" secondItem="WBk-BK-Spd" secondAttribute="bottom" id="EVs-IF-7U6"/>
+                            <constraint firstItem="WBk-BK-Spd" firstAttribute="trailing" secondItem="HVe-m2-6iY" secondAttribute="trailing" constant="5" id="IU0-v2-nFr"/>
+                            <constraint firstItem="379-JH-dxh" firstAttribute="bottom" secondItem="HVe-m2-6iY" secondAttribute="bottom" constant="-83" id="Rs7-TC-luy"/>
+                            <constraint firstItem="WBk-BK-Spd" firstAttribute="leading" secondItem="HVe-m2-6iY" secondAttribute="leading" id="Y6T-UC-GZ0"/>
                             <constraint firstItem="HVe-m2-6iY" firstAttribute="leading" secondItem="379-JH-dxh" secondAttribute="leading" id="qbR-eE-z4p"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="BL8-4G-cTt"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="TDG-WK-0eT"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="searchBar" destination="WBk-BK-Spd" id="4fh-3K-JTc"/>
                         <outlet property="tableView" destination="HVe-m2-6iY" id="l2G-Iw-O1J"/>
+                        <segue destination="PPS-vL-wft" kind="show" identifier="toVideoVC" id="3ma-zt-wxu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zCq-Zp-rP3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4802.2900763358775" y="-30.281690140845072"/>
+            <point key="canvasLocation" x="4902" y="-30"/>
+        </scene>
+        <!--Video View Controller-->
+        <scene sceneID="7ff-1e-mAE">
+            <objects>
+                <viewController id="PPS-vL-wft" customClass="VideoViewController" customModule="sporApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nhD-1t-elJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PS0-bo-RJC" customClass="YTPlayerView">
+                                <rect key="frame" x="0.0" y="103" width="393" height="256"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="256" id="q0g-yY-kdd"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="duf-Nb-Xd9">
+                                <rect key="frame" x="50" y="444" width="293" height="325"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bench Press Ne İşe Yarar ? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odp-Wv-4zb">
+                                <rect key="frame" x="50" y="394" width="293" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wxA-7q-Dp8"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="duf-Nb-Xd9" firstAttribute="bottom" secondItem="wxA-7q-Dp8" secondAttribute="bottom" id="3Ag-QU-vmc"/>
+                            <constraint firstItem="duf-Nb-Xd9" firstAttribute="top" secondItem="Odp-Wv-4zb" secondAttribute="bottom" constant="20" id="7KO-Yz-3a7"/>
+                            <constraint firstItem="wxA-7q-Dp8" firstAttribute="trailing" secondItem="PS0-bo-RJC" secondAttribute="trailing" id="7Ui-9U-pVE"/>
+                            <constraint firstItem="wxA-7q-Dp8" firstAttribute="trailing" secondItem="duf-Nb-Xd9" secondAttribute="trailing" constant="50" id="Gfw-eW-N1W"/>
+                            <constraint firstItem="duf-Nb-Xd9" firstAttribute="centerX" secondItem="nhD-1t-elJ" secondAttribute="centerX" id="H6P-6h-6DB"/>
+                            <constraint firstItem="Odp-Wv-4zb" firstAttribute="top" secondItem="PS0-bo-RJC" secondAttribute="bottom" constant="35" id="WB4-2G-t2O"/>
+                            <constraint firstItem="Odp-Wv-4zb" firstAttribute="centerX" secondItem="nhD-1t-elJ" secondAttribute="centerX" id="bc7-Rn-hip"/>
+                            <constraint firstItem="Odp-Wv-4zb" firstAttribute="leading" secondItem="wxA-7q-Dp8" secondAttribute="leading" constant="50" id="brI-gD-hzt"/>
+                            <constraint firstItem="PS0-bo-RJC" firstAttribute="top" secondItem="wxA-7q-Dp8" secondAttribute="top" constant="44" id="dYm-SV-51I"/>
+                            <constraint firstItem="duf-Nb-Xd9" firstAttribute="leading" secondItem="wxA-7q-Dp8" secondAttribute="leading" constant="50" id="jpC-fx-hoi"/>
+                            <constraint firstItem="PS0-bo-RJC" firstAttribute="leading" secondItem="wxA-7q-Dp8" secondAttribute="leading" id="tO6-pE-eV1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3ZC-bi-3HP"/>
+                    <connections>
+                        <outlet property="aciklamaText" destination="duf-Nb-Xd9" id="YGp-zj-le6"/>
+                        <outlet property="neIseYararLabel" destination="Odp-Wv-4zb" id="L8H-qo-bgZ"/>
+                        <outlet property="playerView" destination="PS0-bo-RJC" id="hpQ-XQ-oUA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s78-r2-O3z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5838.9312977099235" y="-27.464788732394368"/>
         </scene>
         <!--Yakındaki Salonlar-->
         <scene sceneID="5It-Kb-u1N">
             <objects>
-                <viewController id="POk-55-qS0" customClass="NavigationViewController" customModule="sporApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="POk-55-qS0" customClass="MapsViewController" customModule="sporApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6kG-LR-OmT">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -447,36 +521,20 @@
             </objects>
             <point key="canvasLocation" x="4704.580152671756" y="772.53521126760563"/>
         </scene>
-        <!--Deneme View Controller-->
-        <scene sceneID="3JJ-Oz-C8P">
+        <!--View Controller2-->
+        <scene sceneID="T2x-wA-7GY">
             <objects>
-                <viewController id="Ve8-Yk-QhU" customClass="denemeViewController" customModule="sporApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="LkB-M8-CWa">
+                <viewController id="tKG-fV-YuC" customClass="ViewController2" customModule="sporApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z4N-3e-gqK">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pm5-Gf-cq4">
-                                <rect key="frame" x="0.0" y="103" width="393" height="815"/>
-                                <standardMapConfiguration key="preferredConfiguration"/>
-                            </mapView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="bbs-lp-P9f"/>
+                        <viewLayoutGuide key="safeArea" id="mwl-0Y-bMJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="pm5-Gf-cq4" firstAttribute="top" secondItem="bbs-lp-P9f" secondAttribute="top" id="08s-vp-zSN"/>
-                            <constraint firstItem="pm5-Gf-cq4" firstAttribute="leading" secondItem="bbs-lp-P9f" secondAttribute="leading" id="UmD-Hd-tsJ"/>
-                            <constraint firstItem="pm5-Gf-cq4" firstAttribute="bottom" secondItem="bbs-lp-P9f" secondAttribute="bottom" constant="100" id="dag-y9-yNy"/>
-                            <constraint firstItem="pm5-Gf-cq4" firstAttribute="trailing" secondItem="bbs-lp-P9f" secondAttribute="trailing" id="dyE-7V-lHV"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="hAV-p8-CdT"/>
-                    <connections>
-                        <outlet property="mapView" destination="pm5-Gf-cq4" id="Vdl-Aa-R2y"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1iC-2Q-UtC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zxU-1J-RhD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6608.3969465648852" y="772.53521126760563"/>
+            <point key="canvasLocation" x="5839" y="773"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PhT-4a-JfE">
@@ -550,24 +608,6 @@
             </objects>
             <point key="canvasLocation" x="3865" y="773"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="pTC-f0-wyY">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ofV-xa-eh0" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tCB-My-iMr">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Ve8-Yk-QhU" kind="relationship" relationship="rootViewController" id="z8k-SI-ZMS"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cBM-be-6lR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5681.679389312977" y="772.53521126760563"/>
-        </scene>
     </scenes>
     <resources>
         <image name="apple.logo" catalog="system" width="105" height="128"/>
@@ -589,10 +629,16 @@
         <image name="soft" width="5184" height="3456"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">

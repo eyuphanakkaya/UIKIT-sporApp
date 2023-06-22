@@ -8,6 +8,15 @@
         "branch" : "master",
         "revision" : "1f48b65c989bbcf2071472d0c8c055401a58da45"
       }
+    },
+    {
+      "identity" : "youtube-ios-player-helper",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/youtube/youtube-ios-player-helper.git",
+      "state" : {
+        "revision" : "f57129cd4380ec0a74dd3a59da3270a1d653d59b",
+        "version" : "1.0.4"
+      }
     }
   ],
   "version" : 2

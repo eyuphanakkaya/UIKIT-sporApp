@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         myLoginView.loopMode = .loop
         myLoginView.play()
         myLoginView.backgroundColor = nil
+        navigationItem.title = "Giriş Paneli"
         
     }
     

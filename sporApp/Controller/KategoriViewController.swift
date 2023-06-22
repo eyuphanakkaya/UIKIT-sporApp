@@ -68,6 +68,9 @@ extension KategoriViewController : UICollectionViewDelegate,UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "KategoriCell", for: indexPath) as! KategoriCVCell
         cell.setUp(kate: kategoriList[indexPath.row])
+        cell.layer.cornerRadius = 10
+        cell.layer.borderWidth = 3
+        
         return cell
     }
 

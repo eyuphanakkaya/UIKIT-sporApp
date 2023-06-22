@@ -8,6 +8,8 @@
 import UIKit
 
 class AltBaslikTableViewCell: UITableViewCell {
+    
+
     var altbaslik:AltBaslik?
     @IBOutlet weak var altBaslikAdLabel: UILabel!
     override func awakeFromNib() {
@@ -15,6 +17,7 @@ class AltBaslikTableViewCell: UITableViewCell {
     }
 
     func setUp(alt: AltBaslik) {
+        
         altBaslikAdLabel.text = alt.ad
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -22,5 +25,7 @@ class AltBaslikTableViewCell: UITableViewCell {
 
         
     }
+
+
 
 }

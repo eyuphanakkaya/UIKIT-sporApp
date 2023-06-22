@@ -7,15 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A4624D022A41D65E0044F260 /* GoogleMapsBase.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4624D012A41D65E0044F260 /* GoogleMapsBase.xcframework */; };
-		A4624D042A41D6680044F260 /* GoogleMapsCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4624D032A41D6680044F260 /* GoogleMapsCore.xcframework */; };
-		A4624D062A41D6720044F260 /* GoogleMaps.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4624D052A41D6720044F260 /* GoogleMaps.xcframework */; };
-		A4624D082A41E2410044F260 /* GooglePlaces.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4624D072A41E2410044F260 /* GooglePlaces.xcframework */; };
-		A4624D0A2A41E27F0044F260 /* GooglePlaces.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4624D092A41E27F0044F260 /* GooglePlaces.bundle */; };
-		A4624D0C2A41E2D60044F260 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4624D0B2A41E2D60044F260 /* GoogleMaps.bundle */; };
+		A4197F9D2A446DC00067BFB0 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4197F9C2A446DC00067BFB0 /* VideoViewController.swift */; };
+		A4197FA02A446E4D0067BFB0 /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = A4197F9F2A446E4D0067BFB0 /* YouTubeiOSPlayerHelper */; };
 		A491D56A2A418447000E6BF2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A491D5692A418447000E6BF2 /* Lottie */; };
-		A491E3E12A42D6F700829A6D /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A491E3E02A42D6F700829A6D /* ResultViewController.swift */; };
-		A491E3E32A42DAD800829A6D /* GooglePlacesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A491E3E22A42DAD800829A6D /* GooglePlacesManager.swift */; };
 		A4A0A1052A3C8B7F008ABA86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0A1042A3C8B7F008ABA86 /* AppDelegate.swift */; };
 		A4A0A1072A3C8B7F008ABA86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0A1062A3C8B7F008ABA86 /* SceneDelegate.swift */; };
 		A4A0A1092A3C8B7F008ABA86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0A1082A3C8B7F008ABA86 /* ViewController.swift */; };
@@ -23,9 +17,6 @@
 		A4A0A10E2A3C8B7F008ABA86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4A0A10D2A3C8B7F008ABA86 /* Assets.xcassets */; };
 		A4A0A1112A3C8B7F008ABA86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4A0A10F2A3C8B7F008ABA86 /* LaunchScreen.storyboard */; };
 		A4A0A11C2A3C9061008ABA86 /* login.json in Resources */ = {isa = PBXBuildFile; fileRef = A4A0A11B2A3C9061008ABA86 /* login.json */; };
-		A4B5BEF32A40409B005FB70A /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B5BEF22A40409B005FB70A /* NavigationViewController.swift */; };
-		A4B5BF262A407495005FB70A /* denemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B5BF252A407495005FB70A /* denemeViewController.swift */; };
-		A4B5BF282A4093C3005FB70A /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B5BF272A4093C3005FB70A /* Place.swift */; };
 		A4CE7BF62A41CC9800028DE8 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CE7BF52A41CC9800028DE8 /* Accelerate.framework */; };
 		A4CE7BF82A41CCA000028DE8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CE7BF72A41CCA000028DE8 /* CoreData.framework */; };
 		A4CE7BFA2A41CCAC00028DE8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CE7BF92A41CCAC00028DE8 /* CoreGraphics.framework */; };
@@ -52,17 +43,18 @@
 		A4E0A3D42A3DBDAE00E7E3EF /* AltBaslikTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E0A3D32A3DBDAE00E7E3EF /* AltBaslikTableViewCell.swift */; };
 		A4E0A3D92A3DC8D100E7E3EF /* AltBaslik.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E0A3D82A3DC8D100E7E3EF /* AltBaslik.swift */; };
 		A4E2CB952A3CA1E500630A64 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E2CB942A3CA1E400630A64 /* RegisterViewController.swift */; };
+		A4F90C1B2A44886C003960C4 /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F90C1A2A44886C003960C4 /* GoogleMapsBase.framework */; };
+		A4F90C1D2A448879003960C4 /* GoogleMapsCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F90C1C2A448879003960C4 /* GoogleMapsCore.xcframework */; };
+		A4F90C1F2A448881003960C4 /* GoogleMaps.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F90C1E2A448881003960C4 /* GoogleMaps.xcframework */; };
+		A4F90C212A44888E003960C4 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4F90C202A44888E003960C4 /* GoogleMaps.bundle */; };
+		A4F90C232A448F29003960C4 /* GooglePlaces.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F90C222A448F29003960C4 /* GooglePlaces.xcframework */; };
+		A4F90C252A448F3D003960C4 /* GooglePlaces.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4F90C242A448F3D003960C4 /* GooglePlaces.bundle */; };
+		A4F90C272A448FB4003960C4 /* DenemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F90C262A448FB4003960C4 /* DenemeViewController.swift */; };
+		A4F90C292A44903F003960C4 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F90C282A44903F003960C4 /* ViewController2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A4624D012A41D65E0044F260 /* GoogleMapsBase.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GoogleMapsBase.xcframework; path = "../../../Downloads/GoogleMaps-8.0.0 2/Base/Frameworks/GoogleMapsBase.xcframework"; sourceTree = "<group>"; };
-		A4624D032A41D6680044F260 /* GoogleMapsCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GoogleMapsCore.xcframework; path = "../../../Downloads/GoogleMaps-8.0.0 2/Maps/Frameworks/GoogleMapsCore.xcframework"; sourceTree = "<group>"; };
-		A4624D052A41D6720044F260 /* GoogleMaps.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GoogleMaps.xcframework; path = "../../../Downloads/GoogleMaps-8.0.0 2/Maps/Frameworks/GoogleMaps.xcframework"; sourceTree = "<group>"; };
-		A4624D072A41E2410044F260 /* GooglePlaces.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GooglePlaces.xcframework; sourceTree = "<group>"; };
-		A4624D092A41E27F0044F260 /* GooglePlaces.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = "GooglePlaces.xcframework/ios-arm64_x86_64-simulator/GooglePlaces.framework/Resources/GooglePlaces.bundle"; sourceTree = "<group>"; };
-		A4624D0B2A41E2D60044F260 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = "GoogleMaps.xcframework/ios-arm64/GoogleMaps.framework/Resources/GoogleMaps.bundle"; sourceTree = "<group>"; };
-		A491E3E02A42D6F700829A6D /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		A491E3E22A42DAD800829A6D /* GooglePlacesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesManager.swift; sourceTree = "<group>"; };
+		A4197F9C2A446DC00067BFB0 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		A4A0A1012A3C8B7F008ABA86 /* sporApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sporApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A0A1042A3C8B7F008ABA86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4A0A1062A3C8B7F008ABA86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,9 +64,6 @@
 		A4A0A1102A3C8B7F008ABA86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4A0A1122A3C8B7F008ABA86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4A0A11B2A3C9061008ABA86 /* login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = login.json; sourceTree = "<group>"; };
-		A4B5BEF22A40409B005FB70A /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
-		A4B5BF252A407495005FB70A /* denemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = denemeViewController.swift; sourceTree = "<group>"; };
-		A4B5BF272A4093C3005FB70A /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		A4CE7BF52A41CC9800028DE8 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		A4CE7BF72A41CCA000028DE8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A4CE7BF92A41CCAC00028DE8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -101,6 +90,14 @@
 		A4E0A3D32A3DBDAE00E7E3EF /* AltBaslikTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltBaslikTableViewCell.swift; sourceTree = "<group>"; };
 		A4E0A3D82A3DC8D100E7E3EF /* AltBaslik.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltBaslik.swift; sourceTree = "<group>"; };
 		A4E2CB942A3CA1E400630A64 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A4F90C1A2A44886C003960C4 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsBase.framework; sourceTree = "<group>"; };
+		A4F90C1C2A448879003960C4 /* GoogleMapsCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GoogleMapsCore.xcframework; path = "../../../Downloads/GoogleMaps-8.0.0 2/Maps/Frameworks/GoogleMapsCore.xcframework"; sourceTree = "<group>"; };
+		A4F90C1E2A448881003960C4 /* GoogleMaps.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GoogleMaps.xcframework; path = "../../../Downloads/GoogleMaps-8.0.0 2/Maps/Frameworks/GoogleMaps.xcframework"; sourceTree = "<group>"; };
+		A4F90C202A44888E003960C4 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = "../../../Downloads/GoogleMaps-8.0.0 2/Maps/Frameworks/GoogleMaps.xcframework/ios-arm64_x86_64-simulator/GoogleMaps.framework/Resources/GoogleMaps.bundle"; sourceTree = "<group>"; };
+		A4F90C222A448F29003960C4 /* GooglePlaces.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GooglePlaces.xcframework; path = "../../../Downloads/GooglePlaces-8.0.0/Frameworks/GooglePlaces.xcframework"; sourceTree = "<group>"; };
+		A4F90C242A448F3D003960C4 /* GooglePlaces.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = "../../../Downloads/GooglePlaces-8.0.0/Frameworks/GooglePlaces.xcframework/ios-arm64_x86_64-simulator/GooglePlaces.framework/Resources/GooglePlaces.bundle"; sourceTree = "<group>"; };
+		A4F90C262A448FB4003960C4 /* DenemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DenemeViewController.swift; sourceTree = "<group>"; };
+		A4F90C282A44903F003960C4 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,22 +109,23 @@
 				A4CE7C122A41CD3F00028DE8 /* SystemConfiguration.framework in Frameworks */,
 				A4CE7C102A41CD2800028DE8 /* QuartzCore.framework in Frameworks */,
 				A4CE7C0E2A41CD2000028DE8 /* OpenGLES.framework in Frameworks */,
-				A4624D022A41D65E0044F260 /* GoogleMapsBase.xcframework in Frameworks */,
 				A4CE7C0C2A41CD1900028DE8 /* Metal.framework in Frameworks */,
 				A4CE7C0A2A41CD1100028DE8 /* libz.tbd in Frameworks */,
 				A4CE7C082A41CD0800028DE8 /* libc++.tbd in Frameworks */,
 				A4CE7C062A41CD0100028DE8 /* ImageIO.framework in Frameworks */,
 				A4CE7C042A41CCDB00028DE8 /* GLKit.framework in Frameworks */,
-				A4624D042A41D6680044F260 /* GoogleMapsCore.xcframework in Frameworks */,
-				A4624D062A41D6720044F260 /* GoogleMaps.xcframework in Frameworks */,
 				A4CE7C022A41CCCD00028DE8 /* CoreText.framework in Frameworks */,
 				A4CE7C002A41CCC600028DE8 /* CoreTelephony.framework in Frameworks */,
 				A4CE7BFE2A41CCBC00028DE8 /* CoreLocation.framework in Frameworks */,
+				A4F90C1F2A448881003960C4 /* GoogleMaps.xcframework in Frameworks */,
+				A4F90C1D2A448879003960C4 /* GoogleMapsCore.xcframework in Frameworks */,
+				A4197FA02A446E4D0067BFB0 /* YouTubeiOSPlayerHelper in Frameworks */,
 				A4CE7BFC2A41CCB400028DE8 /* CoreImage.framework in Frameworks */,
 				A4CE7BFA2A41CCAC00028DE8 /* CoreGraphics.framework in Frameworks */,
+				A4F90C1B2A44886C003960C4 /* GoogleMapsBase.framework in Frameworks */,
 				A4CE7BF82A41CCA000028DE8 /* CoreData.framework in Frameworks */,
 				A4CE7BF62A41CC9800028DE8 /* Accelerate.framework in Frameworks */,
-				A4624D082A41E2410044F260 /* GooglePlaces.xcframework in Frameworks */,
+				A4F90C232A448F29003960C4 /* GooglePlaces.xcframework in Frameworks */,
 				A491D56A2A418447000E6BF2 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,18 +153,19 @@
 		A4A0A1032A3C8B7F008ABA86 /* sporApp */ = {
 			isa = PBXGroup;
 			children = (
-				A4624D0B2A41E2D60044F260 /* GoogleMaps.bundle */,
-				A4624D092A41E27F0044F260 /* GooglePlaces.bundle */,
-				A4624D052A41D6720044F260 /* GoogleMaps.xcframework */,
-				A4624D032A41D6680044F260 /* GoogleMapsCore.xcframework */,
-				A4624D012A41D65E0044F260 /* GoogleMapsBase.xcframework */,
-				A4624D072A41E2410044F260 /* GooglePlaces.xcframework */,
 				A4E0A3D72A3DC8A200E7E3EF /* Controller */,
 				A4E0A3D62A3DC89B00E7E3EF /* Model */,
 				A4E0A3D52A3DC89000E7E3EF /* View */,
 				A4A0A11D2A3C9077008ABA86 /* Helper */,
 				A4A0A1122A3C8B7F008ABA86 /* Info.plist */,
-				A4B5BF252A407495005FB70A /* denemeViewController.swift */,
+				A4F90C242A448F3D003960C4 /* GooglePlaces.bundle */,
+				A4F90C222A448F29003960C4 /* GooglePlaces.xcframework */,
+				A4F90C202A44888E003960C4 /* GoogleMaps.bundle */,
+				A4F90C1E2A448881003960C4 /* GoogleMaps.xcframework */,
+				A4F90C1C2A448879003960C4 /* GoogleMapsCore.xcframework */,
+				A4F90C1A2A44886C003960C4 /* GoogleMapsBase.framework */,
+				A4F90C262A448FB4003960C4 /* DenemeViewController.swift */,
+				A4F90C282A44903F003960C4 /* ViewController2.swift */,
 			);
 			path = sporApp;
 			sourceTree = "<group>";
@@ -220,8 +219,6 @@
 			children = (
 				A4E0A3CB2A3DAA8000E7E3EF /* Kategoriler.swift */,
 				A4E0A3D82A3DC8D100E7E3EF /* AltBaslik.swift */,
-				A4B5BF272A4093C3005FB70A /* Place.swift */,
-				A491E3E22A42DAD800829A6D /* GooglePlacesManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -237,8 +234,7 @@
 				A4E0A3D12A3DBD6900E7E3EF /* AltBaslikViewController.swift */,
 				A4E0A3D32A3DBDAE00E7E3EF /* AltBaslikTableViewCell.swift */,
 				A4A0A1082A3C8B7F008ABA86 /* ViewController.swift */,
-				A4B5BEF22A40409B005FB70A /* NavigationViewController.swift */,
-				A491E3E02A42D6F700829A6D /* ResultViewController.swift */,
+				A4197F9C2A446DC00067BFB0 /* VideoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -261,6 +257,7 @@
 			name = sporApp;
 			packageProductDependencies = (
 				A491D5692A418447000E6BF2 /* Lottie */,
+				A4197F9F2A446E4D0067BFB0 /* YouTubeiOSPlayerHelper */,
 			);
 			productName = sporApp;
 			productReference = A4A0A1012A3C8B7F008ABA86 /* sporApp.app */;
@@ -292,6 +289,7 @@
 			mainGroup = A4A0A0F82A3C8B7F008ABA86;
 			packageReferences = (
 				A491D5682A418447000E6BF2 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				A4197F9E2A446E4D0067BFB0 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */,
 			);
 			productRefGroup = A4A0A1022A3C8B7F008ABA86 /* Products */;
 			projectDirPath = "";
@@ -310,10 +308,10 @@
 				A4A0A1112A3C8B7F008ABA86 /* LaunchScreen.storyboard in Resources */,
 				A4A0A10E2A3C8B7F008ABA86 /* Assets.xcassets in Resources */,
 				A4A0A10C2A3C8B7F008ABA86 /* Main.storyboard in Resources */,
+				A4F90C212A44888E003960C4 /* GoogleMaps.bundle in Resources */,
 				A4A0A11C2A3C9061008ABA86 /* login.json in Resources */,
-				A4624D0A2A41E27F0044F260 /* GooglePlaces.bundle in Resources */,
 				A4E0A3C62A3D95A900E7E3EF /* register.json in Resources */,
-				A4624D0C2A41E2D60044F260 /* GoogleMaps.bundle in Resources */,
+				A4F90C252A448F3D003960C4 /* GooglePlaces.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,19 +323,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4E0A3D02A3DBC0F00E7E3EF /* FavorilerViewController.swift in Sources */,
-				A4B5BEF32A40409B005FB70A /* NavigationViewController.swift in Sources */,
+				A4F90C272A448FB4003960C4 /* DenemeViewController.swift in Sources */,
 				A4E0A3D92A3DC8D100E7E3EF /* AltBaslik.swift in Sources */,
-				A491E3E32A42DAD800829A6D /* GooglePlacesManager.swift in Sources */,
-				A491E3E12A42D6F700829A6D /* ResultViewController.swift in Sources */,
 				A4A0A1092A3C8B7F008ABA86 /* ViewController.swift in Sources */,
 				A4E0A3CE2A3DBBE300E7E3EF /* AyarlarViewController.swift in Sources */,
+				A4F90C292A44903F003960C4 /* ViewController2.swift in Sources */,
 				A4A0A1052A3C8B7F008ABA86 /* AppDelegate.swift in Sources */,
 				A4A0A1072A3C8B7F008ABA86 /* SceneDelegate.swift in Sources */,
 				A4E0A3C82A3DA14600E7E3EF /* KategoriCVCell.swift in Sources */,
+				A4197F9D2A446DC00067BFB0 /* VideoViewController.swift in Sources */,
 				A4E0A3CA2A3DA89B00E7E3EF /* KategoriViewController.swift in Sources */,
-				A4B5BF282A4093C3005FB70A /* Place.swift in Sources */,
 				A4E2CB952A3CA1E500630A64 /* RegisterViewController.swift in Sources */,
-				A4B5BF262A407495005FB70A /* denemeViewController.swift in Sources */,
 				A4E0A3D42A3DBDAE00E7E3EF /* AltBaslikTableViewCell.swift in Sources */,
 				A4E0A3D22A3DBD6900E7E3EF /* AltBaslikViewController.swift in Sources */,
 				A4E0A3CC2A3DAA8000E7E3EF /* Kategoriler.swift in Sources */,
@@ -490,6 +486,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NF9R7KNMC7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/sporApp",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sporApp/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Kullanıcı Konum İzni";
@@ -519,6 +519,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NF9R7KNMC7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/sporApp",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sporApp/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Kullanıcı Konum İzni";
@@ -564,6 +568,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A4197F9E2A446E4D0067BFB0 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/youtube/youtube-ios-player-helper.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		A491D5682A418447000E6BF2 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
@@ -575,6 +587,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A4197F9F2A446E4D0067BFB0 /* YouTubeiOSPlayerHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A4197F9E2A446E4D0067BFB0 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */;
+			productName = YouTubeiOSPlayerHelper;
+		};
 		A491D5692A418447000E6BF2 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A491D5682A418447000E6BF2 /* XCRemoteSwiftPackageReference "lottie-ios" */;

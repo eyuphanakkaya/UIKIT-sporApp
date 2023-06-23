@@ -9,7 +9,7 @@ import UIKit
 import GoogleMaps
 import GooglePlaces
 
-class MapsViewController: UIViewController, GMSMapViewDelegate, UITextFieldDelegate {
+class DenemeViewController: UIViewController, GMSMapViewDelegate, UITextFieldDelegate {
     var mapView: GMSMapView!
     var marker: GMSMarker!
     var autocompleteController: GMSAutocompleteViewController!
@@ -38,7 +38,7 @@ class MapsViewController: UIViewController, GMSMapViewDelegate, UITextFieldDeleg
     }
 }
 
-extension MapsViewController: GMSAutocompleteViewControllerDelegate {
+extension DenemeViewController: GMSAutocompleteViewControllerDelegate {
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
         let camera = GMSCameraPosition.camera(withLatitude: place.coordinate.latitude, longitude: place.coordinate.longitude, zoom: 11.0)
         mapView.camera = camera

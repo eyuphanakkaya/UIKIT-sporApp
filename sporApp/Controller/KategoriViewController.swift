@@ -30,6 +30,7 @@ class KategoriViewController: UIViewController {
         kategoriList.append(k5)
         kategoriList.append(k6)
         
+        navigationItem.title = ""
         kategoriCollectionView.backgroundColor = nil
         kategoriCollectionView.dataSource = self
         kategoriCollectionView.delegate = self
@@ -39,7 +40,7 @@ class KategoriViewController: UIViewController {
         let genislik = self.kategoriCollectionView.frame.size.width
         tasarim.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         //(genislik-30)/2*1.85
-        tasarim.itemSize = CGSize(width: (genislik-30)/2, height: (genislik - 30 )/2)
+        tasarim.itemSize = CGSize(width: (genislik - 30 )/2, height: (genislik - 30 )/2)
         
         tasarim.minimumLineSpacing = 5
         tasarim.minimumInteritemSpacing = 5

@@ -18,7 +18,7 @@ class AltBaslikViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(kategori?.id!)
+       // print(kategori?.id!)
         let a1 = AltBaslik(id: 1, ad: "Bench Press", resim: "", kategori_id: 1,aciklama: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.",ytId: "rT7DgCr-3pg")
         let a2 = AltBaslik(id: 1, ad: "Squat", resim: "", kategori_id: 1,aciklama: "uzun metin",ytId: "SW_C1A-rejs")
         let a3 = AltBaslik(id: 1, ad: "Incline Bench Press", resim: "", kategori_id: 1,aciklama: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.",ytId: "SrqOu55lrYU")
@@ -56,6 +56,7 @@ class AltBaslikViewController: UIViewController {
         let indeks = sender as? Int
         let destionationVC = segue.destination as? VideoViewController
         destionationVC?.baslik = bosList[indeks!]
+        
 
         
     }

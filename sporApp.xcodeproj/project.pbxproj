@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A4197F9D2A446DC00067BFB0 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4197F9C2A446DC00067BFB0 /* VideoViewController.swift */; };
 		A4197FA02A446E4D0067BFB0 /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = A4197F9F2A446E4D0067BFB0 /* YouTubeiOSPlayerHelper */; };
+		A42666752A46117D00C0631A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42666742A46117D00C0631A /* MapViewController.swift */; };
+		A4649ECC2A4580DA008E1EC9 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4649ECB2A4580DA008E1EC9 /* MapsViewController.swift */; };
 		A491D56A2A418447000E6BF2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A491D5692A418447000E6BF2 /* Lottie */; };
 		A4A0A1052A3C8B7F008ABA86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0A1042A3C8B7F008ABA86 /* AppDelegate.swift */; };
 		A4A0A1072A3C8B7F008ABA86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0A1062A3C8B7F008ABA86 /* SceneDelegate.swift */; };
@@ -49,12 +51,12 @@
 		A4F90C212A44888E003960C4 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4F90C202A44888E003960C4 /* GoogleMaps.bundle */; };
 		A4F90C232A448F29003960C4 /* GooglePlaces.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F90C222A448F29003960C4 /* GooglePlaces.xcframework */; };
 		A4F90C252A448F3D003960C4 /* GooglePlaces.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4F90C242A448F3D003960C4 /* GooglePlaces.bundle */; };
-		A4F90C272A448FB4003960C4 /* DenemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F90C262A448FB4003960C4 /* DenemeViewController.swift */; };
-		A4F90C292A44903F003960C4 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F90C282A44903F003960C4 /* ViewController2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A4197F9C2A446DC00067BFB0 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		A42666742A46117D00C0631A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A4649ECB2A4580DA008E1EC9 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapsViewController.swift; path = ../../MapsViewController.swift; sourceTree = "<group>"; };
 		A4A0A1012A3C8B7F008ABA86 /* sporApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sporApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A0A1042A3C8B7F008ABA86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4A0A1062A3C8B7F008ABA86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,8 +98,6 @@
 		A4F90C202A44888E003960C4 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = "../../../Downloads/GoogleMaps-8.0.0 2/Maps/Frameworks/GoogleMaps.xcframework/ios-arm64_x86_64-simulator/GoogleMaps.framework/Resources/GoogleMaps.bundle"; sourceTree = "<group>"; };
 		A4F90C222A448F29003960C4 /* GooglePlaces.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GooglePlaces.xcframework; path = "../../../Downloads/GooglePlaces-8.0.0/Frameworks/GooglePlaces.xcframework"; sourceTree = "<group>"; };
 		A4F90C242A448F3D003960C4 /* GooglePlaces.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = "../../../Downloads/GooglePlaces-8.0.0/Frameworks/GooglePlaces.xcframework/ios-arm64_x86_64-simulator/GooglePlaces.framework/Resources/GooglePlaces.bundle"; sourceTree = "<group>"; };
-		A4F90C262A448FB4003960C4 /* DenemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DenemeViewController.swift; sourceTree = "<group>"; };
-		A4F90C282A44903F003960C4 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,8 +164,6 @@
 				A4F90C1E2A448881003960C4 /* GoogleMaps.xcframework */,
 				A4F90C1C2A448879003960C4 /* GoogleMapsCore.xcframework */,
 				A4F90C1A2A44886C003960C4 /* GoogleMapsBase.framework */,
-				A4F90C262A448FB4003960C4 /* DenemeViewController.swift */,
-				A4F90C282A44903F003960C4 /* ViewController2.swift */,
 			);
 			path = sporApp;
 			sourceTree = "<group>";
@@ -226,6 +224,7 @@
 		A4E0A3D72A3DC8A200E7E3EF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A4649ECB2A4580DA008E1EC9 /* MapsViewController.swift */,
 				A4E2CB942A3CA1E400630A64 /* RegisterViewController.swift */,
 				A4E0A3C72A3DA14600E7E3EF /* KategoriCVCell.swift */,
 				A4E0A3C92A3DA89B00E7E3EF /* KategoriViewController.swift */,
@@ -235,6 +234,7 @@
 				A4E0A3D32A3DBDAE00E7E3EF /* AltBaslikTableViewCell.swift */,
 				A4A0A1082A3C8B7F008ABA86 /* ViewController.swift */,
 				A4197F9C2A446DC00067BFB0 /* VideoViewController.swift */,
+				A42666742A46117D00C0631A /* MapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -323,11 +323,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4E0A3D02A3DBC0F00E7E3EF /* FavorilerViewController.swift in Sources */,
-				A4F90C272A448FB4003960C4 /* DenemeViewController.swift in Sources */,
 				A4E0A3D92A3DC8D100E7E3EF /* AltBaslik.swift in Sources */,
+				A4649ECC2A4580DA008E1EC9 /* MapsViewController.swift in Sources */,
 				A4A0A1092A3C8B7F008ABA86 /* ViewController.swift in Sources */,
 				A4E0A3CE2A3DBBE300E7E3EF /* AyarlarViewController.swift in Sources */,
-				A4F90C292A44903F003960C4 /* ViewController2.swift in Sources */,
 				A4A0A1052A3C8B7F008ABA86 /* AppDelegate.swift in Sources */,
 				A4A0A1072A3C8B7F008ABA86 /* SceneDelegate.swift in Sources */,
 				A4E0A3C82A3DA14600E7E3EF /* KategoriCVCell.swift in Sources */,
@@ -336,6 +335,7 @@
 				A4E2CB952A3CA1E500630A64 /* RegisterViewController.swift in Sources */,
 				A4E0A3D42A3DBDAE00E7E3EF /* AltBaslikTableViewCell.swift in Sources */,
 				A4E0A3D22A3DBD6900E7E3EF /* AltBaslikViewController.swift in Sources */,
+				A42666752A46117D00C0631A /* MapViewController.swift in Sources */,
 				A4E0A3CC2A3DAA8000E7E3EF /* Kategoriler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

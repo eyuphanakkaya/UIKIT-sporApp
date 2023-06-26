@@ -7,7 +7,7 @@
 
 import Foundation
 
-class AltBaslik {
+struct AltBaslik:Codable{
     var id: Int?
     var ad: String?
     var resim: String?

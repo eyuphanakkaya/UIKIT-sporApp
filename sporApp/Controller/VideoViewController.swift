@@ -39,5 +39,8 @@ class VideoViewController: UIViewController, YTPlayerViewDelegate {
     }*/
     
 
-
+    @IBAction func geriTiklandi(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
 }

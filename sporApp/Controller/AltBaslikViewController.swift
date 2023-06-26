@@ -10,29 +10,21 @@ import UIKit
 class AltBaslikViewController: UIViewController {
 
 
-   
+    var shared = VeriModel.shared
     var altBaslikList = [AltBaslik]()
     var bosList = [AltBaslik]()
+    var searchList = [AltBaslik]()
     var kategori:Kategoriler?
+    var altBaslikListe = AltBaslikEklendi()
+    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
        // print(kategori?.id!)
-        let a1 = AltBaslik(id: 1, ad: "Bench Press", resim: "", kategori_id: 1,aciklama: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.",ytId: "rT7DgCr-3pg")
-        let a2 = AltBaslik(id: 1, ad: "Squat", resim: "", kategori_id: 1,aciklama: "uzun metin",ytId: "SW_C1A-rejs")
-        let a3 = AltBaslik(id: 1, ad: "Incline Bench Press", resim: "", kategori_id: 1,aciklama: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.",ytId: "SrqOu55lrYU")
-        let a4 = AltBaslik(id: 1, ad: "Over head Press", resim: "", kategori_id: 1,aciklama: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.",ytId: "Vyt2QdsR7E")
-        let a5 = AltBaslik(id: 1, ad: "Deadlift", resim: "", kategori_id: 1,aciklama: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.",ytId: "JCXUYuzwNrM")
 
-        
-        
-        
-        altBaslikList.append(a1)
-        altBaslikList.append(a2)
-        altBaslikList.append(a3)
-        altBaslikList.append(a4)
-        altBaslikList.append(a5)
+            
+        altBaslikEkle()
 
         
         searchBar.barTintColor = UIColor.systemGray
@@ -42,7 +34,7 @@ class AltBaslikViewController: UIViewController {
         for x in altBaslikList {
             if kategori?.id == x.kategori_id {
                 bosList.append(x)
-                print(x.ad!)
+                searchList = bosList
             }
         }
         
@@ -50,17 +42,54 @@ class AltBaslikViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         searchBar.delegate = self
+        
 
+    }
+    func altBaslikEkle(){
+        altBaslikList.append(altBaslikListe.a1)
+        altBaslikList.append(altBaslikListe.a2)
+        altBaslikList.append(altBaslikListe.a3)
+        altBaslikList.append(altBaslikListe.a4)
+        altBaslikList.append(altBaslikListe.a5)
+        altBaslikList.append(altBaslikListe.a6)
+        altBaslikList.append(altBaslikListe.a7)
+        altBaslikList.append(altBaslikListe.a8)
+        altBaslikList.append(altBaslikListe.a9)
+        altBaslikList.append(altBaslikListe.a10)
+        altBaslikList.append(altBaslikListe.a11)
+        altBaslikList.append(altBaslikListe.a12)
+        altBaslikList.append(altBaslikListe.a13)
+        altBaslikList.append(altBaslikListe.a14)
+        altBaslikList.append(altBaslikListe.a15)
+            
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         let indeks = sender as? Int
-        let destionationVC = segue.destination as? VideoViewController
-        destionationVC?.baslik = bosList[indeks!]
+        if segue.identifier == "toVideoVC" {
+            let destionationVC = segue.destination as? VideoViewController
+            destionationVC?.baslik = bosList[indeks!]
+        } else if segue.identifier == "toMapVC" {
+            let destinationVC = segue.destination as? MapsViewController
+            destinationVC?.gelenKategori = kategori?.ad
+        }
+       
+    }
+    
+    @IBAction func konumBulTiklandi(_ sender: Any) {
+        performSegue(withIdentifier: "toMapVC", sender: nil)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-
-        
+        if let savedData = UserDefaults.standard.data(forKey: "SavedData"),
+           let dataList = try? JSONDecoder().decode([AltBaslik].self, from: savedData) {
+            VeriModel.shared.dataList = dataList
+            
+        }
     }
 
+    
 }
 
 extension AltBaslikViewController: UITableViewDelegate,UITableViewDataSource {
@@ -91,13 +120,40 @@ extension AltBaslikViewController: UITableViewDelegate,UITableViewDataSource {
         performSegue(withIdentifier: "toVideoVC", sender: indexPath.row)
         
     }
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let favEkle = UIContextualAction(style: .normal, title: "Favorilere Ekle") { [self] contextualAction, view, boolValue in
+            let gidenDeger = bosList[indexPath.row]
+            
+            VeriModel.shared.dataList.append(gidenDeger)
+            
+            // UserDefaults'e veriyi kaydet
+            let defaults = UserDefaults.standard
+            if let encodedData = try? JSONEncoder().encode(VeriModel.shared.dataList) {
+                defaults.set(encodedData, forKey: "SavedData")
+                defaults.synchronize()
+            }
+            
+        }
+        
+        return UISwipeActionsConfiguration(actions: [favEkle])
+    }
 
 
 }
 extension AltBaslikViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchBar.text == "" {
+        
+        if let searchText = searchBar.text, !searchText.isEmpty {
+            let filteredList = bosList.filter { altBaslik in
+                return altBaslik.ad?.lowercased().contains(searchText.lowercased()) ?? false
+            }
+            bosList = filteredList
+        } else {
             
+            bosList = searchList
         }
+        
+        tableView.reloadData()
     }
 }
+

@@ -12,6 +12,7 @@ class MapsViewController: UIViewController {
     var bolge: MKCoordinateRegion?
     var konum: CLLocationCoordinate2D?
     var span: MKCoordinateSpan?
+    var gelenKategori:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,20 +26,24 @@ class MapsViewController: UIViewController {
         locationManager.startUpdatingLocation()
         searchBar.isHidden = true
        
-        //40.980826739943815, 28.717448396589425
+        
         
         
     }
     
     @IBAction func hemenBulTiklandi(_ sender: Any) {
+        
         searchBarCalis()
     }
     
     
     func searchBarCalis() {
+        if mapView.annotations.count > 0 {
+            mapView.removeAnnotations(mapView.annotations)
+        }
         self.view.endEditing(true)
         var deger = searchBar.text
-        deger = "Fitness"
+        deger = gelenKategori
         istek.naturalLanguageQuery = deger
         
         if let currentLocation = locationManager.location?.coordinate {

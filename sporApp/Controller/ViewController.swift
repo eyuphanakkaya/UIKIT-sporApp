@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         myLoginView.backgroundColor = nil
         navigationItem.title = "Giriş Paneli"
         
+        
     }
     
 

@@ -39,7 +39,14 @@ class FavorilerViewController: UIViewController {
             // UITableView'yi yeniden yükle
             favTableView.reloadData()
         }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let indeks = sender as? Int
+        let destionationVC = segue.destination as? VideoViewController
+        destionationVC?.baslik = favList[indeks!]
+ 
+       
+    }
 
 }
 
@@ -70,9 +77,17 @@ extension FavorilerViewController: UITableViewDelegate,UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        // print(favList[indexPath.row].ad!)
-        performSegue(withIdentifier: "toVideoVC", sender: indexPath.row)
+        /*let vc = storyboard?.instantiateViewController(withIdentifier: "toVideo") as! VideoViewController
+        vc.baslik = favList[indexPath.row]
+
+        present(vc, animated: true,completion: nil)*/
+        
+        performSegue(withIdentifier: "toVideo", sender: indexPath.row)
         
     }
+    
+    
+    
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let favKaldir = UIContextualAction(style: .destructive, title: "Favoriden Kaldır") { contextAction, view, boolValue in
             contextAction.image = UIImage(named: "")

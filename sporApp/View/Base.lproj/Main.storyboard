@@ -244,7 +244,9 @@
                             <constraint firstItem="sCO-qC-t8q" firstAttribute="leading" secondItem="KKg-qu-d8i" secondAttribute="leading" id="vb0-I1-4gm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="FgA-aM-YkH"/>
+                    <navigationItem key="navigationItem" id="FgA-aM-YkH">
+                        <barButtonItem key="backBarButtonItem" title="Geri Dön" id="eQg-mH-KdE"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="registerView" destination="1jQ-F5-qM3" id="xtr-0R-CKf"/>
                     </connections>
@@ -416,7 +418,7 @@
         <!--Video View Controller-->
         <scene sceneID="7ff-1e-mAE">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="PPS-vL-wft" customClass="VideoViewController" customModule="sporApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="toVideo" modalPresentationStyle="fullScreen" id="PPS-vL-wft" customClass="VideoViewController" customModule="sporApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nhD-1t-elJ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -429,7 +431,7 @@
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="duf-Nb-Xd9">
-                                <rect key="frame" x="50" y="488" width="293" height="232"/>
+                                <rect key="frame" x="50" y="488" width="293" height="281"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -459,7 +461,9 @@
                             <constraint firstItem="PS0-bo-RJC" firstAttribute="leading" secondItem="wxA-7q-Dp8" secondAttribute="leading" id="tO6-pE-eV1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="LDD-7v-jyG"/>
+                    <navigationItem key="navigationItem" id="LDD-7v-jyG">
+                        <barButtonItem key="backBarButtonItem" title="Geri Dön" id="7Jq-nF-UeR"/>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="aciklamaText" destination="duf-Nb-Xd9" id="YGp-zj-le6"/>
@@ -469,7 +473,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s78-r2-O3z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8870.9923664122125" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="8863" y="-27"/>
         </scene>
         <!--Maps View Controller-->
         <scene sceneID="xL0-8V-g6q">
@@ -557,14 +561,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k16-TT-uI4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7753" y="763"/>
+            <point key="canvasLocation" x="7753" y="826"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PhT-4a-JfE">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="76o-Yr-IFP" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4NV-AX-FtV">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="back" id="4NV-AX-FtV">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -577,7 +581,7 @@
             </objects>
             <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
         </scene>
-        <!--Favoriler-->
+        <!--Favoriler View Controller-->
         <scene sceneID="tOL-ay-OFz">
             <objects>
                 <viewController id="B0O-Zf-eHG" customClass="FavorilerViewController" customModule="sporApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -586,7 +590,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ofi-KW-Ifm">
-                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="favoriCell" rowHeight="91" id="xCm-Ns-mIZ" customClass="FavoriTableViewCell" customModule="sporApp" customModuleProvider="target">
@@ -624,14 +628,17 @@
                             <constraint firstItem="ofi-KW-Ifm" firstAttribute="top" secondItem="VfZ-u5-fWI" secondAttribute="top" id="xNb-Ac-fLI"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="1" title="Favoriler" image="bookmark.slash" catalog="system" selectedImage="bookmark.fill" id="SVU-0E-Yxg"/>
+                    <navigationItem key="navigationItem" id="H9f-h6-3dm">
+                        <barButtonItem key="backBarButtonItem" title="Geri Dön" id="AFd-nz-vZU"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="favTableView" destination="ofi-KW-Ifm" id="xur-G3-m3L"/>
+                        <segue destination="PPS-vL-wft" kind="show" identifier="toVideo" id="QIS-64-4hu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ok-em-wTg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5868" y="796"/>
+            <point key="canvasLocation" x="6642" y="796"/>
         </scene>
         <!--Ayarlar-->
         <scene sceneID="utZ-Gx-3CK">
@@ -648,7 +655,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Uy-E6-LDT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4833" y="797"/>
+            <point key="canvasLocation" x="4790" y="796"/>
         </scene>
         <!--Ana Sayfa-->
         <scene sceneID="r6P-Fz-as0">
@@ -675,12 +682,13 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="E62-Dv-NC7" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="I2f-4v-Ju9">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="8pN-xe-l90" kind="relationship" relationship="viewControllers" id="doR-4F-4bs"/>
-                        <segue destination="B0O-Zf-eHG" kind="relationship" relationship="viewControllers" id="tLx-G9-VzE"/>
+                        <segue destination="OQz-yB-YrN" kind="relationship" relationship="viewControllers" id="tLx-G9-VzE"/>
                         <segue destination="5tH-TI-e2q" kind="relationship" relationship="viewControllers" id="Qh0-XN-rFr"/>
                     </connections>
                 </tabBarController>
@@ -688,9 +696,32 @@
             </objects>
             <point key="canvasLocation" x="4790.0763358778622" y="-30.281690140845072"/>
         </scene>
+        <!--Favoriler-->
+        <scene sceneID="cim-L4-dpR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OQz-yB-YrN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="1" title="Favoriler" image="bookmark.slash" catalog="system" selectedImage="bookmark.fill" id="SVU-0E-Yxg"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QaL-bc-zzg">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="B0O-Zf-eHG" kind="relationship" relationship="rootViewController" id="XfT-lp-w5J"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZIo-K4-rVK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5713.740458015267" y="795.77464788732402"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="QIS-64-4hu"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="apple.logo" catalog="system" width="105" height="128"/>
+        <image name="back" width="128" height="128"/>
         <image name="bookmark.fill" catalog="system" width="110" height="128"/>
         <image name="bookmark.slash" catalog="system" width="113" height="128"/>
         <image name="circles.hexagongrid.fill" catalog="system" width="128" height="115"/>

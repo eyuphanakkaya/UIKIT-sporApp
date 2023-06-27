@@ -17,6 +17,8 @@ class VideoViewController: UIViewController, YTPlayerViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+
+        
         
         if let gelen = baslik {
             if let id = gelen.ytId , let neIseYarar = gelen.ad ,let aciklama = gelen.aciklama {

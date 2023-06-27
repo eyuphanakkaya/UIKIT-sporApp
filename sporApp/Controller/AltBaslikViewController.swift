@@ -26,7 +26,6 @@ class AltBaslikViewController: UIViewController {
             
         altBaslikEkle()
 
-        
         searchBar.barTintColor = UIColor.systemGray
         searchBar.layer.cornerRadius = 20
         searchBar.layer.masksToBounds = true
@@ -76,18 +75,21 @@ class AltBaslikViewController: UIViewController {
        
     }
     
+    
+    
     @IBAction func konumBulTiklandi(_ sender: Any) {
         performSegue(withIdentifier: "toMapVC", sender: nil)
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if let savedData = UserDefaults.standard.data(forKey: "SavedData"),
+        if let savedData = UserDefaults.standard.data(forKey: "NewSavedData"),
            let dataList = try? JSONDecoder().decode([AltBaslik].self, from: savedData) {
             VeriModel.shared.dataList = dataList
             
         }
     }
+    
 
     
 }
@@ -121,19 +123,29 @@ extension AltBaslikViewController: UITableViewDelegate,UITableViewDataSource {
         
     }
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let favEkle = UIContextualAction(style: .normal, title: "Favorilere Ekle") { [self] contextualAction, view, boolValue in
-            let gidenDeger = bosList[indexPath.row]
+        
+        let favEkle = UIContextualAction(style: .normal, title: "") {  contextualAction, view, boolValue in
+            let gidenDeger = self.bosList[indexPath.row]
             
-            VeriModel.shared.dataList.append(gidenDeger)
             
-            // UserDefaults'e veriyi kaydet
-            let defaults = UserDefaults.standard
-            if let encodedData = try? JSONEncoder().encode(VeriModel.shared.dataList) {
-                defaults.set(encodedData, forKey: "SavedData")
-                defaults.synchronize()
-            }
-            
+            for x in VeriModel.shared.dataList {
+                if x.ad == gidenDeger.ad {
+                    print("Hataa")
+                    
+                } else {
+                    VeriModel.shared.dataList.append(gidenDeger)
+                    let defaults = UserDefaults.standard
+                    if let encodedData2 = try? JSONEncoder().encode(VeriModel.shared.dataList) {
+                        defaults.set(encodedData2, forKey: "NewSavedData")
+                        defaults.synchronize()
+                    }
+                    }
+                }
+           
         }
+
+        favEkle.backgroundColor = .red
+        favEkle.image = UIImage(named: "heart")
         
         return UISwipeActionsConfiguration(actions: [favEkle])
     }

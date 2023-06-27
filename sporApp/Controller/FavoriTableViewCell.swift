@@ -9,15 +9,25 @@ import UIKit
 
 class FavoriTableViewCell: UITableViewCell {
 
-    var gelenDeger:AltBaslik?
+    var gelenDeger: AltBaslik? {
+            didSet {
+                updateUI()
+            }
+        }
     @IBOutlet weak var favIsimLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        if let gelen = gelenDeger {
-            favIsimLabel.text = gelen.ad
-        }
-
     }
+    override func prepareForReuse() {
+            super.prepareForReuse()
+            favIsimLabel.text = nil // Hücre yeniden kullanıldığında içeriği sıfırla
+        }
+    private func updateUI() {
+            if let gelen = gelenDeger {
+                favIsimLabel.text = gelen.ad
+            }
+        }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

@@ -7,25 +7,17 @@
 
 import Foundation
 
-struct AltBaslik:Codable{
+struct AltBaslik: Codable, Equatable {
     var id: Int?
     var ad: String?
     var resim: String?
     var kategori_id: Int?
-    var aciklama:String?
-    var ytId:String?
-    
-    init() {
-    }
-    
-    init(id: Int?, ad: String?, resim: String?, kategori_id: Int?,aciklama:String,ytId:String) {
-        self.id = id
-        self.ad = ad
-        self.resim = resim
-        self.kategori_id = kategori_id
-        self.aciklama = aciklama
-        self.ytId = ytId
-    }
-    
+    var aciklama: String?
+    var ytId: String?
+
+    static func ==(lhs: AltBaslik, rhs: AltBaslik) -> Bool {
+         return lhs.id == rhs.id
+     }
 }
+
 

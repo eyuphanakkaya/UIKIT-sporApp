@@ -16,6 +16,7 @@ class AltBaslikViewController: UIViewController {
     var searchList = [AltBaslik]()
     var kategori:Kategoriler?
     var altBaslikListe = AltBaslikEklendi()
+    var List = VeriModel.shared.dataList
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
@@ -87,7 +88,16 @@ class AltBaslikViewController: UIViewController {
            let dataList = try? JSONDecoder().decode([AltBaslik].self, from: savedData) {
             VeriModel.shared.dataList = dataList
             
+        
+            
         }
+    }
+    
+    func hata(isim:String){
+        let uyari = UIAlertController(title: "HATA", message: "\(isim) favoriler içerisinde mevcut", preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Tamam", style: .cancel)
+        uyari.addAction(alertAction)
+        present(uyari, animated: true)
     }
     
 
@@ -127,20 +137,21 @@ extension AltBaslikViewController: UITableViewDelegate,UITableViewDataSource {
         let favEkle = UIContextualAction(style: .normal, title: "") {  contextualAction, view, boolValue in
             let gidenDeger = self.bosList[indexPath.row]
             
-            
-            for x in VeriModel.shared.dataList {
-                if x.ad == gidenDeger.ad {
-                    print("Hataa")
-                    
-                } else {
+        
+                
                     VeriModel.shared.dataList.append(gidenDeger)
                     let defaults = UserDefaults.standard
                     if let encodedData2 = try? JSONEncoder().encode(VeriModel.shared.dataList) {
-                        defaults.set(encodedData2, forKey: "NewSavedData")
-                        defaults.synchronize()
-                    }
-                    }
+            if !VeriModel.shared.dataList.contains(where: { $0.ad == gidenDeger.ad }) {
+                    // Kaydedilmek istenilen veri dataList içinde kayıtlı değilse kaydetme işlemi yapılır
+                    defaults.set(encodedData2, forKey: "NewSavedData")
+                    defaults.synchronize()
+                } else {
+                    // Kaydedilmek istenilen veri dataList içinde zaten kayıtlıysa bir işlem yapma
+                    self.hata(isim: self.bosList[indexPath.row].ad!)
                 }
+            }
+            
            
         }
 

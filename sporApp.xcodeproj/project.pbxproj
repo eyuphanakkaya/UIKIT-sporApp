@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		A4197F9D2A446DC00067BFB0 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4197F9C2A446DC00067BFB0 /* VideoViewController.swift */; };
 		A4197FA02A446E4D0067BFB0 /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = A4197F9F2A446E4D0067BFB0 /* YouTubeiOSPlayerHelper */; };
+		A425FCAB2A4F570400DE40CD /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A425FCAA2A4F570400DE40CD /* FirebaseAnalytics */; };
+		A425FCAD2A4F570400DE40CD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A425FCAC2A4F570400DE40CD /* FirebaseAuth */; };
+		A425FCAF2A4F570400DE40CD /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = A425FCAE2A4F570400DE40CD /* FirebaseDatabase */; };
+		A425FCB12A4F570400DE40CD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A425FCB02A4F570400DE40CD /* FirebaseFirestore */; };
+		A425FCB32A4F570400DE40CD /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A425FCB22A4F570400DE40CD /* FirebaseStorage */; };
+		A425FCB72A4F57C500DE40CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A425FCB62A4F57C500DE40CD /* GoogleService-Info.plist */; };
+		A425FCBB2A4F58C300DE40CD /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = A425FCBA2A4F58C300DE40CD /* GoogleSignIn */; };
+		A425FCBD2A4F58C300DE40CD /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A425FCBC2A4F58C300DE40CD /* GoogleSignInSwift */; };
 		A4649ECC2A4580DA008E1EC9 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4649ECB2A4580DA008E1EC9 /* MapsViewController.swift */; };
 		A491D56A2A418447000E6BF2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A491D5692A418447000E6BF2 /* Lottie */; };
 		A4A0A1052A3C8B7F008ABA86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0A1042A3C8B7F008ABA86 /* AppDelegate.swift */; };
@@ -18,26 +26,9 @@
 		A4A0A10E2A3C8B7F008ABA86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4A0A10D2A3C8B7F008ABA86 /* Assets.xcassets */; };
 		A4A0A1112A3C8B7F008ABA86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4A0A10F2A3C8B7F008ABA86 /* LaunchScreen.storyboard */; };
 		A4A0A11C2A3C9061008ABA86 /* login.json in Resources */ = {isa = PBXBuildFile; fileRef = A4A0A11B2A3C9061008ABA86 /* login.json */; };
-		A4CE7BF62A41CC9800028DE8 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CE7BF52A41CC9800028DE8 /* Accelerate.framework */; };
-		A4CE7BF82A41CCA000028DE8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CE7BF72A41CCA000028DE8 /* CoreData.framework */; };
-		A4CE7BFA2A41CCAC00028DE8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CE7BF92A41CCAC00028DE8 /* CoreGraphics.framework */; };
-		A4CE7BFC2A41CCB400028DE8 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CE7BFB2A41CCB400028DE8 /* CoreImage.framework */; };
-		A4CE7BFE2A41CCBC00028DE8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CE7BFD2A41CCBC00028DE8 /* CoreLocation.framework */; };
-		A4CE7C002A41CCC600028DE8 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CE7BFF2A41CCC600028DE8 /* CoreTelephony.framework */; };
-		A4CE7C022A41CCCD00028DE8 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CE7C012A41CCCD00028DE8 /* CoreText.framework */; };
-		A4CE7C042A41CCDB00028DE8 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CE7C032A41CCDB00028DE8 /* GLKit.framework */; };
-		A4CE7C062A41CD0100028DE8 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CE7C052A41CD0100028DE8 /* ImageIO.framework */; };
-		A4CE7C082A41CD0800028DE8 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CE7C072A41CD0800028DE8 /* libc++.tbd */; };
-		A4CE7C0A2A41CD1100028DE8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CE7C092A41CD1100028DE8 /* libz.tbd */; };
-		A4CE7C0C2A41CD1900028DE8 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CE7C0B2A41CD1900028DE8 /* Metal.framework */; };
-		A4CE7C0E2A41CD2000028DE8 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CE7C0D2A41CD2000028DE8 /* OpenGLES.framework */; };
-		A4CE7C102A41CD2800028DE8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CE7C0F2A41CD2800028DE8 /* QuartzCore.framework */; };
-		A4CE7C122A41CD3F00028DE8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CE7C112A41CD3F00028DE8 /* SystemConfiguration.framework */; };
-		A4CE7C142A41CD4E00028DE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CE7C132A41CD4E00028DE8 /* UIKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		A4DC4F882A49731C001A0361 /* AltBaslikEklendi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC4F872A49731C001A0361 /* AltBaslikEklendi.swift */; };
 		A4DC4F8A2A499364001A0361 /* FavoriTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC4F892A499364001A0361 /* FavoriTableViewCell.swift */; };
 		A4DC4F8C2A499961001A0361 /* VeriModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC4F8B2A499961001A0361 /* VeriModel.swift */; };
-		A4E0A3C62A3D95A900E7E3EF /* register.json in Resources */ = {isa = PBXBuildFile; fileRef = A4E0A3C52A3D95A900E7E3EF /* register.json */; };
 		A4E0A3C82A3DA14600E7E3EF /* KategoriCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E0A3C72A3DA14600E7E3EF /* KategoriCVCell.swift */; };
 		A4E0A3CA2A3DA89B00E7E3EF /* KategoriViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E0A3C92A3DA89B00E7E3EF /* KategoriViewController.swift */; };
 		A4E0A3CC2A3DAA8000E7E3EF /* Kategoriler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E0A3CB2A3DAA8000E7E3EF /* Kategoriler.swift */; };
@@ -47,16 +38,12 @@
 		A4E0A3D42A3DBDAE00E7E3EF /* AltBaslikTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E0A3D32A3DBDAE00E7E3EF /* AltBaslikTableViewCell.swift */; };
 		A4E0A3D92A3DC8D100E7E3EF /* AltBaslik.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E0A3D82A3DC8D100E7E3EF /* AltBaslik.swift */; };
 		A4E2CB952A3CA1E500630A64 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E2CB942A3CA1E400630A64 /* RegisterViewController.swift */; };
-		A4F90C1B2A44886C003960C4 /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F90C1A2A44886C003960C4 /* GoogleMapsBase.framework */; };
-		A4F90C1D2A448879003960C4 /* GoogleMapsCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F90C1C2A448879003960C4 /* GoogleMapsCore.xcframework */; };
-		A4F90C1F2A448881003960C4 /* GoogleMaps.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F90C1E2A448881003960C4 /* GoogleMaps.xcframework */; };
-		A4F90C212A44888E003960C4 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4F90C202A44888E003960C4 /* GoogleMaps.bundle */; };
-		A4F90C232A448F29003960C4 /* GooglePlaces.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F90C222A448F29003960C4 /* GooglePlaces.xcframework */; };
-		A4F90C252A448F3D003960C4 /* GooglePlaces.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4F90C242A448F3D003960C4 /* GooglePlaces.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A4197F9C2A446DC00067BFB0 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		A425FCA62A4F522D00DE40CD /* register.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = register.json; sourceTree = "<group>"; };
+		A425FCB62A4F57C500DE40CD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A4649ECB2A4580DA008E1EC9 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapsViewController.swift; path = ../../MapsViewController.swift; sourceTree = "<group>"; };
 		A4A0A1012A3C8B7F008ABA86 /* sporApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sporApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A0A1042A3C8B7F008ABA86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,26 +54,9 @@
 		A4A0A1102A3C8B7F008ABA86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4A0A1122A3C8B7F008ABA86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4A0A11B2A3C9061008ABA86 /* login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = login.json; sourceTree = "<group>"; };
-		A4CE7BF52A41CC9800028DE8 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
-		A4CE7BF72A41CCA000028DE8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		A4CE7BF92A41CCAC00028DE8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		A4CE7BFB2A41CCB400028DE8 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
-		A4CE7BFD2A41CCBC00028DE8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		A4CE7BFF2A41CCC600028DE8 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		A4CE7C012A41CCCD00028DE8 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		A4CE7C032A41CCDB00028DE8 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
-		A4CE7C052A41CD0100028DE8 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		A4CE7C072A41CD0800028DE8 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		A4CE7C092A41CD1100028DE8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		A4CE7C0B2A41CD1900028DE8 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
-		A4CE7C0D2A41CD2000028DE8 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		A4CE7C0F2A41CD2800028DE8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		A4CE7C112A41CD3F00028DE8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		A4CE7C132A41CD4E00028DE8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A4DC4F872A49731C001A0361 /* AltBaslikEklendi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltBaslikEklendi.swift; sourceTree = "<group>"; };
 		A4DC4F892A499364001A0361 /* FavoriTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriTableViewCell.swift; sourceTree = "<group>"; };
 		A4DC4F8B2A499961001A0361 /* VeriModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeriModel.swift; sourceTree = "<group>"; };
-		A4E0A3C52A3D95A900E7E3EF /* register.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = register.json; path = ../../../../Downloads/register.json; sourceTree = "<group>"; };
 		A4E0A3C72A3DA14600E7E3EF /* KategoriCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KategoriCVCell.swift; sourceTree = "<group>"; };
 		A4E0A3C92A3DA89B00E7E3EF /* KategoriViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KategoriViewController.swift; sourceTree = "<group>"; };
 		A4E0A3CB2A3DAA8000E7E3EF /* Kategoriler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kategoriler.swift; sourceTree = "<group>"; };
@@ -96,12 +66,6 @@
 		A4E0A3D32A3DBDAE00E7E3EF /* AltBaslikTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltBaslikTableViewCell.swift; sourceTree = "<group>"; };
 		A4E0A3D82A3DC8D100E7E3EF /* AltBaslik.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltBaslik.swift; sourceTree = "<group>"; };
 		A4E2CB942A3CA1E400630A64 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		A4F90C1A2A44886C003960C4 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsBase.framework; sourceTree = "<group>"; };
-		A4F90C1C2A448879003960C4 /* GoogleMapsCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GoogleMapsCore.xcframework; path = "../../../Downloads/GoogleMaps-8.0.0 2/Maps/Frameworks/GoogleMapsCore.xcframework"; sourceTree = "<group>"; };
-		A4F90C1E2A448881003960C4 /* GoogleMaps.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GoogleMaps.xcframework; path = "../../../Downloads/GoogleMaps-8.0.0 2/Maps/Frameworks/GoogleMaps.xcframework"; sourceTree = "<group>"; };
-		A4F90C202A44888E003960C4 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = "../../../Downloads/GoogleMaps-8.0.0 2/Maps/Frameworks/GoogleMaps.xcframework/ios-arm64_x86_64-simulator/GoogleMaps.framework/Resources/GoogleMaps.bundle"; sourceTree = "<group>"; };
-		A4F90C222A448F29003960C4 /* GooglePlaces.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GooglePlaces.xcframework; path = "../../../Downloads/GooglePlaces-8.0.0/Frameworks/GooglePlaces.xcframework"; sourceTree = "<group>"; };
-		A4F90C242A448F3D003960C4 /* GooglePlaces.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = "../../../Downloads/GooglePlaces-8.0.0/Frameworks/GooglePlaces.xcframework/ios-arm64_x86_64-simulator/GooglePlaces.framework/Resources/GooglePlaces.bundle"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,40 +73,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4CE7C142A41CD4E00028DE8 /* UIKit.framework in Frameworks */,
-				A4CE7C122A41CD3F00028DE8 /* SystemConfiguration.framework in Frameworks */,
-				A4CE7C102A41CD2800028DE8 /* QuartzCore.framework in Frameworks */,
-				A4CE7C0E2A41CD2000028DE8 /* OpenGLES.framework in Frameworks */,
-				A4CE7C0C2A41CD1900028DE8 /* Metal.framework in Frameworks */,
-				A4CE7C0A2A41CD1100028DE8 /* libz.tbd in Frameworks */,
-				A4CE7C082A41CD0800028DE8 /* libc++.tbd in Frameworks */,
-				A4CE7C062A41CD0100028DE8 /* ImageIO.framework in Frameworks */,
-				A4CE7C042A41CCDB00028DE8 /* GLKit.framework in Frameworks */,
-				A4CE7C022A41CCCD00028DE8 /* CoreText.framework in Frameworks */,
-				A4CE7C002A41CCC600028DE8 /* CoreTelephony.framework in Frameworks */,
-				A4CE7BFE2A41CCBC00028DE8 /* CoreLocation.framework in Frameworks */,
-				A4F90C1F2A448881003960C4 /* GoogleMaps.xcframework in Frameworks */,
-				A4F90C1D2A448879003960C4 /* GoogleMapsCore.xcframework in Frameworks */,
+				A425FCBD2A4F58C300DE40CD /* GoogleSignInSwift in Frameworks */,
+				A425FCAF2A4F570400DE40CD /* FirebaseDatabase in Frameworks */,
+				A425FCBB2A4F58C300DE40CD /* GoogleSignIn in Frameworks */,
 				A4197FA02A446E4D0067BFB0 /* YouTubeiOSPlayerHelper in Frameworks */,
-				A4CE7BFC2A41CCB400028DE8 /* CoreImage.framework in Frameworks */,
-				A4CE7BFA2A41CCAC00028DE8 /* CoreGraphics.framework in Frameworks */,
-				A4F90C1B2A44886C003960C4 /* GoogleMapsBase.framework in Frameworks */,
-				A4CE7BF82A41CCA000028DE8 /* CoreData.framework in Frameworks */,
-				A4CE7BF62A41CC9800028DE8 /* Accelerate.framework in Frameworks */,
-				A4F90C232A448F29003960C4 /* GooglePlaces.xcframework in Frameworks */,
 				A491D56A2A418447000E6BF2 /* Lottie in Frameworks */,
+				A425FCAB2A4F570400DE40CD /* FirebaseAnalytics in Frameworks */,
+				A425FCB32A4F570400DE40CD /* FirebaseStorage in Frameworks */,
+				A425FCAD2A4F570400DE40CD /* FirebaseAuth in Frameworks */,
+				A425FCB12A4F570400DE40CD /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A425FCB42A4F571C00DE40CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A4A0A10A2A3C8B7F008ABA86 /* Main.storyboard */,
+				A4A0A10F2A3C8B7F008ABA86 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A425FCB52A4F573900DE40CD /* FileHelper */ = {
+			isa = PBXGroup;
+			children = (
+				A4A0A1062A3C8B7F008ABA86 /* SceneDelegate.swift */,
+				A4A0A1042A3C8B7F008ABA86 /* AppDelegate.swift */,
+				A4A0A10D2A3C8B7F008ABA86 /* Assets.xcassets */,
+				A425FCA62A4F522D00DE40CD /* register.json */,
+				A4A0A11B2A3C9061008ABA86 /* login.json */,
+			);
+			path = FileHelper;
+			sourceTree = "<group>";
+		};
 		A4A0A0F82A3C8B7F008ABA86 = {
 			isa = PBXGroup;
 			children = (
 				A4A0A1032A3C8B7F008ABA86 /* sporApp */,
 				A4A0A1022A3C8B7F008ABA86 /* Products */,
-				A4CE7BF42A41CC9800028DE8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,63 +128,14 @@
 		A4A0A1032A3C8B7F008ABA86 /* sporApp */ = {
 			isa = PBXGroup;
 			children = (
-				A4E0A3D72A3DC8A200E7E3EF /* Controller */,
 				A4E0A3D62A3DC89B00E7E3EF /* Model */,
-				A4E0A3D52A3DC89000E7E3EF /* View */,
-				A4A0A11D2A3C9077008ABA86 /* Helper */,
+				A425FCB42A4F571C00DE40CD /* View */,
+				A4E0A3D72A3DC8A200E7E3EF /* Controller */,
+				A425FCB52A4F573900DE40CD /* FileHelper */,
 				A4A0A1122A3C8B7F008ABA86 /* Info.plist */,
-				A4F90C242A448F3D003960C4 /* GooglePlaces.bundle */,
-				A4F90C222A448F29003960C4 /* GooglePlaces.xcframework */,
-				A4F90C202A44888E003960C4 /* GoogleMaps.bundle */,
-				A4F90C1E2A448881003960C4 /* GoogleMaps.xcframework */,
-				A4F90C1C2A448879003960C4 /* GoogleMapsCore.xcframework */,
-				A4F90C1A2A44886C003960C4 /* GoogleMapsBase.framework */,
+				A425FCB62A4F57C500DE40CD /* GoogleService-Info.plist */,
 			);
 			path = sporApp;
-			sourceTree = "<group>";
-		};
-		A4A0A11D2A3C9077008ABA86 /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				A4A0A1042A3C8B7F008ABA86 /* AppDelegate.swift */,
-				A4A0A1062A3C8B7F008ABA86 /* SceneDelegate.swift */,
-				A4A0A10D2A3C8B7F008ABA86 /* Assets.xcassets */,
-				A4E0A3C52A3D95A900E7E3EF /* register.json */,
-				A4A0A11B2A3C9061008ABA86 /* login.json */,
-			);
-			path = Helper;
-			sourceTree = "<group>";
-		};
-		A4CE7BF42A41CC9800028DE8 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A4CE7C132A41CD4E00028DE8 /* UIKit.framework */,
-				A4CE7C112A41CD3F00028DE8 /* SystemConfiguration.framework */,
-				A4CE7C0F2A41CD2800028DE8 /* QuartzCore.framework */,
-				A4CE7C0D2A41CD2000028DE8 /* OpenGLES.framework */,
-				A4CE7C0B2A41CD1900028DE8 /* Metal.framework */,
-				A4CE7C092A41CD1100028DE8 /* libz.tbd */,
-				A4CE7C072A41CD0800028DE8 /* libc++.tbd */,
-				A4CE7C052A41CD0100028DE8 /* ImageIO.framework */,
-				A4CE7C032A41CCDB00028DE8 /* GLKit.framework */,
-				A4CE7C012A41CCCD00028DE8 /* CoreText.framework */,
-				A4CE7BFF2A41CCC600028DE8 /* CoreTelephony.framework */,
-				A4CE7BFD2A41CCBC00028DE8 /* CoreLocation.framework */,
-				A4CE7BFB2A41CCB400028DE8 /* CoreImage.framework */,
-				A4CE7BF92A41CCAC00028DE8 /* CoreGraphics.framework */,
-				A4CE7BF72A41CCA000028DE8 /* CoreData.framework */,
-				A4CE7BF52A41CC9800028DE8 /* Accelerate.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A4E0A3D52A3DC89000E7E3EF /* View */ = {
-			isa = PBXGroup;
-			children = (
-				A4A0A10A2A3C8B7F008ABA86 /* Main.storyboard */,
-				A4A0A10F2A3C8B7F008ABA86 /* LaunchScreen.storyboard */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		A4E0A3D62A3DC89B00E7E3EF /* Model */ = {
@@ -264,6 +186,13 @@
 			packageProductDependencies = (
 				A491D5692A418447000E6BF2 /* Lottie */,
 				A4197F9F2A446E4D0067BFB0 /* YouTubeiOSPlayerHelper */,
+				A425FCAA2A4F570400DE40CD /* FirebaseAnalytics */,
+				A425FCAC2A4F570400DE40CD /* FirebaseAuth */,
+				A425FCAE2A4F570400DE40CD /* FirebaseDatabase */,
+				A425FCB02A4F570400DE40CD /* FirebaseFirestore */,
+				A425FCB22A4F570400DE40CD /* FirebaseStorage */,
+				A425FCBA2A4F58C300DE40CD /* GoogleSignIn */,
+				A425FCBC2A4F58C300DE40CD /* GoogleSignInSwift */,
 			);
 			productName = sporApp;
 			productReference = A4A0A1012A3C8B7F008ABA86 /* sporApp.app */;
@@ -296,6 +225,8 @@
 			packageReferences = (
 				A491D5682A418447000E6BF2 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				A4197F9E2A446E4D0067BFB0 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */,
+				A425FCA92A4F570400DE40CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				A425FCB92A4F58C300DE40CD /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = A4A0A1022A3C8B7F008ABA86 /* Products */;
 			projectDirPath = "";
@@ -313,11 +244,9 @@
 			files = (
 				A4A0A1112A3C8B7F008ABA86 /* LaunchScreen.storyboard in Resources */,
 				A4A0A10E2A3C8B7F008ABA86 /* Assets.xcassets in Resources */,
+				A425FCB72A4F57C500DE40CD /* GoogleService-Info.plist in Resources */,
 				A4A0A10C2A3C8B7F008ABA86 /* Main.storyboard in Resources */,
-				A4F90C212A44888E003960C4 /* GoogleMaps.bundle in Resources */,
 				A4A0A11C2A3C9061008ABA86 /* login.json in Resources */,
-				A4E0A3C62A3D95A900E7E3EF /* register.json in Resources */,
-				A4F90C252A448F3D003960C4 /* GooglePlaces.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,8 +509,24 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/youtube/youtube-ios-player-helper.git";
 			requirement = {
-				kind = upToNextMajorVersion;
+				kind = upToNextMinorVersion;
 				minimumVersion = 1.0.0;
+			};
+		};
+		A425FCA92A4F570400DE40CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		A425FCB92A4F58C300DE40CD /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
 			};
 		};
 		A491D5682A418447000E6BF2 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
@@ -599,6 +544,41 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A4197F9E2A446E4D0067BFB0 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */;
 			productName = YouTubeiOSPlayerHelper;
+		};
+		A425FCAA2A4F570400DE40CD /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A425FCA92A4F570400DE40CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		A425FCAC2A4F570400DE40CD /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A425FCA92A4F570400DE40CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		A425FCAE2A4F570400DE40CD /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A425FCA92A4F570400DE40CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		A425FCB02A4F570400DE40CD /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A425FCA92A4F570400DE40CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		A425FCB22A4F570400DE40CD /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A425FCA92A4F570400DE40CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		A425FCBA2A4F58C300DE40CD /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A425FCB92A4F58C300DE40CD /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		A425FCBC2A4F58C300DE40CD /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A425FCB92A4F58C300DE40CD /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
 		};
 		A491D5692A418447000E6BF2 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;

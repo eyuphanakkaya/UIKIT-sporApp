@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A4010FE22A502438000DFEEA /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4010FE12A502438000DFEEA /* AuthenticationServices.framework */; };
 		A4197F9D2A446DC00067BFB0 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4197F9C2A446DC00067BFB0 /* VideoViewController.swift */; };
 		A4197FA02A446E4D0067BFB0 /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = A4197F9F2A446E4D0067BFB0 /* YouTubeiOSPlayerHelper */; };
 		A425FCAB2A4F570400DE40CD /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A425FCAA2A4F570400DE40CD /* FirebaseAnalytics */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A4010FE12A502438000DFEEA /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		A4197F9C2A446DC00067BFB0 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		A425FCA62A4F522D00DE40CD /* register.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = register.json; sourceTree = "<group>"; };
 		A425FCB62A4F57C500DE40CD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4010FE22A502438000DFEEA /* AuthenticationServices.framework in Frameworks */,
 				A425FCBD2A4F58C300DE40CD /* GoogleSignInSwift in Frameworks */,
 				A425FCAF2A4F570400DE40CD /* FirebaseDatabase in Frameworks */,
 				A425FCBB2A4F58C300DE40CD /* GoogleSignIn in Frameworks */,
@@ -88,6 +91,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A4010FE02A502438000DFEEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4010FE12A502438000DFEEA /* AuthenticationServices.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A425FCB42A4F571C00DE40CD /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +125,7 @@
 			children = (
 				A4A0A1032A3C8B7F008ABA86 /* sporApp */,
 				A4A0A1022A3C8B7F008ABA86 /* Products */,
+				A4010FE02A502438000DFEEA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

@@ -16,6 +16,8 @@ class KategoriViewController: UIViewController {
     @IBOutlet weak var kategoriCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.isToolbarHidden = true
+        
         let k1 = Kategoriler(id: 1, ad: "Fitness", resim: "gym")
         let k2 = Kategoriler(id: 2, ad: "Pilates", resim: "gym")
         let k3 = Kategoriler(id: 3, ad: "Kick Boks", resim: "gym")

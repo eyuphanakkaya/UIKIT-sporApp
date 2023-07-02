@@ -18,7 +18,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var registerView: LottieAnimationView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationController?.isToolbarHidden = false
         registerView.contentMode = .scaleToFill
         registerView.loopMode = .loop
         registerView.play()
@@ -37,15 +37,29 @@ class RegisterViewController: UIViewController {
             if error != nil {
                 print(error?.localizedDescription)
             }else{
-                self.navigationController?.popViewController(animated: true)
+                self.kayitOlusturuldu()
             }
         }
         
+    }
+    
+    @IBAction func geridonTiklandi(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
     }
     func       kisiKaydet(kullanici_ad:String,kullanici_soyisim:String,kullanici_sifre:String,kullanici_mail:String){
         let dict:[String:Any] = ["kullanici_ad":kullanici_ad,"kullanici_soyisim":kullanici_soyisim,"kullanici_sifre":kullanici_sifre,"kullanici_mail":kullanici_mail]
         let newRef = ref?.child("Kullanicilar").childByAutoId()
         newRef?.setValue(dict)
+    }
+    
+    func kayitOlusturuldu(){
+        let kayit = UIAlertController(title: "KAYIT", message: "Kayıt oluşturuldu.", preferredStyle: .alert)
+        let kayitAction = UIAlertAction(title: "Tamam", style: .cancel) { action in
+            self.navigationController?.popViewController(animated: true)
+        }
+        
+        kayit.addAction(kayitAction)
+        present(kayit, animated: true)
     }
 
 

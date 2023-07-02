@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var myLoginView: LottieAnimationView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
         myLoginView.contentMode = .scaleToFill
         myLoginView.loopMode = .loop

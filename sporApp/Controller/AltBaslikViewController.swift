@@ -134,31 +134,31 @@ extension AltBaslikViewController: UITableViewDelegate,UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-        let favEkle = UIContextualAction(style: .normal, title: "") {  contextualAction, view, boolValue in
+        let favEkle = UIContextualAction(style: .normal, title: "") { contextualAction, view, boolValue in
             let gidenDeger = self.bosList[indexPath.row]
-            
-        
-                
-                    VeriModel.shared.dataList.append(gidenDeger)
-                    let defaults = UserDefaults.standard
-                    if let encodedData2 = try? JSONEncoder().encode(VeriModel.shared.dataList) {
-            if !VeriModel.shared.dataList.contains(where: { $0.ad == gidenDeger.ad }) {
+
+            let defaults = UserDefaults.standard
+            if var dataList = defaults.data(forKey: "NewSavedData").flatMap({ try? JSONDecoder().decode([AltBaslik].self, from: $0) }) {
+                if !dataList.contains(where: { $0.ad == gidenDeger.ad }) {
                     // Kaydedilmek istenilen veri dataList içinde kayıtlı değilse kaydetme işlemi yapılır
-                    defaults.set(encodedData2, forKey: "NewSavedData")
-                    defaults.synchronize()
+                    VeriModel.shared.dataList.append(gidenDeger)
+                    dataList.append(gidenDeger) // Yeni veriyi dataList'e ekleyin
+                    if let encodedData2 = try? JSONEncoder().encode(dataList) {
+                        defaults.set(encodedData2, forKey: "NewSavedData") // Güncellenmiş veriyi UserDefaults'a kaydedin
+                        defaults.synchronize()
+                    }
                 } else {
                     // Kaydedilmek istenilen veri dataList içinde zaten kayıtlıysa bir işlem yapma
                     self.hata(isim: self.bosList[indexPath.row].ad!)
                 }
             }
-            
-           
         }
 
         favEkle.backgroundColor = .red
         favEkle.image = UIImage(named: "heart")
-        
+
         return UISwipeActionsConfiguration(actions: [favEkle])
+
     }
 
 

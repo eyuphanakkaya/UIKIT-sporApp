@@ -10,14 +10,18 @@ import Lottie
 import FirebaseAuth
 
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     @IBOutlet weak var mailTextField: UITextField!
     @IBOutlet weak var sifreTextField: UITextField!
     @IBOutlet weak var myLoginView: LottieAnimationView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if Auth.auth().currentUser != nil {
+                    // Kullanıcı giriş yapmışsa başka bir sayfaya yönlendirin veya mevcut sayfada giriş yapılmış olduğunu gösterin
+                    // Örnek: Ana sayfaya yönlendirme
+            performSegue(withIdentifier: "toKateVC", sender: nil)
+        }
         // Do any additional setup after loading the view.
         myLoginView.contentMode = .scaleToFill
         myLoginView.loopMode = .loop

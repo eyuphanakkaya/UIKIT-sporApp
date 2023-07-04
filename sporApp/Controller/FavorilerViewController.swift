@@ -34,6 +34,7 @@ class FavorilerViewController: UIViewController {
 
                 favList = dataList
                 //print(dataList)
+                print(dataList)
             }
             
             // UITableView'yi yeniden yükle
@@ -44,6 +45,7 @@ class FavorilerViewController: UIViewController {
         let indeks = sender as? Int
         let destionationVC = segue.destination as? VideoViewController
         destionationVC?.baslik = favList[indeks!]
+        
  
        
     }
@@ -106,6 +108,7 @@ extension FavorilerViewController: UITableViewDelegate,UITableViewDataSource {
                     let encodedData = try? JSONEncoder().encode(dataList)
                     defaults.set(encodedData, forKey: "NewSavedData")
                     defaults.synchronize()
+                    
                 }
             }
             

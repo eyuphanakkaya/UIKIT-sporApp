@@ -19,18 +19,17 @@ class KategoriViewController: UIViewController {
         navigationController?.isToolbarHidden = true
         
         let k1 = Kategoriler(id: 1, ad: "Fitness", resim: "gym")
-        let k2 = Kategoriler(id: 2, ad: "Pilates", resim: "gym")
-        let k3 = Kategoriler(id: 3, ad: "Kick Boks", resim: "gym")
-        let k4 = Kategoriler(id: 4, ad: "Jimnastik", resim: "gym")
-        let k5 = Kategoriler(id: 5, ad: "Futbol", resim: "gym")
-        let k6 = Kategoriler(id: 6, ad: "Bale", resim: "gym")
+        let k2 = Kategoriler(id: 2, ad: "Pilates", resim: "pilates")
+        let k3 = Kategoriler(id: 3, ad: "Kick Boks", resim: "kick")
+        let k4 = Kategoriler(id: 4, ad: "Yoga", resim: "yoga")
+        let k5 = Kategoriler(id: 5, ad: "Bale", resim: "bale")
         
         kategoriList.append(k1)
         kategoriList.append(k2)
         kategoriList.append(k3)
         kategoriList.append(k4)
         kategoriList.append(k5)
-        kategoriList.append(k6)
+
         
         navigationItem.title = ""
         kategoriCollectionView.backgroundColor = nil

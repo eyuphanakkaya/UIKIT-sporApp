@@ -22,7 +22,7 @@
 		A491D56A2A418447000E6BF2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A491D5692A418447000E6BF2 /* Lottie */; };
 		A4A0A1052A3C8B7F008ABA86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0A1042A3C8B7F008ABA86 /* AppDelegate.swift */; };
 		A4A0A1072A3C8B7F008ABA86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0A1062A3C8B7F008ABA86 /* SceneDelegate.swift */; };
-		A4A0A1092A3C8B7F008ABA86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0A1082A3C8B7F008ABA86 /* ViewController.swift */; };
+		A4A0A1092A3C8B7F008ABA86 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0A1082A3C8B7F008ABA86 /* LoginViewController.swift */; };
 		A4A0A10C2A3C8B7F008ABA86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4A0A10A2A3C8B7F008ABA86 /* Main.storyboard */; };
 		A4A0A10E2A3C8B7F008ABA86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4A0A10D2A3C8B7F008ABA86 /* Assets.xcassets */; };
 		A4A0A1112A3C8B7F008ABA86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4A0A10F2A3C8B7F008ABA86 /* LaunchScreen.storyboard */; };
@@ -50,7 +50,7 @@
 		A4A0A1012A3C8B7F008ABA86 /* sporApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sporApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A0A1042A3C8B7F008ABA86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4A0A1062A3C8B7F008ABA86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A4A0A1082A3C8B7F008ABA86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A4A0A1082A3C8B7F008ABA86 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A4A0A10B2A3C8B7F008ABA86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A4A0A10D2A3C8B7F008ABA86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4A0A1102A3C8B7F008ABA86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -172,7 +172,7 @@
 				A4E0A3CF2A3DBC0F00E7E3EF /* FavorilerViewController.swift */,
 				A4E0A3D12A3DBD6900E7E3EF /* AltBaslikViewController.swift */,
 				A4E0A3D32A3DBDAE00E7E3EF /* AltBaslikTableViewCell.swift */,
-				A4A0A1082A3C8B7F008ABA86 /* ViewController.swift */,
+				A4A0A1082A3C8B7F008ABA86 /* LoginViewController.swift */,
 				A4197F9C2A446DC00067BFB0 /* VideoViewController.swift */,
 				A4DC4F892A499364001A0361 /* FavoriTableViewCell.swift */,
 			);
@@ -272,7 +272,7 @@
 				A4E0A3D02A3DBC0F00E7E3EF /* FavorilerViewController.swift in Sources */,
 				A4E0A3D92A3DC8D100E7E3EF /* AltBaslik.swift in Sources */,
 				A4649ECC2A4580DA008E1EC9 /* MapsViewController.swift in Sources */,
-				A4A0A1092A3C8B7F008ABA86 /* ViewController.swift in Sources */,
+				A4A0A1092A3C8B7F008ABA86 /* LoginViewController.swift in Sources */,
 				A4E0A3CE2A3DBBE300E7E3EF /* AyarlarViewController.swift in Sources */,
 				A4A0A1052A3C8B7F008ABA86 /* AppDelegate.swift in Sources */,
 				A4A0A1072A3C8B7F008ABA86 /* SceneDelegate.swift in Sources */,

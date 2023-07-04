@@ -29,6 +29,19 @@ class AyarlarViewController: UIViewController {
         }
     }
     @IBAction func cikisYapTiklandi(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+            // Kullanıcı başarıyla çıkış yaptıktan sonra yapılması istenen işlemler
+            // Örneğin, login ekranına geri dönme
+            let loginViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
+                       UIApplication.shared.windows.first?.rootViewController = loginViewController
+            
+            
+            
+        } catch let error as NSError {
+            // Çıkış işlemi sırasında bir hata oluştu
+            print("Çıkış yaparken hata oluştu: \(error.localizedDescription)")
+        }
     }
     func kisiGuncelle(){
         

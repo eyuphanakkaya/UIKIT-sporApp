@@ -87,7 +87,6 @@ class AltBaslikViewController: UIViewController {
         if let savedData = UserDefaults.standard.data(forKey: "NewSavedData"),
            let dataList = try? JSONDecoder().decode([AltBaslik].self, from: savedData) {
             VeriModel.shared.dataList = dataList
-            
         
             
         }

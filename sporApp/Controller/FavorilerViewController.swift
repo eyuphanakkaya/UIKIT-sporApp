@@ -34,7 +34,7 @@ class FavorilerViewController: UIViewController {
 
                 favList = dataList
                 //print(dataList)
-                print(dataList)
+                
             }
             
             // UITableView'yi yeniden yükle

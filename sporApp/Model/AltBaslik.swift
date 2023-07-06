@@ -7,13 +7,16 @@
 
 import Foundation
 
+struct AltBaslikCevap: Codable {
+    var video: AltBaslik?
+}
+
 struct AltBaslik: Codable, Equatable {
-    var id: Int?
+    var id: String?
+    var katid: String?
     var ad: String?
-    var resim: String?
-    var kategori_id: Int?
     var aciklama: String?
-    var ytId: String?
+    var video: String?
 
     static func ==(lhs: AltBaslik, rhs: AltBaslik) -> Bool {
          return lhs.id == rhs.id

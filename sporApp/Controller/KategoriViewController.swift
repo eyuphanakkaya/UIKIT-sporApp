@@ -6,6 +6,10 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
+
+
 
 
 
@@ -18,19 +22,7 @@ class KategoriViewController: UIViewController {
         super.viewDidLoad()
         navigationController?.isToolbarHidden = true
         
-        let k1 = Kategoriler(id: 1, ad: "Fitness", resim: "gym")
-        let k2 = Kategoriler(id: 2, ad: "Pilates", resim: "pilates")
-        let k3 = Kategoriler(id: 3, ad: "Kick Boks", resim: "kick")
-        let k4 = Kategoriler(id: 4, ad: "Yoga", resim: "yoga")
-        let k5 = Kategoriler(id: 5, ad: "Bale", resim: "bale")
-        
-        kategoriList.append(k1)
-        kategoriList.append(k2)
-        kategoriList.append(k3)
-        kategoriList.append(k4)
-        kategoriList.append(k5)
-
-        
+        kategoriListele()
         navigationItem.title = ""
         kategoriCollectionView.backgroundColor = nil
         kategoriCollectionView.dataSource = self
@@ -54,11 +46,49 @@ class KategoriViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let indeks = sender as? Int
+        let indeks = sender as? String
         let toDestination = segue.destination as? AltBaslikViewController
-        toDestination?.kategori = kategoriList[indeks! - 1]
+        toDestination?.kategori = kategoriList[Int(indeks!)! - 1]
         
     }
+
+    func kategoriListele() {
+        AF.request("https://www.tekinder.org.tr/bootapp/spor/servis.php?tur=kategori", method: .get).response { response in
+            if let error = response.error {
+                print("HATA: \(error)")
+                return
+            }
+            
+            if let data = response.data {
+                do {
+                    let cevap = try JSONDecoder().decode([KategoriCevap].self, from: data)
+                    for item in cevap {
+                        if let kategori = item.kategori {
+                            self.kategoriList.append(kategori)
+                        }
+                    }
+                    self.kategoriCollectionView.reloadData()
+                } catch let error {
+                    print("HATA: \(error)")
+                }
+            }
+        }
+    }
+
+
+    func downloadImage(from url: URL, completion: @escaping (UIImage?) -> Void) {
+        AF.request(url).responseImage { response in
+            switch response.result {
+            case .success(let image):
+                completion(image)
+            case .failure(let error):
+                print("Resim indirme hatası: \(error.localizedDescription)")
+                completion(nil)
+            }
+        }
+    }
+
+
 }
 
 extension KategoriViewController : UICollectionViewDelegate,UICollectionViewDataSource,UITabBarDelegate {
@@ -71,7 +101,20 @@ extension KategoriViewController : UICollectionViewDelegate,UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "KategoriCell", for: indexPath) as! KategoriCVCell
-        cell.setUp(kate: kategoriList[indexPath.row])
+        let kategori = kategoriList[indexPath.row]
+        
+        cell.kategoriAdLabel.text = kategori.ad
+        
+        if let resimURL = URL(string: kategori.resim ?? "") {
+            downloadImage(from: resimURL) { image in
+                DispatchQueue.main.async {
+                    if let downloadedImage = image {
+                        cell.imageView.image = downloadedImage
+                    }
+                }
+            }
+        }
+        
         cell.layer.cornerRadius = 10
         cell.layer.borderWidth = 3
         

@@ -27,7 +27,8 @@
 		A4A0A10E2A3C8B7F008ABA86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4A0A10D2A3C8B7F008ABA86 /* Assets.xcassets */; };
 		A4A0A1112A3C8B7F008ABA86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4A0A10F2A3C8B7F008ABA86 /* LaunchScreen.storyboard */; };
 		A4A0A11C2A3C9061008ABA86 /* login.json in Resources */ = {isa = PBXBuildFile; fileRef = A4A0A11B2A3C9061008ABA86 /* login.json */; };
-		A4DC4F882A49731C001A0361 /* AltBaslikEklendi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC4F872A49731C001A0361 /* AltBaslikEklendi.swift */; };
+		A4D75C872A56AEF60046CE00 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A4D75C862A56AEF60046CE00 /* Alamofire */; };
+		A4D75C8C2A56BFC00046CE00 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = A4D75C8B2A56BFC00046CE00 /* AlamofireImage */; };
 		A4DC4F8A2A499364001A0361 /* FavoriTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC4F892A499364001A0361 /* FavoriTableViewCell.swift */; };
 		A4DC4F8C2A499961001A0361 /* VeriModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC4F8B2A499961001A0361 /* VeriModel.swift */; };
 		A4E0A3C82A3DA14600E7E3EF /* KategoriCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E0A3C72A3DA14600E7E3EF /* KategoriCVCell.swift */; };
@@ -56,7 +57,6 @@
 		A4A0A1102A3C8B7F008ABA86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4A0A1122A3C8B7F008ABA86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4A0A11B2A3C9061008ABA86 /* login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = login.json; sourceTree = "<group>"; };
-		A4DC4F872A49731C001A0361 /* AltBaslikEklendi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltBaslikEklendi.swift; sourceTree = "<group>"; };
 		A4DC4F892A499364001A0361 /* FavoriTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriTableViewCell.swift; sourceTree = "<group>"; };
 		A4DC4F8B2A499961001A0361 /* VeriModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeriModel.swift; sourceTree = "<group>"; };
 		A4E0A3C72A3DA14600E7E3EF /* KategoriCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KategoriCVCell.swift; sourceTree = "<group>"; };
@@ -80,6 +80,8 @@
 				A425FCAF2A4F570400DE40CD /* FirebaseDatabase in Frameworks */,
 				A425FCBB2A4F58C300DE40CD /* GoogleSignIn in Frameworks */,
 				A4197FA02A446E4D0067BFB0 /* YouTubeiOSPlayerHelper in Frameworks */,
+				A4D75C8C2A56BFC00046CE00 /* AlamofireImage in Frameworks */,
+				A4D75C872A56AEF60046CE00 /* Alamofire in Frameworks */,
 				A491D56A2A418447000E6BF2 /* Lottie in Frameworks */,
 				A425FCAB2A4F570400DE40CD /* FirebaseAnalytics in Frameworks */,
 				A425FCB32A4F570400DE40CD /* FirebaseStorage in Frameworks */,
@@ -111,10 +113,10 @@
 		A425FCB52A4F573900DE40CD /* FileHelper */ = {
 			isa = PBXGroup;
 			children = (
+				A425FCA62A4F522D00DE40CD /* register.json */,
 				A4A0A1062A3C8B7F008ABA86 /* SceneDelegate.swift */,
 				A4A0A1042A3C8B7F008ABA86 /* AppDelegate.swift */,
 				A4A0A10D2A3C8B7F008ABA86 /* Assets.xcassets */,
-				A425FCA62A4F522D00DE40CD /* register.json */,
 				A4A0A11B2A3C9061008ABA86 /* login.json */,
 			);
 			path = FileHelper;
@@ -155,7 +157,6 @@
 			children = (
 				A4E0A3CB2A3DAA8000E7E3EF /* Kategoriler.swift */,
 				A4E0A3D82A3DC8D100E7E3EF /* AltBaslik.swift */,
-				A4DC4F872A49731C001A0361 /* AltBaslikEklendi.swift */,
 				A4DC4F8B2A499961001A0361 /* VeriModel.swift */,
 			);
 			path = Model;
@@ -205,6 +206,8 @@
 				A425FCB22A4F570400DE40CD /* FirebaseStorage */,
 				A425FCBA2A4F58C300DE40CD /* GoogleSignIn */,
 				A425FCBC2A4F58C300DE40CD /* GoogleSignInSwift */,
+				A4D75C862A56AEF60046CE00 /* Alamofire */,
+				A4D75C8B2A56BFC00046CE00 /* AlamofireImage */,
 			);
 			productName = sporApp;
 			productReference = A4A0A1012A3C8B7F008ABA86 /* sporApp.app */;
@@ -239,6 +242,8 @@
 				A4197F9E2A446E4D0067BFB0 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */,
 				A425FCA92A4F570400DE40CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				A425FCB92A4F58C300DE40CD /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				A4D75C852A56AEF60046CE00 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				A4D75C8A2A56BFC00046CE00 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 			);
 			productRefGroup = A4A0A1022A3C8B7F008ABA86 /* Products */;
 			projectDirPath = "";
@@ -276,7 +281,6 @@
 				A4E0A3CE2A3DBBE300E7E3EF /* AyarlarViewController.swift in Sources */,
 				A4A0A1052A3C8B7F008ABA86 /* AppDelegate.swift in Sources */,
 				A4A0A1072A3C8B7F008ABA86 /* SceneDelegate.swift in Sources */,
-				A4DC4F882A49731C001A0361 /* AltBaslikEklendi.swift in Sources */,
 				A4E0A3C82A3DA14600E7E3EF /* KategoriCVCell.swift in Sources */,
 				A4197F9D2A446DC00067BFB0 /* VideoViewController.swift in Sources */,
 				A4E0A3CA2A3DA89B00E7E3EF /* KategoriViewController.swift in Sources */,
@@ -549,6 +553,22 @@
 				kind = branch;
 			};
 		};
+		A4D75C852A56AEF60046CE00 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		A4D75C8A2A56BFC00046CE00 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -596,6 +616,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A491D5682A418447000E6BF2 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		A4D75C862A56AEF60046CE00 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A4D75C852A56AEF60046CE00 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		A4D75C8B2A56BFC00046CE00 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A4D75C8A2A56BFC00046CE00 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

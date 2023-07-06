@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+import Alamofire
 
 class AltBaslikViewController: UIViewController {
 
@@ -15,7 +17,6 @@ class AltBaslikViewController: UIViewController {
     var bosList = [AltBaslik]()
     var searchList = [AltBaslik]()
     var kategori:Kategoriler?
-    var altBaslikListe = AltBaslikEklendi()
     var List = VeriModel.shared.dataList
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -24,19 +25,12 @@ class AltBaslikViewController: UIViewController {
         super.viewDidLoad()
        // print(kategori?.id!)
 
-            
-        altBaslikEkle()
-
+        altBaslikListele()
         searchBar.barTintColor = UIColor.systemGray
         searchBar.layer.cornerRadius = 20
         searchBar.layer.masksToBounds = true
+
         
-        for x in altBaslikList {
-            if kategori?.id == x.kategori_id {
-                bosList.append(x)
-                searchList = bosList
-            }
-        }
         
         tableView.backgroundColor = nil
         tableView.delegate = self
@@ -45,24 +39,8 @@ class AltBaslikViewController: UIViewController {
         
 
     }
-    func altBaslikEkle(){
-        altBaslikList.append(altBaslikListe.a1)
-        altBaslikList.append(altBaslikListe.a2)
-        altBaslikList.append(altBaslikListe.a3)
-        altBaslikList.append(altBaslikListe.a4)
-        altBaslikList.append(altBaslikListe.a5)
-        altBaslikList.append(altBaslikListe.a6)
-        altBaslikList.append(altBaslikListe.a7)
-        altBaslikList.append(altBaslikListe.a8)
-        altBaslikList.append(altBaslikListe.a9)
-        altBaslikList.append(altBaslikListe.a10)
-        altBaslikList.append(altBaslikListe.a11)
-        altBaslikList.append(altBaslikListe.a12)
-        altBaslikList.append(altBaslikListe.a13)
-        altBaslikList.append(altBaslikListe.a14)
-        altBaslikList.append(altBaslikListe.a15)
-            
-    }
+
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let indeks = sender as? Int
@@ -98,6 +76,34 @@ class AltBaslikViewController: UIViewController {
         uyari.addAction(alertAction)
         present(uyari, animated: true)
     }
+    func altBaslikListele(){
+        var urlString = "https://www.tekinder.org.tr/bootapp/spor/servis.php?tur=video"
+        AF.request(urlString,method: .get).response { response in
+            if let error = response.error {
+                print("HATA: \(error)")
+            }
+            if let data = response.data {
+                do {
+                    let cevap = try JSONDecoder().decode([AltBaslikCevap].self, from: data)
+                    for x in cevap {
+                        if let gelenDeger = x.video {
+                            self.altBaslikList.append(gelenDeger)
+                        }
+                    }
+                    for x in self.altBaslikList {
+                        if self.kategori?.id == x.katid {
+                            print(x)
+                            self.bosList.append(x)
+                            self.searchList = self.bosList
+                        }
+                    }
+                    self.tableView.reloadData() 
+                } catch {
+                    print(error.localizedDescription)
+                }
+            }
+        }
+    }
     
 
     
@@ -132,8 +138,9 @@ extension AltBaslikViewController: UITableViewDelegate,UITableViewDataSource {
         
     }
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        
+
         let favEkle = UIContextualAction(style: .normal, title: "") { contextualAction, view, boolValue in
+            
             let gidenDeger = self.bosList[indexPath.row]
 
             let defaults = UserDefaults.standard
@@ -159,7 +166,17 @@ extension AltBaslikViewController: UITableViewDelegate,UITableViewDataSource {
         return UISwipeActionsConfiguration(actions: [favEkle])
 
     }
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let favEkle = UIContextualAction(style: .normal, title: "") { contextualAction, view, boolValue in
+            
+            
 
+        }
+        favEkle.backgroundColor = .red
+        favEkle.image = UIImage(named: "heart")
+
+        return UISwipeActionsConfiguration(actions: [favEkle])
+    }
 
 }
 extension AltBaslikViewController: UISearchBarDelegate {

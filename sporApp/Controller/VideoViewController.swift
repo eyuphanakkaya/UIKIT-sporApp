@@ -21,7 +21,7 @@ class VideoViewController: UIViewController, YTPlayerViewDelegate {
         
         
         if let gelen = baslik {
-            if let id = gelen.ytId , let neIseYarar = gelen.ad ,let aciklama = gelen.aciklama {
+            if let id = gelen.video , let neIseYarar = gelen.ad ,let aciklama = gelen.aciklama {
                 
                 self.playerView.load(withVideoId: id)
                 neIseYararLabel.text = "\(neIseYarar) Ne İşe Yarar?"

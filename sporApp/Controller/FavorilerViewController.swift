@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class FavorilerViewController: UIViewController {
     var gelenDeger:AltBaslik?
@@ -45,10 +46,65 @@ class FavorilerViewController: UIViewController {
         let indeks = sender as? Int
         let destionationVC = segue.destination as? VideoViewController
         destionationVC?.baslik = favList[indeks!]
-        
- 
        
     }
+    func getFavoriler() {
+        // Mevcut kullanıcının kimlik bilgisini alın
+        if let currentUser = Auth.auth().currentUser {
+            let userID = currentUser.uid
+            
+            // Firestore veritabanına referans oluşturun
+            let db = Firestore.firestore()
+            
+            // "favoriler" koleksiyonuna referans oluşturun
+            let collectionRef = db.collection("favoriler")
+            
+            // Kullanıcının favorilerini temsil eden belgeleri sorgulayın
+            collectionRef.whereField("kullaniciGelenId", isEqualTo: userID).getDocuments { (snapshot, error) in
+                if let error = error {
+                    print("Veri alınamadı: \(error.localizedDescription)")
+                    return
+                }
+                
+                // Snapshot'tan belgeleri alın
+                guard let documents = snapshot?.documents else {
+                    print("Belge bulunamadı")
+                    return
+                }
+                
+                // Favoriler dizisini temizleyin
+                self.favList.removeAll()
+                
+                // Belge verilerini döngüyle diziye ekleyin
+                for document in documents {
+                    let data = document.data()
+                    // İlgili verilere erişerek Favori nesnesini oluşturun
+                    if let favoriAd = data["favoriAd"] as? String {
+                        let favori = AltBaslik(ad: favoriAd)
+                        self.favList.append(favori)
+                    }
+                    // Diğer verileri de burada işleyebilirsiniz
+                }
+                
+                // TableView'i güncelleyin
+                DispatchQueue.main.async {
+                    self.favTableView.reloadData()
+                }
+            }
+        }
+    }
+
+    func convertToAltBaslik(_ data: [String: Any]) -> AltBaslik? {
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: data, options: [])
+            let altBaslik = try JSONDecoder().decode(AltBaslik.self, from: jsonData)
+            return altBaslik
+        } catch {
+            print("Veri dönüşüm hatası: \(error.localizedDescription)")
+            return nil
+        }
+    }
+
 
 }
 
@@ -74,6 +130,7 @@ extension FavorilerViewController: UITableViewDelegate,UITableViewDataSource {
 
         return cell
     }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 5
     }
@@ -87,10 +144,18 @@ extension FavorilerViewController: UITableViewDelegate,UITableViewDataSource {
         performSegue(withIdentifier: "toVideo", sender: indexPath.row)
         
     }
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let favKaldir = UIContextualAction(style: .destructive, title: "Favoriden Kaldır") { contextAction, view, boolValue in
+            
+
+            
+            
+        }
+        return UISwipeActionsConfiguration(actions: [favKaldir])
+    }
     
     
-    
-    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    /*func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let favKaldir = UIContextualAction(style: .destructive, title: "Favoriden Kaldır") { contextAction, view, boolValue in
             contextAction.image = UIImage(named: "")
             
@@ -122,7 +187,8 @@ extension FavorilerViewController: UITableViewDelegate,UITableViewDataSource {
         }
         
         return UISwipeActionsConfiguration(actions: [favKaldir])
-    }
+    }*/
+
 
    
     

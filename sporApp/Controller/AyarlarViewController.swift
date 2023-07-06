@@ -80,7 +80,7 @@ class AyarlarViewController: UIViewController {
                 if let error = error {
                     print("Veri güncellenirken hata oluştu: \(error)")
                 } else {
-                    print("Veri başarıyla güncellendi")
+                    self.guncelleBilgi()
                 }
             }
             currentUser.updateEmail(to: kullanici_mail)

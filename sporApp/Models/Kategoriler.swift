@@ -6,11 +6,11 @@
 //
 
 import Foundation
-struct KategoriCevap:Codable {
+/*struct KategoriCevap:Codable {
     var kategori:Kategoriler?
 }
 struct Kategoriler:Codable {
     var id: String?
     var ad: String?
     var resim: String?
-}
+}*/

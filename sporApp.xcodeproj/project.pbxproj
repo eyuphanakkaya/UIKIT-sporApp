@@ -33,13 +33,17 @@
 		A4DC4F8C2A499961001A0361 /* VeriModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC4F8B2A499961001A0361 /* VeriModel.swift */; };
 		A4E0A3C82A3DA14600E7E3EF /* KategoriCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E0A3C72A3DA14600E7E3EF /* KategoriCVCell.swift */; };
 		A4E0A3CA2A3DA89B00E7E3EF /* KategoriViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E0A3C92A3DA89B00E7E3EF /* KategoriViewController.swift */; };
-		A4E0A3CC2A3DAA8000E7E3EF /* Kategoriler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E0A3CB2A3DAA8000E7E3EF /* Kategoriler.swift */; };
 		A4E0A3CE2A3DBBE300E7E3EF /* AyarlarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E0A3CD2A3DBBE300E7E3EF /* AyarlarViewController.swift */; };
 		A4E0A3D02A3DBC0F00E7E3EF /* FavorilerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E0A3CF2A3DBC0F00E7E3EF /* FavorilerViewController.swift */; };
 		A4E0A3D22A3DBD6900E7E3EF /* AltBaslikViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E0A3D12A3DBD6900E7E3EF /* AltBaslikViewController.swift */; };
 		A4E0A3D42A3DBDAE00E7E3EF /* AltBaslikTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E0A3D32A3DBDAE00E7E3EF /* AltBaslikTableViewCell.swift */; };
-		A4E0A3D92A3DC8D100E7E3EF /* AltBaslik.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E0A3D82A3DC8D100E7E3EF /* AltBaslik.swift */; };
 		A4E2CB952A3CA1E500630A64 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E2CB942A3CA1E400630A64 /* RegisterViewController.swift */; };
+		A4EF183E2A5C2DF40083B04A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EF183D2A5C2DF40083B04A /* LoginViewModel.swift */; };
+		A4EF18402A5C366E0083B04A /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EF183F2A5C366E0083B04A /* RegisterViewModel.swift */; };
+		A4EF18442A5C42960083B04A /* KategoriViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EF18432A5C42960083B04A /* KategoriViewModel.swift */; };
+		A4EF18462A5C480E0083B04A /* AltBaslikViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EF18452A5C480E0083B04A /* AltBaslikViewModel.swift */; };
+		A4EF184B2A5C51B30083B04A /* MapsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EF184A2A5C51B30083B04A /* MapsViewModel.swift */; };
+		A4F3312F2A599FDF0074823B /* SporModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F3312E2A599FDF0074823B /* SporModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +51,7 @@
 		A4197F9C2A446DC00067BFB0 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		A425FCA62A4F522D00DE40CD /* register.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = register.json; sourceTree = "<group>"; };
 		A425FCB62A4F57C500DE40CD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		A4649ECB2A4580DA008E1EC9 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapsViewController.swift; path = ../../MapsViewController.swift; sourceTree = "<group>"; };
+		A4649ECB2A4580DA008E1EC9 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		A4A0A1012A3C8B7F008ABA86 /* sporApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sporApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A0A1042A3C8B7F008ABA86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4A0A1062A3C8B7F008ABA86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,13 +65,17 @@
 		A4DC4F8B2A499961001A0361 /* VeriModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeriModel.swift; sourceTree = "<group>"; };
 		A4E0A3C72A3DA14600E7E3EF /* KategoriCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KategoriCVCell.swift; sourceTree = "<group>"; };
 		A4E0A3C92A3DA89B00E7E3EF /* KategoriViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KategoriViewController.swift; sourceTree = "<group>"; };
-		A4E0A3CB2A3DAA8000E7E3EF /* Kategoriler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kategoriler.swift; sourceTree = "<group>"; };
 		A4E0A3CD2A3DBBE300E7E3EF /* AyarlarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AyarlarViewController.swift; sourceTree = "<group>"; };
 		A4E0A3CF2A3DBC0F00E7E3EF /* FavorilerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavorilerViewController.swift; sourceTree = "<group>"; };
 		A4E0A3D12A3DBD6900E7E3EF /* AltBaslikViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltBaslikViewController.swift; sourceTree = "<group>"; };
 		A4E0A3D32A3DBDAE00E7E3EF /* AltBaslikTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltBaslikTableViewCell.swift; sourceTree = "<group>"; };
-		A4E0A3D82A3DC8D100E7E3EF /* AltBaslik.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltBaslik.swift; sourceTree = "<group>"; };
 		A4E2CB942A3CA1E400630A64 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A4EF183D2A5C2DF40083B04A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		A4EF183F2A5C366E0083B04A /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		A4EF18432A5C42960083B04A /* KategoriViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KategoriViewModel.swift; sourceTree = "<group>"; };
+		A4EF18452A5C480E0083B04A /* AltBaslikViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltBaslikViewModel.swift; sourceTree = "<group>"; };
+		A4EF184A2A5C51B30083B04A /* MapsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewModel.swift; sourceTree = "<group>"; };
+		A4F3312E2A599FDF0074823B /* SporModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SporModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,22 +109,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A425FCB42A4F571C00DE40CD /* View */ = {
-			isa = PBXGroup;
-			children = (
-				A4A0A10A2A3C8B7F008ABA86 /* Main.storyboard */,
-				A4A0A10F2A3C8B7F008ABA86 /* LaunchScreen.storyboard */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		A425FCB52A4F573900DE40CD /* FileHelper */ = {
 			isa = PBXGroup;
 			children = (
 				A425FCA62A4F522D00DE40CD /* register.json */,
-				A4A0A1062A3C8B7F008ABA86 /* SceneDelegate.swift */,
-				A4A0A1042A3C8B7F008ABA86 /* AppDelegate.swift */,
-				A4A0A10D2A3C8B7F008ABA86 /* Assets.xcassets */,
 				A4A0A11B2A3C9061008ABA86 /* login.json */,
 			);
 			path = FileHelper;
@@ -142,9 +138,10 @@
 		A4A0A1032A3C8B7F008ABA86 /* sporApp */ = {
 			isa = PBXGroup;
 			children = (
-				A4E0A3D62A3DC89B00E7E3EF /* Model */,
-				A425FCB42A4F571C00DE40CD /* View */,
-				A4E0A3D72A3DC8A200E7E3EF /* Controller */,
+				A4F331372A59AA270074823B /* Models */,
+				A4F331342A59A9A10074823B /* Views */,
+				A4F3312C2A599BCE0074823B /* ViewModels */,
+				A4F331322A59A95D0074823B /* Resources */,
 				A425FCB52A4F573900DE40CD /* FileHelper */,
 				A4A0A1122A3C8B7F008ABA86 /* Info.plist */,
 				A425FCB62A4F57C500DE40CD /* GoogleService-Info.plist */,
@@ -152,32 +149,71 @@
 			path = sporApp;
 			sourceTree = "<group>";
 		};
-		A4E0A3D62A3DC89B00E7E3EF /* Model */ = {
+		A4F3312C2A599BCE0074823B /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				A4E0A3CB2A3DAA8000E7E3EF /* Kategoriler.swift */,
-				A4E0A3D82A3DC8D100E7E3EF /* AltBaslik.swift */,
-				A4DC4F8B2A499961001A0361 /* VeriModel.swift */,
+				A4EF183D2A5C2DF40083B04A /* LoginViewModel.swift */,
+				A4EF183F2A5C366E0083B04A /* RegisterViewModel.swift */,
+				A4EF18432A5C42960083B04A /* KategoriViewModel.swift */,
+				A4EF18452A5C480E0083B04A /* AltBaslikViewModel.swift */,
+				A4EF184A2A5C51B30083B04A /* MapsViewModel.swift */,
 			);
-			path = Model;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		A4E0A3D72A3DC8A200E7E3EF /* Controller */ = {
+		A4F331322A59A95D0074823B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A4649ECB2A4580DA008E1EC9 /* MapsViewController.swift */,
-				A4E2CB942A3CA1E400630A64 /* RegisterViewController.swift */,
+				A4A0A1042A3C8B7F008ABA86 /* AppDelegate.swift */,
+				A4A0A1062A3C8B7F008ABA86 /* SceneDelegate.swift */,
+				A4A0A10D2A3C8B7F008ABA86 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A4F331342A59A9A10074823B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A4F331362A59A9ED0074823B /* Controllers */,
+				A4DC4F892A499364001A0361 /* FavoriTableViewCell.swift */,
+				A4E0A3D32A3DBDAE00E7E3EF /* AltBaslikTableViewCell.swift */,
 				A4E0A3C72A3DA14600E7E3EF /* KategoriCVCell.swift */,
+				A4F331352A59A9A60074823B /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A4F331352A59A9A60074823B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A4A0A10A2A3C8B7F008ABA86 /* Main.storyboard */,
+				A4A0A10F2A3C8B7F008ABA86 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		A4F331362A59A9ED0074823B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A4E2CB942A3CA1E400630A64 /* RegisterViewController.swift */,
+				A4649ECB2A4580DA008E1EC9 /* MapsViewController.swift */,
 				A4E0A3C92A3DA89B00E7E3EF /* KategoriViewController.swift */,
+				A4E0A3D12A3DBD6900E7E3EF /* AltBaslikViewController.swift */,
 				A4E0A3CD2A3DBBE300E7E3EF /* AyarlarViewController.swift */,
 				A4E0A3CF2A3DBC0F00E7E3EF /* FavorilerViewController.swift */,
-				A4E0A3D12A3DBD6900E7E3EF /* AltBaslikViewController.swift */,
-				A4E0A3D32A3DBDAE00E7E3EF /* AltBaslikTableViewCell.swift */,
 				A4A0A1082A3C8B7F008ABA86 /* LoginViewController.swift */,
 				A4197F9C2A446DC00067BFB0 /* VideoViewController.swift */,
-				A4DC4F892A499364001A0361 /* FavoriTableViewCell.swift */,
 			);
-			path = Controller;
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A4F331372A59AA270074823B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A4DC4F8B2A499961001A0361 /* VeriModel.swift */,
+				A4F3312E2A599FDF0074823B /* SporModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,13 +311,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4E0A3D02A3DBC0F00E7E3EF /* FavorilerViewController.swift in Sources */,
-				A4E0A3D92A3DC8D100E7E3EF /* AltBaslik.swift in Sources */,
 				A4649ECC2A4580DA008E1EC9 /* MapsViewController.swift in Sources */,
 				A4A0A1092A3C8B7F008ABA86 /* LoginViewController.swift in Sources */,
 				A4E0A3CE2A3DBBE300E7E3EF /* AyarlarViewController.swift in Sources */,
 				A4A0A1052A3C8B7F008ABA86 /* AppDelegate.swift in Sources */,
+				A4F3312F2A599FDF0074823B /* SporModel.swift in Sources */,
 				A4A0A1072A3C8B7F008ABA86 /* SceneDelegate.swift in Sources */,
+				A4EF18442A5C42960083B04A /* KategoriViewModel.swift in Sources */,
+				A4EF18402A5C366E0083B04A /* RegisterViewModel.swift in Sources */,
+				A4EF183E2A5C2DF40083B04A /* LoginViewModel.swift in Sources */,
 				A4E0A3C82A3DA14600E7E3EF /* KategoriCVCell.swift in Sources */,
+				A4EF184B2A5C51B30083B04A /* MapsViewModel.swift in Sources */,
+				A4EF18462A5C480E0083B04A /* AltBaslikViewModel.swift in Sources */,
 				A4197F9D2A446DC00067BFB0 /* VideoViewController.swift in Sources */,
 				A4E0A3CA2A3DA89B00E7E3EF /* KategoriViewController.swift in Sources */,
 				A4E2CB952A3CA1E500630A64 /* RegisterViewController.swift in Sources */,
@@ -289,7 +330,6 @@
 				A4E0A3D22A3DBD6900E7E3EF /* AltBaslikViewController.swift in Sources */,
 				A4DC4F8A2A499364001A0361 /* FavoriTableViewCell.swift in Sources */,
 				A4DC4F8C2A499961001A0361 /* VeriModel.swift in Sources */,
-				A4E0A3CC2A3DAA8000E7E3EF /* Kategoriler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

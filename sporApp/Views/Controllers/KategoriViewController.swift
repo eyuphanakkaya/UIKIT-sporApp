@@ -9,13 +9,11 @@ import UIKit
 import Alamofire
 import AlamofireImage
 
-
-
-
-
 class KategoriViewController: UIViewController {
 
     var kategoriList = [Kategoriler]()
+    
+    var kategoriViewModel = KategoriViewModel()
     
     @IBOutlet weak var kategoriCollectionView: UICollectionView!
     override func viewDidLoad() {
@@ -40,9 +38,21 @@ class KategoriViewController: UIViewController {
         
         kategoriCollectionView.collectionViewLayout = tasarim
         
-       
-
+        
         // Do any additional setup after loading the view.
+    }
+    func kategoriListele() {
+        kategoriViewModel.fetchKategoriler { [weak self] result in
+            switch result {
+            case .success(let kategoriler):
+                self?.kategoriList = kategoriler
+                DispatchQueue.main.async {
+                    self?.kategoriCollectionView.reloadData()
+                }
+            case .failure(let error):
+                print("Hata: \(error.localizedDescription)")
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -51,43 +61,6 @@ class KategoriViewController: UIViewController {
         toDestination?.kategori = kategoriList[Int(indeks!)! - 1]
         
     }
-
-    func kategoriListele() {
-        AF.request("https://www.tekinder.org.tr/bootapp/spor/servis.php?tur=kategori", method: .get).response { response in
-            if let error = response.error {
-                print("HATA: \(error)")
-                return
-            }
-            
-            if let data = response.data {
-                do {
-                    let cevap = try JSONDecoder().decode([KategoriCevap].self, from: data)
-                    for item in cevap {
-                        if let kategori = item.kategori {
-                            self.kategoriList.append(kategori)
-                        }
-                    }
-                    self.kategoriCollectionView.reloadData()
-                } catch let error {
-                    print("HATA: \(error)")
-                }
-            }
-        }
-    }
-
-
-    func downloadImage(from url: URL, completion: @escaping (UIImage?) -> Void) {
-        AF.request(url).responseImage { response in
-            switch response.result {
-            case .success(let image):
-                completion(image)
-            case .failure(let error):
-                print("Resim indirme hatası: \(error.localizedDescription)")
-                completion(nil)
-            }
-        }
-    }
-
 
 }
 
@@ -106,7 +79,8 @@ extension KategoriViewController : UICollectionViewDelegate,UICollectionViewData
         cell.kategoriAdLabel.text = kategori.ad
         
         if let resimURL = URL(string: kategori.resim ?? "") {
-            downloadImage(from: resimURL) { image in
+            
+            kategoriViewModel.downloadImage(from: resimURL) { image in
                 DispatchQueue.main.async {
                     if let downloadedImage = image {
                         cell.imageView.image = downloadedImage

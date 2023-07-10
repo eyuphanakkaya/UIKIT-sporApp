@@ -16,9 +16,6 @@ class VideoViewController: UIViewController, YTPlayerViewDelegate {
     var baslik: AltBaslik?
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
-        
         
         if let gelen = baslik {
             if let id = gelen.video , let neIseYarar = gelen.ad ,let aciklama = gelen.aciklama {

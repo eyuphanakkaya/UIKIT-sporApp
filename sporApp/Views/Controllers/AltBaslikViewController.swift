@@ -11,11 +11,10 @@ import Alamofire
 
 class AltBaslikViewController: UIViewController {
 
+    
+    var altBaslikViewModel = AltBaslikViewModel()
 
     var shared = VeriModel.shared
-    var altBaslikList = [AltBaslik]()
-    var bosList = [AltBaslik]()
-    var searchList = [AltBaslik]()
     var kategori:Kategoriler?
     var List = VeriModel.shared.dataList
     
@@ -25,7 +24,7 @@ class AltBaslikViewController: UIViewController {
         super.viewDidLoad()
        // print(kategori?.id!)
 
-        altBaslikListele()
+        altBaslikListe()
         searchBar.barTintColor = UIColor.systemGray
         searchBar.layer.cornerRadius = 20
         searchBar.layer.masksToBounds = true
@@ -39,6 +38,23 @@ class AltBaslikViewController: UIViewController {
         
 
     }
+    func altBaslikListe() {
+        altBaslikViewModel.kategori = kategori // selectedKategori, kategori seçiminizin olduğu bir değişkenin değeridir
+        altBaslikViewModel.fetchData { [weak self] result in
+            switch result {
+            case .success:
+                // Veriler başarıyla alındı, View güncellemelerini yapabilirsiniz
+                DispatchQueue.main.async {
+                    self?.tableView.reloadData()
+                }
+            case .failure(let error):
+                // Hata durumunda hata işlemlerini gerçekleştirin
+                print("Hata: \(error.localizedDescription)")
+            }
+        }
+    }
+
+
 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -46,7 +62,7 @@ class AltBaslikViewController: UIViewController {
         let indeks = sender as? Int
         if segue.identifier == "toVideoVC" {
             let destionationVC = segue.destination as? VideoViewController
-            destionationVC?.baslik = bosList[indeks!]
+            destionationVC?.baslik = altBaslikViewModel.bosList[indeks!]
         } else if segue.identifier == "toMapVC" {
             let destinationVC = segue.destination as? MapsViewController
             destinationVC?.gelenKategori = kategori?.ad
@@ -65,55 +81,17 @@ class AltBaslikViewController: UIViewController {
         if let savedData = UserDefaults.standard.data(forKey: "NewSavedData"),
            let dataList = try? JSONDecoder().decode([AltBaslik].self, from: savedData) {
             VeriModel.shared.dataList = dataList
-        
-            
-        }
-    }
-    
-    func hata(isim:String){
-        let uyari = UIAlertController(title: "HATA", message: "\(isim) favoriler içerisinde mevcut", preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "Tamam", style: .cancel)
-        uyari.addAction(alertAction)
-        present(uyari, animated: true)
-    }
-    func altBaslikListele(){
-        var urlString = "https://www.tekinder.org.tr/bootapp/spor/servis.php?tur=video"
-        AF.request(urlString,method: .get).response { response in
-            if let error = response.error {
-                print("HATA: \(error)")
-            }
-            if let data = response.data {
-                do {
-                    let cevap = try JSONDecoder().decode([AltBaslikCevap].self, from: data)
-                    for x in cevap {
-                        if let gelenDeger = x.video {
-                            self.altBaslikList.append(gelenDeger)
-                        }
-                    }
-                    for x in self.altBaslikList {
-                        if self.kategori?.id == x.katid {
-                            print(x)
-                            self.bosList.append(x)
-                            self.searchList = self.bosList
-                        }
-                    }
-                    self.tableView.reloadData() 
-                } catch {
-                    print(error.localizedDescription)
-                }
-            }
         }
     }
     
 
-    
 }
 
 extension AltBaslikViewController: UITableViewDelegate,UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return bosList.count
+        return altBaslikViewModel.bosList.count
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -122,7 +100,7 @@ extension AltBaslikViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "altBaslikCell", for: indexPath) as! AltBaslikTableViewCell
     
-        cell.altBaslikAdLabel.text = bosList[indexPath.row].ad
+        cell.altBaslikAdLabel.text = altBaslikViewModel.bosList[indexPath.row].ad
         cell.layer.borderWidth = 3
         cell.layer.cornerRadius = 10
         tableView.rowHeight = 100
@@ -133,7 +111,7 @@ extension AltBaslikViewController: UITableViewDelegate,UITableViewDataSource {
         return 5
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(bosList[indexPath.row].ad!)
+        //print(bosList[indexPath.row].ad!)
         performSegue(withIdentifier: "toVideoVC", sender: indexPath.row)
         
     }
@@ -141,7 +119,7 @@ extension AltBaslikViewController: UITableViewDelegate,UITableViewDataSource {
 
         let favEkle = UIContextualAction(style: .normal, title: "") { contextualAction, view, boolValue in
             
-            let gidenDeger = self.bosList[indexPath.row]
+            let gidenDeger = self.altBaslikViewModel.bosList[indexPath.row]
 
             let defaults = UserDefaults.standard
             if var dataList = defaults.data(forKey: "NewSavedData").flatMap({ try? JSONDecoder().decode([AltBaslik].self, from: $0) }) {
@@ -155,7 +133,7 @@ extension AltBaslikViewController: UITableViewDelegate,UITableViewDataSource {
                     }
                 } else {
                     // Kaydedilmek istenilen veri dataList içinde zaten kayıtlıysa bir işlem yapma
-                    self.hata(isim: self.bosList[indexPath.row].ad!)
+                    self.altBaslikViewModel.hata(isim:self.altBaslikViewModel.bosList[indexPath.row].ad!)
                 }
             }
         }
@@ -183,13 +161,13 @@ extension AltBaslikViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         if let searchText = searchBar.text, !searchText.isEmpty {
-            let filteredList = bosList.filter { altBaslik in
+            let filteredList = altBaslikViewModel.bosList.filter { altBaslik in
                 return altBaslik.ad?.lowercased().contains(searchText.lowercased()) ?? false
             }
-            bosList = filteredList
+                altBaslikViewModel.bosList = filteredList
         } else {
             
-            bosList = searchList
+            altBaslikViewModel.bosList = altBaslikViewModel.searchList
         }
         
         tableView.reloadData()

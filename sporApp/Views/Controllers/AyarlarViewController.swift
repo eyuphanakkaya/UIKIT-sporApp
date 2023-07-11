@@ -9,90 +9,46 @@ import UIKit
 import Firebase
 
 class AyarlarViewController: UIViewController {
+    
     var ref: DatabaseReference?
+    var ayarlarViewModel = AyarlarViewModel()
+    
     @IBOutlet weak var kullaniciSifreTextField: UITextField!
     @IBOutlet weak var kullaniciMailTextField: UITextField!
     @IBOutlet weak var kullaniciSoyadTextField: UITextField!
     @IBOutlet weak var kullaniciAdTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        ayarlarViewModel.ayarlarViewController = self
+        
         ref = Database.database().reference()
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
-        girisBilgi()
+        ayarlarViewModel.getGirisBilgi { [weak self] ayarlar in
+            // Giriş bilgileri geldiğinde veya nil ise ViewModelDelegate aracılığıyla View Controller'a iletilir
+            self?.didFetchGirisBilgi(ayarlar)
+        }
     }
+    
     
     
     @IBAction func guncelleTiklandi(_ sender: Any) {
         if let kullanici_ad = kullaniciAdTextField.text , let kullanici_soyisim = kullaniciSoyadTextField.text,let kullanici_sifre =
             kullaniciSifreTextField.text,let kullanici_mail = kullaniciMailTextField.text {
-            kisiGuncelle(kullanici_ad: kullanici_ad, kullanici_soyisim: kullanici_soyisim, kullanici_sifre: kullanici_sifre, kullanici_mail: kullanici_mail)
+            ayarlarViewModel.kisiGuncelle(kullanici_ad: kullanici_ad, kullanici_soyisim: kullanici_soyisim, kullanici_sifre: kullanici_sifre, kullanici_mail: kullanici_mail)
         }
     }
     @IBAction func cikisYapTiklandi(_ sender: Any) {
-        do {
-            try Auth.auth().signOut()
-            // Kullanıcı başarıyla çıkış yaptıktan sonra yapılması istenen işlemler
-            // Örneğin, login ekranına geri dönme
-            let loginViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
-                       UIApplication.shared.windows.first?.rootViewController = loginViewController
-            
-            
-            
-        } catch let error as NSError {
-            // Çıkış işlemi sırasında bir hata oluştu
-            print("Çıkış yaparken hata oluştu: \(error.localizedDescription)")
-        }
+        ayarlarViewModel.cikisYap()
     }
-    func girisBilgi(){
-        if let currentUser = Auth.auth().currentUser {
-            let userId = currentUser.uid
-            ref?.child("Kullanicilar").child(userId).observeSingleEvent(of: .value, with: { snapShot in
-                if let kullaniciBilgileri = snapShot.value as? [String: Any] {
-                    
-                    self.kullaniciAdTextField.text = kullaniciBilgileri["kullanici_ad"] as?  String
-                    self.kullaniciSoyadTextField.text = kullaniciBilgileri["kullanici_soyisim"] as? String
-                    self.kullaniciMailTextField.text = kullaniciBilgileri["kullanici_mail"] as? String
-                    self.kullaniciSifreTextField.text = kullaniciBilgileri["kullanici_sifre"] as? String
-                    
-                }
-            })
-        }
+}
+
+extension AyarlarViewController: AyarlarViewDelegate {
+    func didFetchGirisBilgi(_ girisBilgileri: Kullanicilar?) {
+        kullaniciAdTextField.text = girisBilgileri?.ad
+        kullaniciSoyadTextField.text = girisBilgileri?.soyad
+        kullaniciMailTextField.text = girisBilgileri?.mail
+        kullaniciSifreTextField.text = girisBilgileri?.sifre
     }
-    func kisiGuncelle(kullanici_ad: String, kullanici_soyisim: String, kullanici_sifre: String, kullanici_mail: String) {
-        if let currentUser = Auth.auth().currentUser {
-            let userID = currentUser.uid
-
-            // Güncellenmek istenen verinin yolu
-            let dataPath = "Kullanicilar/\(userID)"
-
-            let dict: [String: Any] = [
-                "kullanici_ad": kullanici_ad,
-                "kullanici_soyisim": kullanici_soyisim,
-                "kullanici_sifre": kullanici_sifre,
-                "kullanici_mail": kullanici_mail
-            ]
-
-            // Veriyi güncelleme işlemi
-            ref!.child(dataPath).updateChildValues(dict) { (error, _) in
-                if let error = error {
-                    print("Veri güncellenirken hata oluştu: \(error)")
-                } else {
-                    self.guncelleBilgi()
-                }
-            }
-            currentUser.updateEmail(to: kullanici_mail)
-            currentUser.updatePassword(to: kullanici_sifre)
-        }
-    }
-
-    func guncelleBilgi(){
-        let bilgi = UIAlertController(title: "Bilgi", message: "Kullanıcı Güncellendi.", preferredStyle: .alert)
-        let bilgiAction = UIAlertAction(title: "Tamam", style: .cancel)
-        bilgi.addAction(bilgiAction)
-        present(bilgi, animated: true)
-    }
-    
 }

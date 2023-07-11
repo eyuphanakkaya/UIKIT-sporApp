@@ -12,6 +12,7 @@ class FavorilerViewController: UIViewController {
     var gelenDeger:AltBaslik?
     var favList = [AltBaslik]()
     var shared = VeriModel.shared
+    let db = Firestore.firestore()
     
     @IBOutlet weak var favTableView: UITableView!
     override func viewDidLoad() {
@@ -21,92 +22,96 @@ class FavorilerViewController: UIViewController {
         favTableView.dataSource = self
         favTableView.backgroundColor = nil
         
-
+       
        
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
-        loadData()
+        fetchFavoriteData()
     }
-    func loadData() {
-            let defaults = UserDefaults.standard
-            if let savedData = defaults.data(forKey: "NewSavedData"),
-               let dataList = try? JSONDecoder().decode([AltBaslik].self, from: savedData) {
-
-                favList = dataList
-                //print(dataList)
-                
-            }
-            
-            // UITableView'yi yeniden yükle
-            favTableView.reloadData()
-        }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        let indeks = sender as? Int
-        let destionationVC = segue.destination as? VideoViewController
-        destionationVC?.baslik = favList[indeks!]
-       
+        if segue.identifier == "toVideo" {
+            if let indexPath = sender as? Int {
+                let destinationVC = segue.destination as? VideoViewController
+                destinationVC?.baslik = favList[indexPath]
+            }
+        }
     }
-    func getFavoriler() {
-        // Mevcut kullanıcının kimlik bilgisini alın
-        if let currentUser = Auth.auth().currentUser {
-            let userID = currentUser.uid
+
+
+    func fetchFavoriteData() {
+        guard let currentUserID = Auth.auth().currentUser?.uid else {
+            print("Kullanıcı oturumu yok.")
+            return
+        }
+        
+        let db = Firestore.firestore()
+        let collectionRef = db.collection("users").document(currentUserID).collection("favorites")
+        
+        collectionRef.getDocuments { (snapshot, error) in
+            if let error = error {
+                print("Favori verileri alınırken hata oluştu: \(error.localizedDescription)")
+                return
+            }
             
-            // Firestore veritabanına referans oluşturun
-            let db = Firestore.firestore()
+            guard let documents = snapshot?.documents else {
+                print("Favori verileri bulunamadı.")
+                return
+            }
             
-            // "favoriler" koleksiyonuna referans oluşturun
-            let collectionRef = db.collection("favoriler")
+            // Favori verilerini diziye ekle
+            self.favList = documents.compactMap { document in
+                let data = document.data()
+                let altBaslik = AltBaslik(ad: data["ad"] as? String)
+                return altBaslik
+            }
             
-            // Kullanıcının favorilerini temsil eden belgeleri sorgulayın
-            collectionRef.whereField("kullaniciGelenId", isEqualTo: userID).getDocuments { (snapshot, error) in
-                if let error = error {
-                    print("Veri alınamadı: \(error.localizedDescription)")
-                    return
-                }
-                
-                // Snapshot'tan belgeleri alın
-                guard let documents = snapshot?.documents else {
-                    print("Belge bulunamadı")
-                    return
-                }
-                
-                // Favoriler dizisini temizleyin
-                self.favList.removeAll()
-                
-                // Belge verilerini döngüyle diziye ekleyin
-                for document in documents {
-                    let data = document.data()
-                    // İlgili verilere erişerek Favori nesnesini oluşturun
-                    if let favoriAd = data["favoriAd"] as? String {
-                        let favori = AltBaslik(ad: favoriAd)
-                        self.favList.append(favori)
+            // Tabloyu güncelle
+            self.favTableView.reloadData()
+        }
+    }
+    func deleteData(rowData: AltBaslik, indexPath: IndexPath) {
+        guard let currentUserID = Auth.auth().currentUser?.uid else {
+            print("Kullanıcı oturumu yok.")
+            return
+        }
+        
+        let db = Firestore.firestore()
+        let collectionRef = db.collection("users").document(currentUserID).collection("favorites")
+        
+        collectionRef.whereField("ad", isEqualTo: rowData.ad ?? "").getDocuments { (snapshot, error) in
+            if let error = error {
+                print("Favori verileri alınırken hata oluştu: \(error.localizedDescription)")
+                return
+            }
+            
+            guard let documents = snapshot?.documents else {
+                print("Favori verileri bulunamadı.")
+                return
+            }
+            
+            for document in documents {
+                let documentID = document.documentID
+                collectionRef.document(documentID).delete { error in
+                    if let error = error {
+                        print("Veri silinirken hata oluştu: \(error.localizedDescription)")
+                    } else {
+                        print("Veri başarıyla silindi.")
+                        
+                        // Silinen veriyi favori listesinden kaldır
+                        self.favList.remove(at: indexPath.row)
+                        self.favTableView.reloadData()
                     }
-                    // Diğer verileri de burada işleyebilirsiniz
-                }
-                
-                // TableView'i güncelleyin
-                DispatchQueue.main.async {
-                    self.favTableView.reloadData()
                 }
             }
         }
     }
 
-    func convertToAltBaslik(_ data: [String: Any]) -> AltBaslik? {
-        do {
-            let jsonData = try JSONSerialization.data(withJSONObject: data, options: [])
-            let altBaslik = try JSONDecoder().decode(AltBaslik.self, from: jsonData)
-            return altBaslik
-        } catch {
-            print("Veri dönüşüm hatası: \(error.localizedDescription)")
-            return nil
-        }
-    }
 
 
 }
+
+
 
 extension FavorilerViewController: UITableViewDelegate,UITableViewDataSource {
 
@@ -145,51 +150,17 @@ extension FavorilerViewController: UITableViewDelegate,UITableViewDataSource {
         
     }
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let favKaldir = UIContextualAction(style: .destructive, title: "Favoriden Kaldır") { contextAction, view, boolValue in
-            
-
-            
-            
-        }
-        return UISwipeActionsConfiguration(actions: [favKaldir])
-    }
-    
-    
-    /*func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let favKaldir = UIContextualAction(style: .destructive, title: "Favoriden Kaldır") { contextAction, view, boolValue in
-            contextAction.image = UIImage(named: "")
-            
-            // Favori öğesinin kaldırılması
-            let selectedFavorite = self.favList[indexPath.row] // Seçilen favori öğesi
-            self.favList.remove(at: indexPath.row) // Favori listesinden kaldırma işlemi
-            
-            // Güncellenmiş favori listesini UserDefault'a kaydetme
-            let defaults = UserDefaults.standard
-            if let savedData = defaults.data(forKey: "NewSavedData"),
-               var dataList = try? JSONDecoder().decode([AltBaslik].self, from: savedData) {
-                
-                if let index = dataList.firstIndex(where: { $0.ad == selectedFavorite.ad }) {
-                    dataList.remove(at: index)
-                    let encodedData = try? JSONEncoder().encode(dataList)
-                    defaults.set(encodedData, forKey: "NewSavedData")
-                    defaults.synchronize()
-                    
-                }
-            }
-            
-            // VeriModel içerisinden de seçilen favori öğesini kaldırma
-            if let index = VeriModel.shared.dataList.firstIndex(of: selectedFavorite) {
-                VeriModel.shared.dataList.remove(at: index)
-            }
-            
-            // UITableView'yi yeniden yükleme
-            tableView.reloadData()
+        let deleteAction = UIContextualAction(style: .destructive, title: "Sil") { (action, view, completion) in
+            let rowData = self.favList[indexPath.row]
+            self.deleteData(rowData: rowData, indexPath: indexPath)
+            completion(true)
         }
         
-        return UISwipeActionsConfiguration(actions: [favKaldir])
-    }*/
-
-
-   
+      //  deleteAction.backgroundColor = .red
+        
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+        configuration.performsFirstActionWithFullSwipe = false
+        return configuration
+    }
     
 }

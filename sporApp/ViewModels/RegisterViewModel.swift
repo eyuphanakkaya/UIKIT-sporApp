@@ -20,7 +20,6 @@ final class RegisterViewModel {
             if let error = error {
                 print("Kayıt oluşturma hatası: \(error.localizedDescription)")
             } else {
-                
                 self.kayitOlusturuldu()
             }
         }

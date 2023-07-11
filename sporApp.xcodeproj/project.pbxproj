@@ -42,7 +42,9 @@
 		A4EF18402A5C366E0083B04A /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EF183F2A5C366E0083B04A /* RegisterViewModel.swift */; };
 		A4EF18442A5C42960083B04A /* KategoriViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EF18432A5C42960083B04A /* KategoriViewModel.swift */; };
 		A4EF18462A5C480E0083B04A /* AltBaslikViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EF18452A5C480E0083B04A /* AltBaslikViewModel.swift */; };
-		A4EF184B2A5C51B30083B04A /* MapsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EF184A2A5C51B30083B04A /* MapsViewModel.swift */; };
+		A4F0C8562A5D3F3E00DAE697 /* AyarlarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F0C8552A5D3F3E00DAE697 /* AyarlarViewModel.swift */; };
+		A4F0C8582A5D463300DAE697 /* Kullanicilar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F0C8572A5D463300DAE697 /* Kullanicilar.swift */; };
+		A4F0C85A2A5D52CA00DAE697 /* RowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F0C8592A5D52CA00DAE697 /* RowData.swift */; };
 		A4F3312F2A599FDF0074823B /* SporModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F3312E2A599FDF0074823B /* SporModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,7 +76,9 @@
 		A4EF183F2A5C366E0083B04A /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		A4EF18432A5C42960083B04A /* KategoriViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KategoriViewModel.swift; sourceTree = "<group>"; };
 		A4EF18452A5C480E0083B04A /* AltBaslikViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltBaslikViewModel.swift; sourceTree = "<group>"; };
-		A4EF184A2A5C51B30083B04A /* MapsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewModel.swift; sourceTree = "<group>"; };
+		A4F0C8552A5D3F3E00DAE697 /* AyarlarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AyarlarViewModel.swift; sourceTree = "<group>"; };
+		A4F0C8572A5D463300DAE697 /* Kullanicilar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kullanicilar.swift; sourceTree = "<group>"; };
+		A4F0C8592A5D52CA00DAE697 /* RowData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowData.swift; sourceTree = "<group>"; };
 		A4F3312E2A599FDF0074823B /* SporModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SporModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,7 +160,7 @@
 				A4EF183F2A5C366E0083B04A /* RegisterViewModel.swift */,
 				A4EF18432A5C42960083B04A /* KategoriViewModel.swift */,
 				A4EF18452A5C480E0083B04A /* AltBaslikViewModel.swift */,
-				A4EF184A2A5C51B30083B04A /* MapsViewModel.swift */,
+				A4F0C8552A5D3F3E00DAE697 /* AyarlarViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -212,6 +216,8 @@
 			children = (
 				A4DC4F8B2A499961001A0361 /* VeriModel.swift */,
 				A4F3312E2A599FDF0074823B /* SporModel.swift */,
+				A4F0C8572A5D463300DAE697 /* Kullanicilar.swift */,
+				A4F0C8592A5D52CA00DAE697 /* RowData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -315,13 +321,15 @@
 				A4A0A1092A3C8B7F008ABA86 /* LoginViewController.swift in Sources */,
 				A4E0A3CE2A3DBBE300E7E3EF /* AyarlarViewController.swift in Sources */,
 				A4A0A1052A3C8B7F008ABA86 /* AppDelegate.swift in Sources */,
+				A4F0C8562A5D3F3E00DAE697 /* AyarlarViewModel.swift in Sources */,
 				A4F3312F2A599FDF0074823B /* SporModel.swift in Sources */,
 				A4A0A1072A3C8B7F008ABA86 /* SceneDelegate.swift in Sources */,
+				A4F0C85A2A5D52CA00DAE697 /* RowData.swift in Sources */,
+				A4F0C8582A5D463300DAE697 /* Kullanicilar.swift in Sources */,
 				A4EF18442A5C42960083B04A /* KategoriViewModel.swift in Sources */,
 				A4EF18402A5C366E0083B04A /* RegisterViewModel.swift in Sources */,
 				A4EF183E2A5C2DF40083B04A /* LoginViewModel.swift in Sources */,
 				A4E0A3C82A3DA14600E7E3EF /* KategoriCVCell.swift in Sources */,
-				A4EF184B2A5C51B30083B04A /* MapsViewModel.swift in Sources */,
 				A4EF18462A5C480E0083B04A /* AltBaslikViewModel.swift in Sources */,
 				A4197F9D2A446DC00067BFB0 /* VideoViewController.swift in Sources */,
 				A4E0A3CA2A3DA89B00E7E3EF /* KategoriViewController.swift in Sources */,

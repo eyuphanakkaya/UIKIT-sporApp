@@ -8,6 +8,7 @@
 import Foundation
 import Alamofire
 import UIKit
+import Firebase
 
 class AltBaslikViewModel {
     var altBaslikList = [AltBaslik]()
@@ -16,6 +17,23 @@ class AltBaslikViewModel {
     var searchList = [AltBaslik]()
     
     var altbaslikViewController: AltBaslikViewController?
+    
+    func addFavorite(userID: String, rowData: AltBaslik) {
+        let db = Firestore.firestore()
+        let collectionRef = db.collection("users").document(userID).collection("favorites")
+        
+        let data: [String: Any] = [
+            "ad": rowData.ad ?? ""
+        ]
+        
+        collectionRef.addDocument(data: data) { (error) in
+            if let error = error {
+                print("Favori eklenirken hata oluştu: \(error.localizedDescription)")
+            } else {
+                print("Favori başarıyla eklendi.")
+            }
+        }
+    }
     
     func fetchData(completion: @escaping (Result<Void, Error>) -> Void) {
         let urlString = "https://www.tekinder.org.tr/bootapp/spor/servis.php?tur=video"

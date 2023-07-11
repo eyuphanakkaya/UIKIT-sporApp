@@ -13,10 +13,12 @@ class AltBaslikViewController: UIViewController {
 
     
     var altBaslikViewModel = AltBaslikViewModel()
+    var favoriler: [String: [AltBaslik]] = [:]
 
     var shared = VeriModel.shared
     var kategori:Kategoriler?
     var List = VeriModel.shared.dataList
+    let db = Firestore.firestore()
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
@@ -29,8 +31,7 @@ class AltBaslikViewController: UIViewController {
         searchBar.layer.cornerRadius = 20
         searchBar.layer.masksToBounds = true
 
-        
-        
+    
         tableView.backgroundColor = nil
         tableView.delegate = self
         tableView.dataSource = self
@@ -53,16 +54,14 @@ class AltBaslikViewController: UIViewController {
             }
         }
     }
-
-
-
-    
+  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let indeks = sender as? Int
         if segue.identifier == "toVideoVC" {
             let destionationVC = segue.destination as? VideoViewController
             destionationVC?.baslik = altBaslikViewModel.bosList[indeks!]
+            
         } else if segue.identifier == "toMapVC" {
             let destinationVC = segue.destination as? MapsViewController
             destinationVC?.gelenKategori = kategori?.ad
@@ -70,20 +69,10 @@ class AltBaslikViewController: UIViewController {
        
     }
     
-    
-    
+
     @IBAction func konumBulTiklandi(_ sender: Any) {
         performSegue(withIdentifier: "toMapVC", sender: nil)
     }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        if let savedData = UserDefaults.standard.data(forKey: "NewSavedData"),
-           let dataList = try? JSONDecoder().decode([AltBaslik].self, from: savedData) {
-            VeriModel.shared.dataList = dataList
-        }
-    }
-    
 
 }
 
@@ -115,7 +104,7 @@ extension AltBaslikViewController: UITableViewDelegate,UITableViewDataSource {
         performSegue(withIdentifier: "toVideoVC", sender: indexPath.row)
         
     }
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    /*func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
 
         let favEkle = UIContextualAction(style: .normal, title: "") { contextualAction, view, boolValue in
             
@@ -143,18 +132,28 @@ extension AltBaslikViewController: UITableViewDelegate,UITableViewDataSource {
 
         return UISwipeActionsConfiguration(actions: [favEkle])
 
-    }
-    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let favEkle = UIContextualAction(style: .normal, title: "") { contextualAction, view, boolValue in
-            
-            
+    }*/
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+           let rowData = altBaslikViewModel.bosList[indexPath.row]
 
-        }
+           let favEkle = UIContextualAction(style: .normal, title: "Favoriye Ekle") { (action, view, completion) in
+               guard let currentUserID = Auth.auth().currentUser?.uid else {
+                   print("Kullanıcı oturumu yok.")
+                   completion(false)
+                   return
+               }
+               
+            self.altBaslikViewModel.addFavorite(userID: currentUserID, rowData: rowData)
+            completion(true)
+           }
+           
         favEkle.backgroundColor = .red
         favEkle.image = UIImage(named: "heart")
+           
+           let configuration = UISwipeActionsConfiguration(actions: [favEkle])
+           return configuration
+       }
 
-        return UISwipeActionsConfiguration(actions: [favEkle])
-    }
 
 }
 extension AltBaslikViewController: UISearchBarDelegate {

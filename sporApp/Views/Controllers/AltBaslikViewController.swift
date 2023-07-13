@@ -15,9 +15,7 @@ class AltBaslikViewController: UIViewController {
     var altBaslikViewModel = AltBaslikViewModel()
     var favoriler: [String: [AltBaslik]] = [:]
 
-    var shared = VeriModel.shared
     var kategori:Kategoriler?
-    var List = VeriModel.shared.dataList
     let db = Firestore.firestore()
     
     @IBOutlet weak var searchBar: UISearchBar!

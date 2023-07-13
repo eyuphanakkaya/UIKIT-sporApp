@@ -18,6 +18,8 @@
 		A425FCB72A4F57C500DE40CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A425FCB62A4F57C500DE40CD /* GoogleService-Info.plist */; };
 		A425FCBB2A4F58C300DE40CD /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = A425FCBA2A4F58C300DE40CD /* GoogleSignIn */; };
 		A425FCBD2A4F58C300DE40CD /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A425FCBC2A4F58C300DE40CD /* GoogleSignInSwift */; };
+		A42B4ED62A5FE38E00EE2358 /* FavorilerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42B4ED52A5FE38E00EE2358 /* FavorilerViewModel.swift */; };
+		A42B4ED92A5FE73100EE2358 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42B4ED82A5FE73100EE2358 /* Alert.swift */; };
 		A4649ECC2A4580DA008E1EC9 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4649ECB2A4580DA008E1EC9 /* MapsViewController.swift */; };
 		A491D56A2A418447000E6BF2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A491D5692A418447000E6BF2 /* Lottie */; };
 		A4A0A1052A3C8B7F008ABA86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0A1042A3C8B7F008ABA86 /* AppDelegate.swift */; };
@@ -30,7 +32,6 @@
 		A4D75C872A56AEF60046CE00 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A4D75C862A56AEF60046CE00 /* Alamofire */; };
 		A4D75C8C2A56BFC00046CE00 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = A4D75C8B2A56BFC00046CE00 /* AlamofireImage */; };
 		A4DC4F8A2A499364001A0361 /* FavoriTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC4F892A499364001A0361 /* FavoriTableViewCell.swift */; };
-		A4DC4F8C2A499961001A0361 /* VeriModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC4F8B2A499961001A0361 /* VeriModel.swift */; };
 		A4E0A3C82A3DA14600E7E3EF /* KategoriCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E0A3C72A3DA14600E7E3EF /* KategoriCVCell.swift */; };
 		A4E0A3CA2A3DA89B00E7E3EF /* KategoriViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E0A3C92A3DA89B00E7E3EF /* KategoriViewController.swift */; };
 		A4E0A3CE2A3DBBE300E7E3EF /* AyarlarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E0A3CD2A3DBBE300E7E3EF /* AyarlarViewController.swift */; };
@@ -53,7 +54,10 @@
 		A4197F9C2A446DC00067BFB0 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		A425FCA62A4F522D00DE40CD /* register.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = register.json; sourceTree = "<group>"; };
 		A425FCB62A4F57C500DE40CD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A42B4ED52A5FE38E00EE2358 /* FavorilerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavorilerViewModel.swift; sourceTree = "<group>"; };
+		A42B4ED82A5FE73100EE2358 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		A4649ECB2A4580DA008E1EC9 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
+		A473897D2A5E813B00A985E6 /* sporApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = sporApp.entitlements; sourceTree = "<group>"; };
 		A4A0A1012A3C8B7F008ABA86 /* sporApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sporApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A0A1042A3C8B7F008ABA86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4A0A1062A3C8B7F008ABA86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,7 +68,6 @@
 		A4A0A1122A3C8B7F008ABA86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4A0A11B2A3C9061008ABA86 /* login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = login.json; sourceTree = "<group>"; };
 		A4DC4F892A499364001A0361 /* FavoriTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriTableViewCell.swift; sourceTree = "<group>"; };
-		A4DC4F8B2A499961001A0361 /* VeriModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeriModel.swift; sourceTree = "<group>"; };
 		A4E0A3C72A3DA14600E7E3EF /* KategoriCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KategoriCVCell.swift; sourceTree = "<group>"; };
 		A4E0A3C92A3DA89B00E7E3EF /* KategoriViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KategoriViewController.swift; sourceTree = "<group>"; };
 		A4E0A3CD2A3DBBE300E7E3EF /* AyarlarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AyarlarViewController.swift; sourceTree = "<group>"; };
@@ -116,10 +119,19 @@
 		A425FCB52A4F573900DE40CD /* FileHelper */ = {
 			isa = PBXGroup;
 			children = (
+				A42B4ED72A5FE72000EE2358 /* Alerts */,
 				A425FCA62A4F522D00DE40CD /* register.json */,
 				A4A0A11B2A3C9061008ABA86 /* login.json */,
 			);
 			path = FileHelper;
+			sourceTree = "<group>";
+		};
+		A42B4ED72A5FE72000EE2358 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				A42B4ED82A5FE73100EE2358 /* Alert.swift */,
+			);
+			path = Alerts;
 			sourceTree = "<group>";
 		};
 		A4A0A0F82A3C8B7F008ABA86 = {
@@ -142,6 +154,7 @@
 		A4A0A1032A3C8B7F008ABA86 /* sporApp */ = {
 			isa = PBXGroup;
 			children = (
+				A473897D2A5E813B00A985E6 /* sporApp.entitlements */,
 				A4F331372A59AA270074823B /* Models */,
 				A4F331342A59A9A10074823B /* Views */,
 				A4F3312C2A599BCE0074823B /* ViewModels */,
@@ -161,6 +174,7 @@
 				A4EF18432A5C42960083B04A /* KategoriViewModel.swift */,
 				A4EF18452A5C480E0083B04A /* AltBaslikViewModel.swift */,
 				A4F0C8552A5D3F3E00DAE697 /* AyarlarViewModel.swift */,
+				A42B4ED52A5FE38E00EE2358 /* FavorilerViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -214,7 +228,6 @@
 		A4F331372A59AA270074823B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A4DC4F8B2A499961001A0361 /* VeriModel.swift */,
 				A4F3312E2A599FDF0074823B /* SporModel.swift */,
 				A4F0C8572A5D463300DAE697 /* Kullanicilar.swift */,
 				A4F0C8592A5D52CA00DAE697 /* RowData.swift */,
@@ -319,8 +332,10 @@
 				A4E0A3D02A3DBC0F00E7E3EF /* FavorilerViewController.swift in Sources */,
 				A4649ECC2A4580DA008E1EC9 /* MapsViewController.swift in Sources */,
 				A4A0A1092A3C8B7F008ABA86 /* LoginViewController.swift in Sources */,
+				A42B4ED62A5FE38E00EE2358 /* FavorilerViewModel.swift in Sources */,
 				A4E0A3CE2A3DBBE300E7E3EF /* AyarlarViewController.swift in Sources */,
 				A4A0A1052A3C8B7F008ABA86 /* AppDelegate.swift in Sources */,
+				A42B4ED92A5FE73100EE2358 /* Alert.swift in Sources */,
 				A4F0C8562A5D3F3E00DAE697 /* AyarlarViewModel.swift in Sources */,
 				A4F3312F2A599FDF0074823B /* SporModel.swift in Sources */,
 				A4A0A1072A3C8B7F008ABA86 /* SceneDelegate.swift in Sources */,
@@ -337,7 +352,6 @@
 				A4E0A3D42A3DBDAE00E7E3EF /* AltBaslikTableViewCell.swift in Sources */,
 				A4E0A3D22A3DBD6900E7E3EF /* AltBaslikViewController.swift in Sources */,
 				A4DC4F8A2A499364001A0361 /* FavoriTableViewCell.swift in Sources */,
-				A4DC4F8C2A499961001A0361 /* VeriModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +498,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = sporApp/sporApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NF9R7KNMC7;
@@ -517,6 +532,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = sporApp/sporApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NF9R7KNMC7;

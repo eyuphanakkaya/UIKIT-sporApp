@@ -11,12 +11,15 @@ import Firebase
 class FavorilerViewController: UIViewController {
     var gelenDeger:AltBaslik?
     var favList = [AltBaslik]()
-    var shared = VeriModel.shared
     let db = Firestore.firestore()
+    
+    var favViewModel = FavorilerViewModel()
     
     @IBOutlet weak var favTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        favViewModel.favoriViewController = self
        
         favTableView.delegate = self
         favTableView.dataSource = self
@@ -37,78 +40,18 @@ class FavorilerViewController: UIViewController {
             }
         }
     }
-
-
+    
     func fetchFavoriteData() {
-        guard let currentUserID = Auth.auth().currentUser?.uid else {
-            print("Kullanıcı oturumu yok.")
-            return
-        }
-        
-        let db = Firestore.firestore()
-        let collectionRef = db.collection("users").document(currentUserID).collection("favorites")
-        
-        collectionRef.getDocuments { (snapshot, error) in
-            if let error = error {
-                print("Favori verileri alınırken hata oluştu: \(error.localizedDescription)")
-                return
-            }
-            
-            guard let documents = snapshot?.documents else {
-                print("Favori verileri bulunamadı.")
-                return
-            }
-            
-            // Favori verilerini diziye ekle
-            self.favList = documents.compactMap { document in
-                let data = document.data()
-                let altBaslik = AltBaslik(ad: data["ad"] as? String)
-                return altBaslik
-            }
-            
-            // Tabloyu güncelle
-            self.favTableView.reloadData()
+        favViewModel.fetchFavoriteData { [weak self] (fetchedFavorites) in
+            self?.favTableView.reloadData()
         }
     }
     func deleteData(rowData: AltBaslik, indexPath: IndexPath) {
-        guard let currentUserID = Auth.auth().currentUser?.uid else {
-            print("Kullanıcı oturumu yok.")
-            return
-        }
-        
-        let db = Firestore.firestore()
-        let collectionRef = db.collection("users").document(currentUserID).collection("favorites")
-        
-        collectionRef.whereField("ad", isEqualTo: rowData.ad ?? "").getDocuments { (snapshot, error) in
-            if let error = error {
-                print("Favori verileri alınırken hata oluştu: \(error.localizedDescription)")
-                return
+            favViewModel.deleteData(rowData: rowData) { [weak self] in
+                self?.favViewModel.favList.remove(at: indexPath.row)
+                self?.favTableView.reloadData()
             }
-            
-            guard let documents = snapshot?.documents else {
-                print("Favori verileri bulunamadı.")
-                return
-            }
-            
-            for document in documents {
-                let documentID = document.documentID
-                collectionRef.document(documentID).delete { error in
-                    if let error = error {
-                        print("Veri silinirken hata oluştu: \(error.localizedDescription)")
-                    } else {
-                        print("Veri başarıyla silindi.")
-                        
-                        // Silinen veriyi favori listesinden kaldır
-                        self.favList.remove(at: indexPath.row)
-                        self.favTableView.reloadData()
-                    }
-                }
-            }
-        }
-    }
-
-
-
+        }   
 }
 
 
@@ -117,14 +60,14 @@ extension FavorilerViewController: UITableViewDelegate,UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return favList.count
+        return favViewModel.getNumberOfFavorites()
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let gelenVeri = favList[indexPath.row]
+        let gelenVeri = self.favViewModel.getFavorite(at: indexPath.row)
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "favoriCell", for: indexPath) as! FavoriTableViewCell
         
@@ -151,7 +94,7 @@ extension FavorilerViewController: UITableViewDelegate,UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive, title: "Sil") { (action, view, completion) in
-            let rowData = self.favList[indexPath.row]
+            let rowData = self.favViewModel.favList[indexPath.row]
             self.deleteData(rowData: rowData, indexPath: indexPath)
             completion(true)
         }

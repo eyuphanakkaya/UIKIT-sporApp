@@ -11,6 +11,7 @@ import Firebase
 final class RegisterViewModel {
     weak var registerViewController: RegisterViewController?
     var ref:DatabaseReference?
+    var alerts = AlertAction()
    
     func kisiKaydet(kullanici_ad: String, kullanici_soyisim: String, kullanici_sifre: String, kullanici_mail: String) {
         ref = Database.database().reference()
@@ -20,7 +21,8 @@ final class RegisterViewModel {
             if let error = error {
                 print("Kayıt oluşturma hatası: \(error.localizedDescription)")
             } else {
-                self.kayitOlusturuldu()
+                self.alerts.girisHata(mesaj: "Kayıt oluşturuldu.", viewControllers: self.registerViewController)
+                
             }
         }
     }
@@ -34,19 +36,5 @@ final class RegisterViewModel {
             }
         }
         
-    }
-    
-    func kayitOlusturuldu(){
-        guard let viewController = registerViewController else {
-            return
-        }
-        
-        let kayit = UIAlertController(title: "KAYIT", message: "Kayıt oluşturuldu.", preferredStyle: .alert)
-        let kayitAction = UIAlertAction(title: "Tamam", style: .cancel) { action in
-            viewController.navigationController?.popViewController(animated: true)
-        }
-        
-        kayit.addAction(kayitAction)
-        viewController.present(kayit, animated: true)
     }
 }

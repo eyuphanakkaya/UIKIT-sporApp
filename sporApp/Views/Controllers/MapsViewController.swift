@@ -14,6 +14,8 @@ class MapsViewController: UIViewController {
     var span: MKCoordinateSpan?
     var gelenKategori:String?
     
+    var alerts = AlertAction()
+    var mapViewController: MapsViewController?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -74,6 +76,7 @@ class MapsViewController: UIViewController {
                     }
                 }
             } else {
+                self.alerts.girisHata(mesaj: "Mekan yok.", viewControllers: self.mapViewController)
                 print("Mekan Yok")
             }
         }

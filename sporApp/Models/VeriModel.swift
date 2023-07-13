@@ -7,7 +7,7 @@
 
 import Foundation
 
-class VeriModel {
+/*class VeriModel {
     
     static let shared = VeriModel() // Paylaşılan örnek
     

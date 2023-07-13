@@ -9,6 +9,8 @@ import FirebaseAuth
 import UIKit
 
 final class LoginViewModel {
+    
+    var alerts = AlertAction()
     weak var loginViewController: LoginViewController?
     
     func girisYap(_ mail: String,_ sifre: String) {
@@ -16,13 +18,14 @@ final class LoginViewModel {
             if error != nil {
                 // Giriş sırasında bir hata oluştu
                 if mail == "" && sifre == "" {
-                    self.girisHata(mesaj: "Lütfen boş bırakmayınız.")
+                    self.alerts.girisHata(mesaj: "Lütfen boş bırakmayınız.", viewControllers: self.loginViewController)
+                   
                 } else if mail == "" {
-                    self.girisHata(mesaj: "Lütfen Mail'i boş bırakmayınız.")
+                    self.alerts.girisHata(mesaj: "Lütfen Mail'i boş bırakmayınız.", viewControllers: self.loginViewController)
                 } else if sifre == "" {
-                    self.girisHata(mesaj: "Lütfen şifreyi boş bırakmayınız.")
+                    self.alerts.girisHata(mesaj: "Lütfen şifreyi boş bırakmayınız.", viewControllers: self.loginViewController)
                 } else {
-                    self.girisHata(mesaj: "Lütfen geçerli değerler giriniz veya kayıtlı değilseniz kayolunuz.")
+                    self.alerts.girisHata(mesaj: "Lütfen geçerli değerler giriniz veya kayıtlı değilseniz kayolunuz.", viewControllers: self.loginViewController)
                 }
                
             } else {
@@ -33,14 +36,5 @@ final class LoginViewModel {
         }
     }
     
-    func girisHata(mesaj:String){
-        guard let viewController = loginViewController else {
-            return
-        }
-        
-        let uyeOl = UIAlertController(title: "Uyarı", message: mesaj, preferredStyle: .alert)
-        let uyeAction = UIAlertAction(title: "Tamam", style: .cancel)
-        uyeOl.addAction(uyeAction)
-        viewController.present(uyeOl, animated: true)
-    }
+
 }

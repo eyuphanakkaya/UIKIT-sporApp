@@ -18,6 +18,7 @@ class AyarlarViewModel {
 
     var ref: DatabaseReference?
     var ayarlarViewController: AyarlarViewController?
+    var alerts = AlertAction()
     
     func getGirisBilgi(completion: @escaping (Kullanicilar?) -> Void) {
            if let currentUser = Auth.auth().currentUser {
@@ -73,7 +74,8 @@ class AyarlarViewModel {
                 if let error = error {
                     print("Veri güncellenirken hata oluştu: \(error)")
                 } else {
-                    self.guncelleBilgi()
+                    self.alerts.girisHata(mesaj: "Kullanıcı Güncellendi.", viewControllers: self.ayarlarViewController)
+                    
                 }
             }
             currentUser.updateEmail(to: kullanici_mail)
@@ -81,13 +83,4 @@ class AyarlarViewModel {
         }
     }
     
-    func guncelleBilgi(){
-        
-        guard let ayarlarView = ayarlarViewController else {return}
-        
-        let bilgi = UIAlertController(title: "Bilgi", message: "Kullanıcı Güncellendi.", preferredStyle: .alert)
-        let bilgiAction = UIAlertAction(title: "Tamam", style: .cancel)
-        bilgi.addAction(bilgiAction)
-        ayarlarView.present(bilgi, animated: true)
-    }
 }

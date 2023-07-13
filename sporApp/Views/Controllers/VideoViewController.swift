@@ -26,16 +26,8 @@ class VideoViewController: UIViewController, YTPlayerViewDelegate {
             }
            
         }
-        
-       
-        
-        //playerView.load(withPlaylistId:"rT7DgCr-3pg", playerVars: ["playsinline" : 1] )
-        
-        // Do any additional setup after loading the view.
+    
     }
-    /*func playerViewDidBecomeReady(_ playerView: YTPlayerView) {
-        playerView.playVideo()
-    }*/
     
 
     @IBAction func geriTiklandi(_ sender: Any) {

@@ -57,7 +57,6 @@
 		A42B4ED52A5FE38E00EE2358 /* FavorilerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavorilerViewModel.swift; sourceTree = "<group>"; };
 		A42B4ED82A5FE73100EE2358 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		A4649ECB2A4580DA008E1EC9 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
-		A473897D2A5E813B00A985E6 /* sporApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = sporApp.entitlements; sourceTree = "<group>"; };
 		A4A0A1012A3C8B7F008ABA86 /* sporApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sporApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A0A1042A3C8B7F008ABA86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4A0A1062A3C8B7F008ABA86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,7 +153,6 @@
 		A4A0A1032A3C8B7F008ABA86 /* sporApp */ = {
 			isa = PBXGroup;
 			children = (
-				A473897D2A5E813B00A985E6 /* sporApp.entitlements */,
 				A4F331372A59AA270074823B /* Models */,
 				A4F331342A59A9A10074823B /* Views */,
 				A4F3312C2A599BCE0074823B /* ViewModels */,
@@ -508,6 +506,7 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sporApp/Info.plist;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Bu uygulama, nabız verisini okumak için sağlık verilerine erişim talep ediyor.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Kullanıcı Konum İzni";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -542,6 +541,7 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sporApp/Info.plist;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Bu uygulama, nabız verisini okumak için sağlık verilerine erişim talep ediyor.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Kullanıcı Konum İzni";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

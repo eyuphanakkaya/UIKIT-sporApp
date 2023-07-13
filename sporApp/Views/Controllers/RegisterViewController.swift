@@ -26,10 +26,10 @@ class RegisterViewController: UIViewController {
         
         super.viewDidLoad()
         
-        navigationController?.isToolbarHidden = false
-        registerView.contentMode = .scaleToFill
+        navigationItem.titleView?.tintColor = .white
+       /* registerView.contentMode = .scaleToFill
         registerView.loopMode = .loop
-        registerView.play()
+        registerView.play()*/
     }
     @IBAction func kayitOlusturTiklandi(_ sender: Any) {
         if let kullanici_ad = kullaniciAdTextField.text , let kullanici_soyisim = kullaniciSoyadTextField.text,let kullanici_sifre =
@@ -40,10 +40,7 @@ class RegisterViewController: UIViewController {
         }
     }
 
-    
-    @IBAction func geridonTiklandi(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
-    }
+
 
 
 

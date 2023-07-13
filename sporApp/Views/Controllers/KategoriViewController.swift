@@ -8,6 +8,7 @@
 import UIKit
 import Alamofire
 import AlamofireImage
+import Firebase
 
 class KategoriViewController: UIViewController {
 
@@ -18,29 +19,30 @@ class KategoriViewController: UIViewController {
     @IBOutlet weak var kategoriCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.isToolbarHidden = true
         
         kategoriListele()
-        navigationItem.title = ""
         kategoriCollectionView.backgroundColor = nil
         kategoriCollectionView.dataSource = self
         kategoriCollectionView.delegate = self
+        
 
         let tasarim = UICollectionViewFlowLayout()
         
         let genislik = self.kategoriCollectionView.frame.size.width
-        tasarim.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        tasarim.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 20, right: 10)
         //(genislik-30)/2*1.85
-        tasarim.itemSize = CGSize(width: (genislik - 30 )/2, height: (genislik - 30 )/2)
+        tasarim.itemSize = CGSize(width: (genislik - 50 )/2, height: (genislik - 30)/2)
         
         tasarim.minimumLineSpacing = 5
         tasarim.minimumInteritemSpacing = 5
         
         kategoriCollectionView.collectionViewLayout = tasarim
         
+
         
         // Do any additional setup after loading the view.
     }
+
     func kategoriListele() {
         kategoriViewModel.fetchKategoriler { [weak self] result in
             switch result {

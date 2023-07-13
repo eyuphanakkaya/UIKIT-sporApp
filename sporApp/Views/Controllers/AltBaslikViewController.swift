@@ -134,7 +134,7 @@ extension AltBaslikViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
            let rowData = altBaslikViewModel.bosList[indexPath.row]
 
-           let favEkle = UIContextualAction(style: .normal, title: "Favoriye Ekle") { (action, view, completion) in
+           let favEkle = UIContextualAction(style: .normal, title: "") { (action, view, completion) in
                guard let currentUserID = Auth.auth().currentUser?.uid else {
                    print("Kullanıcı oturumu yok.")
                    completion(false)
@@ -146,7 +146,7 @@ extension AltBaslikViewController: UITableViewDelegate,UITableViewDataSource {
            }
            
         favEkle.backgroundColor = .red
-        favEkle.image = UIImage(named: "heart")
+        favEkle.image = UIImage(systemName: "heart")
            
            let configuration = UISwipeActionsConfiguration(actions: [favEkle])
            return configuration

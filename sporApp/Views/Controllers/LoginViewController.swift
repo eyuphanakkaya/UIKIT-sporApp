@@ -27,11 +27,11 @@ class LoginViewController: UIViewController {
             performSegue(withIdentifier: "toKateVC", sender: nil)
         }
         // Do any additional setup after loading the view.
-        myLoginView.contentMode = .scaleToFill
+      /*  myLoginView.contentMode = .scaleToFill
         myLoginView.loopMode = .loop
         myLoginView.play()
         myLoginView.backgroundColor = nil
-        
+        */
         
     }
 
@@ -41,9 +41,8 @@ class LoginViewController: UIViewController {
     }
     @IBAction func signInGoogleTiklandi(_ sender: Any) {
     }
-    @IBAction func signInAppleTiklandi(_ sender: Any) {
-        
-    }
+
+ 
     
 
     func girisYap() {

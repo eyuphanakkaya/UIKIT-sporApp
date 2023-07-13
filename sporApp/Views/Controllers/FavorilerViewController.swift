@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import HealthKit
 
 class FavorilerViewController: UIViewController {
     var gelenDeger:AltBaslik?
@@ -34,9 +35,9 @@ class FavorilerViewController: UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toVideo" {
-            if let indexPath = sender as? Int {
+            if let index = sender as? Int {
                 let destinationVC = segue.destination as? VideoViewController
-                destinationVC?.baslik = favList[indexPath]
+                destinationVC?.baslik = favList[index]
             }
         }
     }
@@ -93,12 +94,12 @@ extension FavorilerViewController: UITableViewDelegate,UITableViewDataSource {
         
     }
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let deleteAction = UIContextualAction(style: .destructive, title: "Sil") { (action, view, completion) in
+        let deleteAction = UIContextualAction(style: .destructive, title: "") { (action, view, completion) in
             let rowData = self.favViewModel.favList[indexPath.row]
             self.deleteData(rowData: rowData, indexPath: indexPath)
             completion(true)
         }
-        
+        deleteAction.image = UIImage(systemName: "trash")
       //  deleteAction.backgroundColor = .red
         
         let configuration = UISwipeActionsConfiguration(actions: [deleteAction])

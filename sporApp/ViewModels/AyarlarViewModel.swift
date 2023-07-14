@@ -51,6 +51,18 @@ class AyarlarViewModel {
             print("Çıkış yaparken hata oluştu: \(error.localizedDescription)")
         }
     }
+    func darkMode(sender: UISwitch){
+        if #available(iOS 13.0, *) {
+            let appDelegate = UIApplication.shared.windows.first
+            if sender.isOn {
+                appDelegate?.overrideUserInterfaceStyle = .light
+                return
+            }
+            
+            appDelegate?.overrideUserInterfaceStyle = .dark
+            return
+        }
+    }
     
 
     

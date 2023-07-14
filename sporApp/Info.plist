@@ -9,24 +9,13 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>&lt;?xml</string>
-				<string>version="1.0"</string>
-				<string>encoding="UTF-8"?&gt;
-&lt;!DOCTYPE</string>
-				<string>plist</string>
-				<string>PUBLIC</string>
-				<string>"-//Apple//DTD</string>
-				<string>PLIST</string>
-				<string>1.0//EN"</string>
-				<string>"http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
-&lt;plist</string>
-				<string>version="1.0"&gt;
-&lt;string&gt;com.googleusercontent.apps.951752901921-kh4guilnntn018o14s0nno5rhhbqfhl2&lt;/string&gt;
-&lt;/plist&gt;
+				<string>com.googleusercontent.apps.951752901921-kh4guilnntn018o14s0nno5rhhbqfhl2
 </string>
 			</array>
 		</dict>
 		<dict>
+			<key>CFBundleIdentifier</key>
+			<string></string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>

@@ -12,9 +12,9 @@ final class LoginViewModel {
     
     var alerts = AlertAction()
     weak var loginViewController: LoginViewController?
-    
     func girisYap(_ mail: String,_ sifre: String) {
-        Auth.auth().signIn(withEmail: mail, password: sifre) { (user, error) in
+        
+        Auth.auth().signIn(withEmail: mail, password: sifre) { user, error in
             if error != nil {
                 // Giriş sırasında bir hata oluştu
                 if mail == "" && sifre == "" {
@@ -35,6 +35,6 @@ final class LoginViewModel {
             }
         }
     }
-    
+
 
 }

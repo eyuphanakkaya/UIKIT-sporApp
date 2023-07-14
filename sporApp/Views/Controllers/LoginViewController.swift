@@ -12,7 +12,7 @@ import FirebaseAuth
 
 class LoginViewController: UIViewController {
     
-   private var loginViewModel = LoginViewModel()
+    private var loginViewModel = LoginViewModel()
 
     @IBOutlet weak var mailTextField: UITextField!
     @IBOutlet weak var sifreTextField: UITextField!
@@ -21,11 +21,6 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         loginViewModel.loginViewController = self
-        if Auth.auth().currentUser != nil {
-                    // Kullanıcı giriş yapmışsa başka bir sayfaya yönlendirin veya mevcut sayfada giriş yapılmış olduğunu gösterin
-                    // Örnek: Ana sayfaya yönlendirme
-            performSegue(withIdentifier: "toKateVC", sender: nil)
-        }
         // Do any additional setup after loading the view.
       /*  myLoginView.contentMode = .scaleToFill
         myLoginView.loopMode = .loop
@@ -34,6 +29,7 @@ class LoginViewController: UIViewController {
         */
         
     }
+    
 
     
     @IBAction func girisYapTiklandi(_ sender: Any) {
@@ -41,10 +37,6 @@ class LoginViewController: UIViewController {
     }
     @IBAction func signInGoogleTiklandi(_ sender: Any) {
     }
-
- 
-    
-
     func girisYap() {
         if let mail = mailTextField.text , let sifre = sifreTextField.text {
             loginViewModel.girisYap(mail, sifre)

@@ -31,12 +31,15 @@ class RegisterViewController: UIViewController {
         registerView.loopMode = .loop
         registerView.play()*/
     }
+    
+    @IBAction func geriTiklandi(_ sender: Any) {
+        dismiss(animated: true)
+    }
     @IBAction func kayitOlusturTiklandi(_ sender: Any) {
         if let kullanici_ad = kullaniciAdTextField.text , let kullanici_soyisim = kullaniciSoyadTextField.text,let kullanici_sifre =
             kullaniciSifreTextField.text,let kullanici_mail = kullaniciMailTextField.text {
             
             registerViewModel.kisiKaydet(kullanici_ad: kullanici_ad, kullanici_soyisim: kullanici_soyisim, kullanici_sifre: kullanici_sifre, kullanici_mail: kullanici_mail)
-            registerViewModel.authKaydet(kullanici_mail: kullanici_mail, kullanici_sifre: kullanici_sifre)
         }
     }
 

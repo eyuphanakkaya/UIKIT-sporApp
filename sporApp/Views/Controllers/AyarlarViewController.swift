@@ -12,6 +12,10 @@ class AyarlarViewController: UIViewController {
     
     var ref: DatabaseReference?
     var ayarlarViewModel = AyarlarViewModel()
+    @IBOutlet weak var viewComp: UIView!
+    
+  
+    @IBOutlet weak var modeSwitch: UISwitch!
     
     @IBOutlet weak var kullaniciSifreTextField: UITextField!
     @IBOutlet weak var kullaniciMailTextField: UITextField!
@@ -20,7 +24,7 @@ class AyarlarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ayarlarViewModel.ayarlarViewController = self
-        
+        viewComp.layer.cornerRadius = 20
         ref = Database.database().reference()
         // Do any additional setup after loading the view.
     }
@@ -31,7 +35,13 @@ class AyarlarViewController: UIViewController {
         }
     }
     
+    @IBAction func onClickedSwitch(_ sender: UISwitch) {
+        ayarlarViewModel.darkMode(sender: sender)
+        
+    }
+
     
+
     
     @IBAction func guncelleTiklandi(_ sender: Any) {
         if let kullanici_ad = kullaniciAdTextField.text , let kullanici_soyisim = kullaniciSoyadTextField.text,let kullanici_sifre =

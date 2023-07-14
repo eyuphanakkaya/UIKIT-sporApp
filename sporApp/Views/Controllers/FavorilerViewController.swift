@@ -73,7 +73,7 @@ extension FavorilerViewController: UITableViewDelegate,UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "favoriCell", for: indexPath) as! FavoriTableViewCell
         
         cell.gelenDeger = gelenVeri
-        cell.layer.borderWidth = 3
+        cell.layer.borderWidth = 2
         cell.layer.cornerRadius = 10
         tableView.rowHeight = 100
 

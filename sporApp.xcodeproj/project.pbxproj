@@ -19,6 +19,9 @@
 		A42B4ED62A5FE38E00EE2358 /* FavorilerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42B4ED52A5FE38E00EE2358 /* FavorilerViewModel.swift */; };
 		A42B4ED92A5FE73100EE2358 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42B4ED82A5FE73100EE2358 /* Alert.swift */; };
 		A4649ECC2A4580DA008E1EC9 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4649ECB2A4580DA008E1EC9 /* MapsViewController.swift */; };
+		A4658B042A62D72B00119935 /* women.json in Resources */ = {isa = PBXBuildFile; fileRef = A4658B032A62D72B00119935 /* women.json */; };
+		A4658B062A62D73500119935 /* man.json in Resources */ = {isa = PBXBuildFile; fileRef = A4658B052A62D73500119935 /* man.json */; };
+		A4658B082A62D75800119935 /* KesfetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4658B072A62D75800119935 /* KesfetViewController.swift */; };
 		A491D56A2A418447000E6BF2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A491D5692A418447000E6BF2 /* Lottie */; };
 		A4A0A1052A3C8B7F008ABA86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0A1042A3C8B7F008ABA86 /* AppDelegate.swift */; };
 		A4A0A1072A3C8B7F008ABA86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0A1062A3C8B7F008ABA86 /* SceneDelegate.swift */; };
@@ -27,8 +30,6 @@
 		A4A0A10E2A3C8B7F008ABA86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4A0A10D2A3C8B7F008ABA86 /* Assets.xcassets */; };
 		A4A0A1112A3C8B7F008ABA86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4A0A10F2A3C8B7F008ABA86 /* LaunchScreen.storyboard */; };
 		A4A0A11C2A3C9061008ABA86 /* login.json in Resources */ = {isa = PBXBuildFile; fileRef = A4A0A11B2A3C9061008ABA86 /* login.json */; };
-		A4CEAB1F2A618D6600AE1495 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = A4CEAB1E2A618D6600AE1495 /* GoogleSignIn */; };
-		A4CEAB212A618D6600AE1495 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A4CEAB202A618D6600AE1495 /* GoogleSignInSwift */; };
 		A4D75C872A56AEF60046CE00 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A4D75C862A56AEF60046CE00 /* Alamofire */; };
 		A4D75C8C2A56BFC00046CE00 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = A4D75C8B2A56BFC00046CE00 /* AlamofireImage */; };
 		A4DC4F8A2A499364001A0361 /* FavoriTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC4F892A499364001A0361 /* FavoriTableViewCell.swift */; };
@@ -57,6 +58,9 @@
 		A42B4ED52A5FE38E00EE2358 /* FavorilerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavorilerViewModel.swift; sourceTree = "<group>"; };
 		A42B4ED82A5FE73100EE2358 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		A4649ECB2A4580DA008E1EC9 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
+		A4658B032A62D72B00119935 /* women.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = women.json; sourceTree = "<group>"; };
+		A4658B052A62D73500119935 /* man.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = man.json; sourceTree = "<group>"; };
+		A4658B072A62D75800119935 /* KesfetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KesfetViewController.swift; sourceTree = "<group>"; };
 		A4A0A1012A3C8B7F008ABA86 /* sporApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sporApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A0A1042A3C8B7F008ABA86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4A0A1062A3C8B7F008ABA86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,8 +95,6 @@
 			files = (
 				A4010FE22A502438000DFEEA /* AuthenticationServices.framework in Frameworks */,
 				A425FCAF2A4F570400DE40CD /* FirebaseDatabase in Frameworks */,
-				A4CEAB1F2A618D6600AE1495 /* GoogleSignIn in Frameworks */,
-				A4CEAB212A618D6600AE1495 /* GoogleSignInSwift in Frameworks */,
 				A4197FA02A446E4D0067BFB0 /* YouTubeiOSPlayerHelper in Frameworks */,
 				A4D75C8C2A56BFC00046CE00 /* AlamofireImage in Frameworks */,
 				A4D75C872A56AEF60046CE00 /* Alamofire in Frameworks */,
@@ -120,6 +122,8 @@
 			children = (
 				A42B4ED72A5FE72000EE2358 /* Alerts */,
 				A425FCA62A4F522D00DE40CD /* register.json */,
+				A4658B032A62D72B00119935 /* women.json */,
+				A4658B052A62D73500119935 /* man.json */,
 				A4A0A11B2A3C9061008ABA86 /* login.json */,
 			);
 			path = FileHelper;
@@ -219,6 +223,7 @@
 				A4E0A3CF2A3DBC0F00E7E3EF /* FavorilerViewController.swift */,
 				A4A0A1082A3C8B7F008ABA86 /* LoginViewController.swift */,
 				A4197F9C2A446DC00067BFB0 /* VideoViewController.swift */,
+				A4658B072A62D75800119935 /* KesfetViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -259,8 +264,6 @@
 				A425FCB22A4F570400DE40CD /* FirebaseStorage */,
 				A4D75C862A56AEF60046CE00 /* Alamofire */,
 				A4D75C8B2A56BFC00046CE00 /* AlamofireImage */,
-				A4CEAB1E2A618D6600AE1495 /* GoogleSignIn */,
-				A4CEAB202A618D6600AE1495 /* GoogleSignInSwift */,
 			);
 			productName = sporApp;
 			productReference = A4A0A1012A3C8B7F008ABA86 /* sporApp.app */;
@@ -296,7 +299,6 @@
 				A425FCA92A4F570400DE40CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				A4D75C852A56AEF60046CE00 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				A4D75C8A2A56BFC00046CE00 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
-				A4CEAB1D2A618D6600AE1495 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = A4A0A1022A3C8B7F008ABA86 /* Products */;
 			projectDirPath = "";
@@ -313,9 +315,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4A0A1112A3C8B7F008ABA86 /* LaunchScreen.storyboard in Resources */,
+				A4658B062A62D73500119935 /* man.json in Resources */,
 				A4A0A10E2A3C8B7F008ABA86 /* Assets.xcassets in Resources */,
 				A425FCB72A4F57C500DE40CD /* GoogleService-Info.plist in Resources */,
 				A4A0A10C2A3C8B7F008ABA86 /* Main.storyboard in Resources */,
+				A4658B042A62D72B00119935 /* women.json in Resources */,
 				A4A0A11C2A3C9061008ABA86 /* login.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,6 +337,7 @@
 				A42B4ED62A5FE38E00EE2358 /* FavorilerViewModel.swift in Sources */,
 				A4E0A3CE2A3DBBE300E7E3EF /* AyarlarViewController.swift in Sources */,
 				A4A0A1052A3C8B7F008ABA86 /* AppDelegate.swift in Sources */,
+				A4658B082A62D75800119935 /* KesfetViewController.swift in Sources */,
 				A42B4ED92A5FE73100EE2358 /* Alert.swift in Sources */,
 				A4F0C8562A5D3F3E00DAE697 /* AyarlarViewModel.swift in Sources */,
 				A4F3312F2A599FDF0074823B /* SporModel.swift in Sources */,
@@ -609,14 +614,6 @@
 				kind = branch;
 			};
 		};
-		A4CEAB1D2A618D6600AE1495 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 7.0.0;
-			};
-		};
 		A4D75C852A56AEF60046CE00 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -670,16 +667,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A491D5682A418447000E6BF2 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
-		};
-		A4CEAB1E2A618D6600AE1495 /* GoogleSignIn */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A4CEAB1D2A618D6600AE1495 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
-			productName = GoogleSignIn;
-		};
-		A4CEAB202A618D6600AE1495 /* GoogleSignInSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A4CEAB1D2A618D6600AE1495 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
-			productName = GoogleSignInSwift;
 		};
 		A4D75C862A56AEF60046CE00 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;

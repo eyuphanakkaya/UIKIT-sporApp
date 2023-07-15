@@ -8,23 +8,18 @@
 import UIKit
 import FirebaseCore
 import FirebaseAuth
-import GoogleSignIn
-import GoogleSignInSwift
-
-
-
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+  
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         Thread.sleep(forTimeInterval: 1.0)
+     
         FirebaseApp.configure()
-        //applyCurrentInterfaceStyle()
-       //"AIzaSyDESF5GfgAWSwgldpeSDx_cQiBtq13KZI8"
-
-        // Override point for customization after application launch.
+       
+       
         return true
     }
     
@@ -60,32 +55,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-    func application(
-      _ app: UIApplication,
-      open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]
-    ) -> Bool {
-      var handled: Bool
 
-      handled = GIDSignIn.sharedInstance.handle(url)
-      if handled {
-        return true
-      }
-
-      // Handle other custom URL types.
-
-      // If not handled by this app, return false.
-      return false
-    }
-    func applicationDidFinishLaunching(_ notification: Notification) {
-      // Register for GetURL events.
-      let appleEventManager = NSAppleEventManager.shared()
-      appleEventManager.setEventHandler(
-        self,
-        andSelector: "handleGetURLEvent:replyEvent:",
-        forEventClass: AEEventClass(kInternetEventClass),
-        andEventID: AEEventID(kAEGetURL)
-      )
-    }
+    
 
 
 }

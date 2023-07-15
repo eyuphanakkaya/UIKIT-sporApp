@@ -31,7 +31,7 @@
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVJ-be-czm">
-                                <rect key="frame" x="35" y="556" width="333" height="34.333333333333371"/>
+                                <rect key="frame" x="35" y="487" width="333" height="34.333333333333371"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Kayıt Ol">
@@ -46,14 +46,14 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ya da kaydol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQL-kH-hnH">
-                                <rect key="frame" x="147" y="503" width="109" height="24"/>
+                                <rect key="frame" x="142" y="430" width="109" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZzH-GN-YgQ">
-                                <rect key="frame" x="34" y="206.66666666666669" width="35" height="37.333333333333314"/>
+                                <rect key="frame" x="35" y="218.66666666666663" width="35" height="37.333333333333314"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
@@ -65,32 +65,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XFI-ok-fKF">
-                                <rect key="frame" x="44" y="555.66666666666663" width="35" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="key.horizontal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="SxL-hf-pso">
-                                <rect key="frame" x="34" y="279.66666666666669" width="35" height="37.333333333333314"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sue-dX-T80">
-                                <rect key="frame" x="35" y="427" width="333" height="34.333333333333371"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="google ile giriş yap">
-                                    <backgroundConfiguration key="background" cornerRadius="9">
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" red="0.94901967050000002" green="0.94901967050000002" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="signInGoogle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QuB-zp-0gk"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="google.png" translatesAutoresizingMaskIntoConstraints="NO" id="SL3-gc-RNw">
-                                <rect key="frame" x="44" y="427.33333333333337" width="35" height="33"/>
+                                <rect key="frame" x="33" y="489.66666666666663" width="35" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
@@ -123,6 +98,11 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="key.horizontal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="SxL-hf-pso">
+                                <rect key="frame" x="34" y="284.66666666666669" width="35" height="37.333333333333314"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.43137252329999998" green="0.66274511810000003" blue="0.8156862855" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -138,30 +118,6 @@
             </objects>
             <point key="canvasLocation" x="3295.419847328244" y="-30.281690140845072"/>
         </scene>
-        <!--Sign In-->
-        <scene sceneID="u44-iZ-utw">
-            <objects>
-                <viewController id="Ydi-sa-hks" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3gH-Nx-gci">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YH1-I0-g0N">
-                                <rect key="frame" x="53" y="173" width="286" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="gkH-EJ-ydd"/>
-                        <color key="backgroundColor" red="0.1411764771" green="0.12549020350000001" blue="0.1294117719" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Sign In" id="Pjb-Pb-g8w"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UxC-Wb-aJ8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3822.1374045801526" y="623.94366197183103"/>
-        </scene>
         <!--Register-->
         <scene sceneID="0H8-ob-gvc">
             <objects>
@@ -173,22 +129,22 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.2" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Gvg-0i-hTq">
                                 <rect key="frame" x="24" y="263.66666666666663" width="35" height="37.333333333333314"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" name="LighGray"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mail" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="LeA-93-oxn">
                                 <rect key="frame" x="24" y="317.66666666666669" width="35" height="37.333333333333314"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" name="LighGray"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="key.horizontal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="a7E-PH-h0V">
                                 <rect key="frame" x="27" y="386.66666666666669" width="35" height="37.333333333333258"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" name="LighGray"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cv3-8e-oki">
                                 <rect key="frame" x="24" y="201.66666666666663" width="35" height="37.333333333333314"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" name="LighGray"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5L-gp-hCi">
                                 <rect key="frame" x="28" y="496" width="333" height="34.333333333333371"/>
@@ -196,9 +152,9 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Kayıt Oluştur">
                                     <backgroundConfiguration key="background" cornerRadius="9">
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="LighGray"/>
                                     </backgroundConfiguration>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseForegroundColor" name="LightWhite"/>
                                     <color key="baseBackgroundColor" red="0.94901967050000002" green="0.94901967050000002" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -236,20 +192,20 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.fill.checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3TD-I9-HY3">
                                 <rect key="frame" x="28" y="498" width="35" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" name="LightWhite"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QA7-sP-7qI">
                                 <rect key="frame" x="16" y="116" width="120" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" name="LighGray"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="you are completely safe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfZ-zk-jnR">
                                 <rect key="frame" x="103" y="589" width="187" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" name="LighGray"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4e-Iy-nBP">
@@ -264,7 +220,8 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KKg-qu-d8i"/>
-                        <color key="backgroundColor" red="0.1411764771" green="0.12549020350000001" blue="0.1294117719" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" name="Color"/>
+                        <color key="tintColor" name="LightWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Register" id="FgA-aM-YkH"/>
                     <connections>
@@ -334,7 +291,7 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nFI-9x-T7V"/>
-                        <color key="backgroundColor" red="0.1411764771" green="0.12549020350000001" blue="0.1294117719" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" name="LightWhite"/>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Kategoriler" largeTitleDisplayMode="always" id="arx-uf-zFJ"/>
@@ -359,7 +316,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HVe-m2-6iY">
                                 <rect key="frame" x="0.0" y="154" width="393" height="615"/>
                                 <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="sectionIndexBackgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" name="LighGray"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="altBaslikCell" rowHeight="100" id="Kkz-du-5sW" customClass="AltBaslikTableViewCell" customModule="sporApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="38" width="393" height="100"/>
@@ -371,11 +328,11 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bench Press" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7go-JE-NVW">
                                                     <rect key="frame" x="132" y="35.666666666666664" width="129" height="28.999999999999993"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                    <color key="textColor" systemColor="systemYellowColor"/>
+                                                    <color key="textColor" name="LightWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" name="LighGray"/>
                                             <constraints>
                                                 <constraint firstItem="7go-JE-NVW" firstAttribute="centerX" secondItem="TQt-ms-xYG" secondAttribute="centerX" id="h7f-ec-DU3"/>
                                                 <constraint firstItem="7go-JE-NVW" firstAttribute="centerY" secondItem="TQt-ms-xYG" secondAttribute="centerY" id="v7M-Aa-Wo3"/>
@@ -397,7 +354,7 @@
                             </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="379-JH-dxh"/>
-                        <color key="backgroundColor" red="0.1411764771" green="0.12549020350000001" blue="0.1294117719" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" name="LightWhite"/>
                         <constraints>
                             <constraint firstItem="WBk-BK-Spd" firstAttribute="top" secondItem="379-JH-dxh" secondAttribute="top" id="21V-Fr-Dcx"/>
                             <constraint firstItem="HVe-m2-6iY" firstAttribute="top" secondItem="379-JH-dxh" secondAttribute="top" constant="51" id="5TC-M0-2OG"/>
@@ -422,6 +379,7 @@
                                     <action selector="konumBulTiklandi:" destination="G1M-Q3-JVt" eventType="touchUpInside" id="4sm-GU-2PQ"/>
                                 </connections>
                             </button>
+                            <color key="tintColor" name="LighGray"/>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -458,7 +416,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="duf-Nb-Xd9">
-                                <rect key="frame" x="50" y="556.33333333333337" width="293" height="171.66666666666663"/>
+                                <rect key="frame" x="50" y="556.33333333333337" width="293" height="220.66666666666663"/>
                                 <color key="backgroundColor" red="0.1411764771" green="0.12549020350000001" blue="0.1294117719" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -495,6 +453,105 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s78-r2-O3z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="9773" y="-27"/>
+        </scene>
+        <!--Kendini Keşfet-->
+        <scene sceneID="eXr-tq-Tv3">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="MdL-PQ-1b7" customClass="KesfetViewController" customModule="sporApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tfj-fK-NNj">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kilo Giriniz" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Sw-41-cto">
+                                <rect key="frame" x="67" y="409" width="254" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="UgB-Mz-ST9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Yaş Giriniz" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P62-7K-POc">
+                                <rect key="frame" x="67" y="500" width="254" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="OaK-qw-x3j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5b0-QA-jjl">
+                                <rect key="frame" x="141" y="578" width="107" height="32"/>
+                                <segments>
+                                    <segment title="Kadın"/>
+                                    <segment title="Erkek"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedClicked:" destination="MdL-PQ-1b7" eventType="valueChanged" id="mXZ-dA-AAS"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LPc-xz-m7g" customClass="LottieAnimationView" customModule="Lottie">
+                                <rect key="frame" x="52" y="132" width="289" height="154"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="women"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Boy Giriniz" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n79-gQ-4Vm">
+                                <rect key="frame" x="67" y="330" width="254" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="vJO-pb-7cb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kY-Mf-GJE">
+                                <rect key="frame" x="75" y="630" width="239" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="njS-DA-40G"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Keşfet">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" name="color 1"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" name="LightWhite"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="MdL-PQ-1b7" eventType="touchUpInside" id="hbK-Bu-jH9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pa6-XZ-7wb"/>
+                        <color key="backgroundColor" red="0.99607843159999998" green="0.98039215800000001" blue="0.94509804249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="5kY-Mf-GJE" firstAttribute="leading" secondItem="pa6-XZ-7wb" secondAttribute="leading" constant="75" id="1Nd-hA-FJj"/>
+                            <constraint firstItem="P62-7K-POc" firstAttribute="top" secondItem="2Sw-41-cto" secondAttribute="bottom" constant="41" id="6Hk-hM-XxN"/>
+                            <constraint firstItem="pa6-XZ-7wb" firstAttribute="trailing" secondItem="2Sw-41-cto" secondAttribute="trailing" constant="72" id="6Yl-cy-TNd"/>
+                            <constraint firstItem="2Sw-41-cto" firstAttribute="centerX" secondItem="5b0-QA-jjl" secondAttribute="centerX" id="Bdm-Qu-b47"/>
+                            <constraint firstItem="2Sw-41-cto" firstAttribute="trailing" secondItem="n79-gQ-4Vm" secondAttribute="trailing" id="FdZ-HF-kOp"/>
+                            <constraint firstItem="5b0-QA-jjl" firstAttribute="leading" secondItem="pa6-XZ-7wb" secondAttribute="leading" constant="141" id="Lqh-kf-AXc"/>
+                            <constraint firstItem="pa6-XZ-7wb" firstAttribute="trailing" secondItem="5kY-Mf-GJE" secondAttribute="trailing" constant="79" id="Rzj-yY-B0e"/>
+                            <constraint firstItem="5kY-Mf-GJE" firstAttribute="top" secondItem="5b0-QA-jjl" secondAttribute="bottom" constant="21" id="fn7-HI-vgT"/>
+                            <constraint firstItem="2Sw-41-cto" firstAttribute="leading" secondItem="pa6-XZ-7wb" secondAttribute="leading" constant="67" id="hYB-ub-5B1"/>
+                            <constraint firstItem="2Sw-41-cto" firstAttribute="trailing" secondItem="P62-7K-POc" secondAttribute="trailing" id="hsP-j2-W8P"/>
+                            <constraint firstItem="2Sw-41-cto" firstAttribute="centerX" secondItem="n79-gQ-4Vm" secondAttribute="centerX" id="ivY-DA-nXG"/>
+                            <constraint firstItem="2Sw-41-cto" firstAttribute="leading" secondItem="P62-7K-POc" secondAttribute="leading" id="od4-od-BTF"/>
+                            <constraint firstAttribute="bottom" secondItem="2Sw-41-cto" secondAttribute="bottom" constant="324" id="ohJ-Y5-Tws"/>
+                            <constraint firstItem="2Sw-41-cto" firstAttribute="top" secondItem="n79-gQ-4Vm" secondAttribute="bottom" constant="29" id="sia-0q-YuG"/>
+                            <constraint firstItem="5b0-QA-jjl" firstAttribute="top" secondItem="P62-7K-POc" secondAttribute="bottom" constant="28" id="ztp-OQ-ik7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Kendini Keşfet" id="dd1-iv-LUv"/>
+                    <connections>
+                        <outlet property="boyTextField" destination="n79-gQ-4Vm" id="RAz-Sm-1tN"/>
+                        <outlet property="genderSegmented" destination="5b0-QA-jjl" id="fSE-0h-Tul"/>
+                        <outlet property="genderView" destination="LPc-xz-m7g" id="mxk-fA-wU9"/>
+                        <outlet property="kiloTextField" destination="2Sw-41-cto" id="eWg-JX-lem"/>
+                        <outlet property="yasTextField" destination="P62-7K-POc" id="2Ut-1U-tUk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="doS-AH-4B4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4824" y="796"/>
         </scene>
         <!--Keşfet-->
         <scene sceneID="xL0-8V-g6q">
@@ -582,7 +639,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k16-TT-uI4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9536.6412213740459" y="795.77464788732402"/>
+            <point key="canvasLocation" x="8821" y="796"/>
         </scene>
         <!--Favoriler-->
         <scene sceneID="tOL-ay-OFz">
@@ -676,7 +733,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ayarlar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jur-dc-etU">
                                         <rect key="frame" x="35" y="84" width="135" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="38"/>
-                                        <color key="textColor" name="Color"/>
+                                        <color key="textColor" name="LightWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kullanıcı Adı" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Zm-Js-hbw">
@@ -803,12 +860,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" largeTitles="YES" id="e47-EO-job">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="116.33333333333334"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" name="Color"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" name="Color"/>
-                        </textAttributes>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" name="Color"/>
+                            <color key="textColor" name="LightWhite"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -836,6 +889,7 @@
                     <connections>
                         <segue destination="8pN-xe-l90" kind="relationship" relationship="viewControllers" id="doR-4F-4bs"/>
                         <segue destination="OQz-yB-YrN" kind="relationship" relationship="viewControllers" id="tLx-G9-VzE"/>
+                        <segue destination="M0e-4u-o4I" kind="relationship" relationship="viewControllers" id="t2C-oA-kQ0"/>
                         <segue destination="5tH-TI-e2q" kind="relationship" relationship="viewControllers" id="Qh0-XN-rFr"/>
                     </connections>
                 </tabBarController>
@@ -853,7 +907,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="116.33333333333334"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" name="color 1"/>
+                            <color key="textColor" name="LightWhite"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -865,42 +919,38 @@
             </objects>
             <point key="canvasLocation" x="6640.4580152671751" y="795.77464788732402"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="qhD-hV-jgR">
+        <!--Kendini Keşfet-->
+        <scene sceneID="VUa-xD-tGU">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="30E-fk-1rb" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="M0e-4u-o4I" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Kendini Keşfet" image="figure.play" catalog="system" selectedImage="figure.strengthtraining.traditional" id="tch-Om-WuO"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ve9-j5-sPD">
-                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="rWM-TZ-OBZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="116.33333333333334"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                        </textAttributes>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Ydi-sa-hks" kind="relationship" relationship="rootViewController" id="MzI-2P-ZCi"/>
+                        <segue destination="MdL-PQ-1b7" kind="relationship" relationship="rootViewController" id="mfD-Cl-VzT"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="p2y-uF-Nc1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zvH-f3-ts4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2895.419847328244" y="623.94366197183103"/>
+            <point key="canvasLocation" x="3834" y="796"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tqm-hq-pHw"/>
+        <segue reference="QIS-64-4hu"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowshape.turn.up.backward" catalog="system" width="128" height="104"/>
         <image name="bookmark.fill" catalog="system" width="110" height="128"/>
         <image name="bookmark.slash" catalog="system" width="113" height="128"/>
         <image name="exit" width="256" height="256"/>
+        <image name="figure.play" catalog="system" width="128" height="117"/>
+        <image name="figure.strengthtraining.traditional" catalog="system" width="128" height="119"/>
         <image name="gear.circle" catalog="system" width="128" height="123"/>
         <image name="gear.circle.fill" catalog="system" width="128" height="123"/>
-        <image name="google.png" width="18" height="18"/>
         <image name="gym" width="640" height="427"/>
         <image name="homekit" catalog="system" width="128" height="104"/>
         <image name="key.horizontal" catalog="system" width="128" height="68"/>
@@ -917,8 +967,14 @@
         <namedColor name="Color">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="LighGray">
+            <color red="0.22699999809265137" green="0.22599999606609344" blue="0.25400000810623169" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="LightWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="color 1">
-            <color red="0.22680440721604833" green="0.22559574651249378" blue="0.25359059343434343" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.22699999809265137" green="0.22599999606609344" blue="0.25400000810623169" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -928,12 +984,6 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

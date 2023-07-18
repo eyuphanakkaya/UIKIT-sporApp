@@ -22,7 +22,7 @@ class AltBaslikViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-       // print(kategori?.id!)
+        print(kategori?.id!)
 
         altBaslikListe()
         searchBar.barTintColor = UIColor.systemGray
@@ -63,6 +63,8 @@ class AltBaslikViewController: UIViewController {
         } else if segue.identifier == "toMapVC" {
             let destinationVC = segue.destination as? MapsViewController
             destinationVC?.gelenKategori = kategori?.ad
+        } else if segue.identifier == "toAltBaslik"{
+            
         }
        
     }

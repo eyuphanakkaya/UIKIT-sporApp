@@ -403,20 +403,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PS0-bo-RJC" customClass="YTPlayerView">
-                                <rect key="frame" x="0.0" y="207.33333333333337" width="393" height="256"/>
+                                <rect key="frame" x="0.0" y="199" width="393" height="256"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="256" id="q0g-yY-kdd"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bench Press Ne İşe Yarar ? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odp-Wv-4zb">
-                                <rect key="frame" x="50" y="498.33333333333326" width="327" height="30"/>
+                                <rect key="frame" x="50" y="490" width="327" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="duf-Nb-Xd9">
-                                <rect key="frame" x="50" y="556.33333333333337" width="293" height="220.66666666666663"/>
+                                <rect key="frame" x="50" y="548" width="293" height="229"/>
                                 <color key="backgroundColor" red="0.1411764771" green="0.12549020350000001" blue="0.1294117719" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -547,6 +547,7 @@
                         <outlet property="genderView" destination="LPc-xz-m7g" id="mxk-fA-wU9"/>
                         <outlet property="kiloTextField" destination="2Sw-41-cto" id="eWg-JX-lem"/>
                         <outlet property="yasTextField" destination="P62-7K-POc" id="2Ut-1U-tUk"/>
+                        <segue destination="G1M-Q3-JVt" kind="show" identifier="AltBaslik" id="qvO-Hn-c4h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="doS-AH-4B4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -941,6 +942,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="QIS-64-4hu"/>
+        <segue reference="qvO-Hn-c4h"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowshape.turn.up.backward" catalog="system" width="128" height="104"/>
@@ -971,7 +973,7 @@
             <color red="0.22699999809265137" green="0.22599999606609344" blue="0.25400000810623169" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="LightWhite">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.92400002479553223" green="0.99000000953674316" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="color 1">
             <color red="0.22699999809265137" green="0.22599999606609344" blue="0.25400000810623169" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

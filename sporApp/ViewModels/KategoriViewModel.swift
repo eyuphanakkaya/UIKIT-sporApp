@@ -11,6 +11,7 @@ import AlamofireImage
 import UIKit
 
 class KategoriViewModel {
+    var kate =  [Kategoriler]()
     func fetchKategoriler(completion: @escaping (Result<[Kategoriler], Error>) -> Void) {
         let urlString = "https://www.tekinder.org.tr/bootapp/spor/servis.php?tur=kategori"
         AF.request(urlString, method: .get).response { response in
@@ -24,6 +25,7 @@ class KategoriViewModel {
                     let cevap = try JSONDecoder().decode([KategoriCevap].self, from: data)
                     let kategoriList = cevap.compactMap { $0.kategori }
                     completion(.success(kategoriList))
+                    
                 } catch {
                     completion(.failure(error))
                 }

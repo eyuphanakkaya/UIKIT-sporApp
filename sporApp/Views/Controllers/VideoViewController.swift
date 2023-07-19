@@ -11,9 +11,10 @@ import YouTubeiOSPlayerHelper
 class VideoViewController: UIViewController, YTPlayerViewDelegate {
     @IBOutlet var playerView: YTPlayerView!
     @IBOutlet weak var neIseYararLabel: UILabel!
-    
     @IBOutlet weak var aciklamaText: UITextView!
+    
     var baslik: AltBaslik?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

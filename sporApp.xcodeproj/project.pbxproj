@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A4010FE22A502438000DFEEA /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4010FE12A502438000DFEEA /* AuthenticationServices.framework */; };
+		A40E282C2A67CC2800F2B8F6 /* YonlendirmeAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40E282B2A67CC2800F2B8F6 /* YonlendirmeAlert.swift */; };
+		A40E282E2A67DF4600F2B8F6 /* KesfetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40E282D2A67DF4600F2B8F6 /* KesfetViewModel.swift */; };
 		A4197F9D2A446DC00067BFB0 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4197F9C2A446DC00067BFB0 /* VideoViewController.swift */; };
 		A4197FA02A446E4D0067BFB0 /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = A4197F9F2A446E4D0067BFB0 /* YouTubeiOSPlayerHelper */; };
 		A425FCAB2A4F570400DE40CD /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A425FCAA2A4F570400DE40CD /* FirebaseAnalytics */; };
@@ -52,6 +54,8 @@
 
 /* Begin PBXFileReference section */
 		A4010FE12A502438000DFEEA /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
+		A40E282B2A67CC2800F2B8F6 /* YonlendirmeAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YonlendirmeAlert.swift; sourceTree = "<group>"; };
+		A40E282D2A67DF4600F2B8F6 /* KesfetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KesfetViewModel.swift; sourceTree = "<group>"; };
 		A4197F9C2A446DC00067BFB0 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		A425FCA62A4F522D00DE40CD /* register.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = register.json; sourceTree = "<group>"; };
 		A425FCB62A4F57C500DE40CD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				A42B4ED82A5FE73100EE2358 /* Alert.swift */,
+				A40E282B2A67CC2800F2B8F6 /* YonlendirmeAlert.swift */,
 			);
 			path = Alerts;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 				A4EF18452A5C480E0083B04A /* AltBaslikViewModel.swift */,
 				A4F0C8552A5D3F3E00DAE697 /* AyarlarViewModel.swift */,
 				A42B4ED52A5FE38E00EE2358 /* FavorilerViewModel.swift */,
+				A40E282D2A67DF4600F2B8F6 /* KesfetViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -345,6 +351,7 @@
 				A4F0C85A2A5D52CA00DAE697 /* RowData.swift in Sources */,
 				A4F0C8582A5D463300DAE697 /* Kullanicilar.swift in Sources */,
 				A4EF18442A5C42960083B04A /* KategoriViewModel.swift in Sources */,
+				A40E282E2A67DF4600F2B8F6 /* KesfetViewModel.swift in Sources */,
 				A4EF18402A5C366E0083B04A /* RegisterViewModel.swift in Sources */,
 				A4EF183E2A5C2DF40083B04A /* LoginViewModel.swift in Sources */,
 				A4E0A3C82A3DA14600E7E3EF /* KategoriCVCell.swift in Sources */,
@@ -352,6 +359,7 @@
 				A4197F9D2A446DC00067BFB0 /* VideoViewController.swift in Sources */,
 				A4E0A3CA2A3DA89B00E7E3EF /* KategoriViewController.swift in Sources */,
 				A4E2CB952A3CA1E500630A64 /* RegisterViewController.swift in Sources */,
+				A40E282C2A67CC2800F2B8F6 /* YonlendirmeAlert.swift in Sources */,
 				A4E0A3D42A3DBDAE00E7E3EF /* AltBaslikTableViewCell.swift in Sources */,
 				A4E0A3D22A3DBD6900E7E3EF /* AltBaslikViewController.swift in Sources */,
 				A4DC4F8A2A499364001A0361 /* FavoriTableViewCell.swift in Sources */,

@@ -26,25 +26,29 @@ class FavorilerViewController: UIViewController {
         favTableView.dataSource = self
         favTableView.backgroundColor = nil
         
-       
+        
        
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
         fetchFavoriteData()
+      
+        
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toVideo" {
-            if let index = sender as? Int {
-                let destinationVC = segue.destination as? VideoViewController
-                destinationVC?.baslik = favList[index]
-            }
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "toVideo" {
+//            if let index = sender as? Int {
+//                print(index)
+//                let destinationVC = segue.destination as? VideoViewController
+//                destinationVC?.baslik = favViewModel.getFavorite(at: index)
+//            }
+//        }
+//    }
     
     func fetchFavoriteData() {
         favViewModel.fetchFavoriteData { [weak self] (fetchedFavorites) in
             self?.favTableView.reloadData()
+        
         }
     }
     func deleteData(rowData: AltBaslik, indexPath: IndexPath) {
@@ -69,13 +73,14 @@ extension FavorilerViewController: UITableViewDelegate,UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let gelenVeri = self.favViewModel.getFavorite(at: indexPath.row)
+        favList = [gelenVeri]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "favoriCell", for: indexPath) as! FavoriTableViewCell
         
         cell.gelenDeger = gelenVeri
         cell.layer.borderWidth = 2
         cell.layer.cornerRadius = 10
-        tableView.rowHeight = 100
+        tableView.rowHeight = 70
 
         return cell
     }
@@ -83,16 +88,16 @@ extension FavorilerViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 5
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       // print(favList[indexPath.row].ad!)
-        /*let vc = storyboard?.instantiateViewController(withIdentifier: "toVideo") as! VideoViewController
-        vc.baslik = favList[indexPath.row]
-
-        present(vc, animated: true,completion: nil)*/
-        
-        performSegue(withIdentifier: "toVideo", sender: indexPath.row)
-        
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//       // print(favList[indexPath.row].ad!)
+//        /*let vc = storyboard?.instantiateViewController(withIdentifier: "toVideo") as! VideoViewController
+//        vc.baslik = favList[indexPath.row]
+//
+//        present(vc, animated: true,completion: nil)*/
+//        
+//        performSegue(withIdentifier: "toVideo", sender: indexPath.row)
+//        
+//    }
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive, title: "") { (action, view, completion) in
             let rowData = self.favViewModel.favList[indexPath.row]

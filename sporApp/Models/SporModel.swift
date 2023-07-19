@@ -10,7 +10,7 @@ import Foundation
 struct KategoriCevap:Codable {
     var kategori:Kategoriler?
 }
-struct Kategoriler:Codable {
+struct Kategoriler:Codable,Equatable {
     var id: String?
     var ad: String?
     var resim: String?

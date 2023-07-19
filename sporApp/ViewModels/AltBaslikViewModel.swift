@@ -13,6 +13,7 @@ import Firebase
 class AltBaslikViewModel {
     var altBaslikList = [AltBaslik]()
     var kategori: Kategoriler?
+    var gelen: Int?
     var bosList = [AltBaslik]()
     var searchList = [AltBaslik]()
     
@@ -52,7 +53,7 @@ class AltBaslikViewModel {
                         }
                     }
                     for x in self.altBaslikList {
-                        if self.kategori?.id == x.katid {
+                        if self.gelen == Int(x.katid ?? "") || self.kategori?.id == (x.katid ?? "Değer Yok") {
                             self.bosList.append(x)
                             self.searchList = self.bosList
                         }

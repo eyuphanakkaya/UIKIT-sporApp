@@ -15,7 +15,8 @@ class AltBaslikViewController: UIViewController {
     var altBaslikViewModel = AltBaslikViewModel()
     var favoriler: [String: [AltBaslik]] = [:]
 
-    var kategori:Kategoriler?
+    var kategori: Kategoriler?
+    var gelen: Int?
     let db = Firestore.firestore()
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -38,7 +39,13 @@ class AltBaslikViewController: UIViewController {
 
     }
     func altBaslikListe() {
-        altBaslikViewModel.kategori = kategori // selectedKategori, kategori seçiminizin olduğu bir değişkenin değeridir
+        if let gelenInt = gelen as? Int {
+            altBaslikViewModel.gelen = gelenInt
+        } else if let kategoriString = kategori as? Kategoriler {
+            altBaslikViewModel.kategori = kategoriString
+        }
+
+        altBaslikViewModel.gelen = gelen // selectedKategori, kategori seçiminizin olduğu bir değişkenin değeridir
         altBaslikViewModel.fetchData { [weak self] result in
             switch result {
             case .success:
@@ -48,7 +55,7 @@ class AltBaslikViewController: UIViewController {
                 }
             case .failure(let error):
                 // Hata durumunda hata işlemlerini gerçekleştirin
-                print("Hata: \(error.localizedDescription)")
+                print("Hata: \(error)")
             }
         }
     }
@@ -63,9 +70,7 @@ class AltBaslikViewController: UIViewController {
         } else if segue.identifier == "toMapVC" {
             let destinationVC = segue.destination as? MapsViewController
             destinationVC?.gelenKategori = kategori?.ad
-        } else if segue.identifier == "toAltBaslik"{
-            
-        }
+        } 
        
     }
     
@@ -90,10 +95,10 @@ extension AltBaslikViewController: UITableViewDelegate,UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "altBaslikCell", for: indexPath) as! AltBaslikTableViewCell
     
         cell.altBaslikAdLabel.text = altBaslikViewModel.bosList[indexPath.row].ad
-        cell.layer.borderWidth = 3
+        cell.layer.borderWidth = 0.5
         cell.layer.cornerRadius = 10
-        tableView.rowHeight = 100
-
+        tableView.rowHeight = 70
+        
         return cell
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -104,35 +109,6 @@ extension AltBaslikViewController: UITableViewDelegate,UITableViewDataSource {
         performSegue(withIdentifier: "toVideoVC", sender: indexPath.row)
         
     }
-    /*func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-
-        let favEkle = UIContextualAction(style: .normal, title: "") { contextualAction, view, boolValue in
-            
-            let gidenDeger = self.altBaslikViewModel.bosList[indexPath.row]
-
-            let defaults = UserDefaults.standard
-            if var dataList = defaults.data(forKey: "NewSavedData").flatMap({ try? JSONDecoder().decode([AltBaslik].self, from: $0) }) {
-                if !dataList.contains(where: { $0.ad == gidenDeger.ad }) {
-                    // Kaydedilmek istenilen veri dataList içinde kayıtlı değilse kaydetme işlemi yapılır
-                    VeriModel.shared.dataList.append(gidenDeger)
-                    dataList.append(gidenDeger) // Yeni veriyi dataList'e ekleyin
-                    if let encodedData2 = try? JSONEncoder().encode(dataList) {
-                        defaults.set(encodedData2, forKey: "NewSavedData") // Güncellenmiş veriyi UserDefaults'a kaydedin
-                        defaults.synchronize()
-                    }
-                } else {
-                    // Kaydedilmek istenilen veri dataList içinde zaten kayıtlıysa bir işlem yapma
-                    self.altBaslikViewModel.hata(isim:self.altBaslikViewModel.bosList[indexPath.row].ad!)
-                }
-            }
-        }
-
-        favEkle.backgroundColor = .red
-        favEkle.image = UIImage(named: "heart")
-
-        return UISwipeActionsConfiguration(actions: [favEkle])
-
-    }*/
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
            let rowData = altBaslikViewModel.bosList[indexPath.row]
 

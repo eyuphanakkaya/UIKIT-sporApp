@@ -44,6 +44,7 @@ class FavorilerViewModel {
             }
             
             self.favList = fetchedFavorites
+           
             completion(fetchedFavorites)
         }
     }

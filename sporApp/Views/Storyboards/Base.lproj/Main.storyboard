@@ -27,6 +27,7 @@
                                 <rect key="frame" x="77" y="208" width="291" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="textColor" name="LighGray"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
@@ -36,9 +37,9 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Kayıt Ol">
                                     <backgroundConfiguration key="background" cornerRadius="9">
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="SignInSpecial"/>
                                     </backgroundConfiguration>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseForegroundColor" name="LightWhite"/>
                                     <color key="baseBackgroundColor" red="0.94901967050000002" green="0.94901967050000002" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -55,19 +56,20 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZzH-GN-YgQ">
                                 <rect key="frame" x="35" y="218.66666666666663" width="35" height="37.333333333333314"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" name="SignInSpecial"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1234567" borderStyle="roundedRect" placeholder="Şifre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nek-sT-JB4">
                                 <rect key="frame" x="77" y="281" width="291" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="textColor" name="LighGray"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XFI-ok-fKF">
                                 <rect key="frame" x="35" y="497.66666666666663" width="35" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" name="LightWhite"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3aN-kG-r5S">
                                 <rect key="frame" x="35" y="365" width="333" height="57"/>
@@ -75,39 +77,39 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Giriş Yap">
                                     <backgroundConfiguration key="background" cornerRadius="9">
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="SignInSpecial"/>
                                     </backgroundConfiguration>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseForegroundColor" name="LightWhite"/>
                                     <color key="baseBackgroundColor" red="0.94901967050000002" green="0.94901967050000002" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="girisYapTiklandi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wgg-3V-q12"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WrU-Yc-4HM">
-                                <rect key="frame" x="34" y="119" width="99" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="you are completely safe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGO-6q-Ipj">
                                 <rect key="frame" x="108" y="705" width="187" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" name="LightWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="key.horizontal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="SxL-hf-pso">
                                 <rect key="frame" x="34" y="284.66666666666669" width="35" height="37.333333333333314"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" name="SignInSpecial"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rectangle.portrait.and.arrow.forward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="a3e-te-Wu9">
                                 <rect key="frame" x="35" y="375.66666666666669" width="35" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" name="LightWhite"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRb-sv-CQu">
+                                <rect key="frame" x="34" y="127" width="99" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <color key="textColor" name="SignInSpecial"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.43137252329999998" green="0.66274511810000003" blue="0.8156862855" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -170,6 +172,7 @@
                                 <rect key="frame" x="67" y="203" width="291" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="textColor" name="LighGray"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                             </textField>
@@ -177,6 +180,7 @@
                                 <rect key="frame" x="67" y="265" width="291" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="textColor" name="LighGray"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                             </textField>
@@ -184,6 +188,7 @@
                                 <rect key="frame" x="70" y="383" width="291" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="textColor" name="LighGray"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
@@ -191,8 +196,9 @@
                                 <rect key="frame" x="67" y="323" width="291" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="textColor" name="LighGray"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QA7-sP-7qI">
                                 <rect key="frame" x="16" y="116" width="120" height="41"/>
@@ -415,13 +421,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bench Press Ne İşe Yarar ? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odp-Wv-4zb">
-                                <rect key="frame" x="50" y="498.33333333333326" width="327" height="30"/>
+                                <rect key="frame" x="16" y="486" width="361" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" name="LighGray"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="duf-Nb-Xd9">
-                                <rect key="frame" x="50" y="556.33333333333337" width="293" height="220.66666666666663"/>
+                                <rect key="frame" x="50" y="535" width="293" height="220.66666666666663"/>
                                 <color key="backgroundColor" name="LightWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" name="LighGray"/>
@@ -432,14 +438,14 @@
                         <viewLayoutGuide key="safeArea" id="wxA-7q-Dp8"/>
                         <color key="backgroundColor" name="LightWhite"/>
                         <constraints>
-                            <constraint firstItem="duf-Nb-Xd9" firstAttribute="bottom" secondItem="wxA-7q-Dp8" secondAttribute="bottom" constant="8" id="3Ag-QU-vmc"/>
-                            <constraint firstItem="duf-Nb-Xd9" firstAttribute="top" secondItem="Odp-Wv-4zb" secondAttribute="bottom" constant="28" id="7KO-Yz-3a7"/>
+                            <constraint firstItem="duf-Nb-Xd9" firstAttribute="bottom" secondItem="wxA-7q-Dp8" secondAttribute="bottom" constant="-13.333333333333371" id="3Ag-QU-vmc"/>
+                            <constraint firstItem="duf-Nb-Xd9" firstAttribute="top" secondItem="Odp-Wv-4zb" secondAttribute="bottom" constant="19" id="7KO-Yz-3a7"/>
                             <constraint firstItem="wxA-7q-Dp8" firstAttribute="trailing" secondItem="PS0-bo-RJC" secondAttribute="trailing" id="7Ui-9U-pVE"/>
                             <constraint firstItem="wxA-7q-Dp8" firstAttribute="trailing" secondItem="duf-Nb-Xd9" secondAttribute="trailing" constant="50" id="Gfw-eW-N1W"/>
                             <constraint firstItem="duf-Nb-Xd9" firstAttribute="centerX" secondItem="nhD-1t-elJ" secondAttribute="centerX" id="H6P-6h-6DB"/>
-                            <constraint firstItem="Odp-Wv-4zb" firstAttribute="top" secondItem="PS0-bo-RJC" secondAttribute="bottom" constant="35" id="WB4-2G-t2O"/>
-                            <constraint firstItem="Odp-Wv-4zb" firstAttribute="centerX" secondItem="nhD-1t-elJ" secondAttribute="centerX" constant="17" id="bc7-Rn-hip"/>
-                            <constraint firstItem="Odp-Wv-4zb" firstAttribute="leading" secondItem="wxA-7q-Dp8" secondAttribute="leading" constant="50" id="brI-gD-hzt"/>
+                            <constraint firstItem="Odp-Wv-4zb" firstAttribute="top" secondItem="PS0-bo-RJC" secondAttribute="bottom" constant="22.666666666666629" id="WB4-2G-t2O"/>
+                            <constraint firstItem="Odp-Wv-4zb" firstAttribute="centerX" secondItem="nhD-1t-elJ" secondAttribute="centerX" id="bc7-Rn-hip"/>
+                            <constraint firstItem="Odp-Wv-4zb" firstAttribute="leading" secondItem="wxA-7q-Dp8" secondAttribute="leading" constant="16" id="brI-gD-hzt"/>
                             <constraint firstItem="PS0-bo-RJC" firstAttribute="top" secondItem="wxA-7q-Dp8" secondAttribute="top" constant="44" id="dYm-SV-51I"/>
                             <constraint firstItem="duf-Nb-Xd9" firstAttribute="leading" secondItem="wxA-7q-Dp8" secondAttribute="leading" constant="50" id="jpC-fx-hoi"/>
                             <constraint firstItem="PS0-bo-RJC" firstAttribute="leading" secondItem="wxA-7q-Dp8" secondAttribute="leading" id="tO6-pE-eV1"/>
@@ -457,7 +463,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s78-r2-O3z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9488" y="-27"/>
+            <point key="canvasLocation" x="9487.7862595419847" y="-27.464788732394368"/>
         </scene>
         <!--Kendini Keşfet-->
         <scene sceneID="eXr-tq-Tv3">
@@ -706,6 +712,7 @@
                     <connections>
                         <outlet property="favTableView" destination="ofi-KW-Ifm" id="xur-G3-m3L"/>
                         <segue destination="PPS-vL-wft" kind="show" identifier="toVideo" id="QIS-64-4hu"/>
+                        <segue destination="G1M-Q3-JVt" kind="show" identifier="toVeri" id="4vN-Ug-CBI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ok-em-wTg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -958,7 +965,7 @@
                     <tabBarItem key="tabBarItem" title="Ana Sayfa" image="homekit" catalog="system" selectedImage="homekit" id="QWj-wU-C5g"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="vnv-Zy-mH3">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="108"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="116.33333333333334"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -973,7 +980,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="QIS-64-4hu"/>
-        <segue reference="E7O-sU-ToL"/>
+        <segue reference="4vN-Ug-CBI"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowshape.turn.up.backward" catalog="system" width="128" height="104"/>
@@ -999,10 +1006,13 @@
         <image name="rectangle.portrait.and.arrow.forward" catalog="system" width="128" height="109"/>
         <image name="update" width="256" height="256"/>
         <namedColor name="LighGray">
-            <color red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.12999999523162842" green="0.12999999523162842" blue="0.12999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="LightWhite">
-            <color red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.92100000381469727" green="0.92100000381469727" blue="0.92100000381469727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SignInSpecial">
+            <color red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="color 1">
             <color red="0.22699999809265137" green="0.22599999606609344" blue="0.25400000810623169" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

@@ -21,6 +21,9 @@ class LoginViewController: UIViewController {
         
         loginViewModel.loginViewController = self
         
+        mailTextField.delegate = self
+        sifreTextField.delegate = self
+        
         mailTextField.layer.cornerRadius = 20
         mailTextField.frame = CGRect(x: mailTextField.frame.origin.x, y: mailTextField.frame.origin.y, width: mailTextField.frame.size.width, height: 55)
         sifreTextField.layer.cornerRadius = 20
@@ -43,4 +46,19 @@ class LoginViewController: UIViewController {
     }
 
 }
+extension LoginViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField == mailTextField{
+            let currentText = textField.text ?? ""
+            let updatedText = (currentText as NSString).replacingCharacters(in: range, with: string)
+        
+        } else if textField == sifreTextField {
+            let currentText = textField.text ?? ""
+            let updatedText = (currentText as NSString).replacingCharacters(in: range, with: string)
+            return updatedText.count <= 15
+        }
+        return true
+    }
+}
+
 

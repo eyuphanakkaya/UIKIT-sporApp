@@ -20,6 +20,7 @@
 		A425FCB72A4F57C500DE40CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A425FCB62A4F57C500DE40CD /* GoogleService-Info.plist */; };
 		A42B4ED62A5FE38E00EE2358 /* FavorilerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42B4ED52A5FE38E00EE2358 /* FavorilerViewModel.swift */; };
 		A42B4ED92A5FE73100EE2358 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42B4ED82A5FE73100EE2358 /* Alert.swift */; };
+		A438460D2A69213200E754D8 /* MapsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A438460C2A69213200E754D8 /* MapsViewModel.swift */; };
 		A4649ECC2A4580DA008E1EC9 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4649ECB2A4580DA008E1EC9 /* MapsViewController.swift */; };
 		A4658B042A62D72B00119935 /* women.json in Resources */ = {isa = PBXBuildFile; fileRef = A4658B032A62D72B00119935 /* women.json */; };
 		A4658B062A62D73500119935 /* man.json in Resources */ = {isa = PBXBuildFile; fileRef = A4658B052A62D73500119935 /* man.json */; };
@@ -61,6 +62,7 @@
 		A425FCB62A4F57C500DE40CD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A42B4ED52A5FE38E00EE2358 /* FavorilerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavorilerViewModel.swift; sourceTree = "<group>"; };
 		A42B4ED82A5FE73100EE2358 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		A438460C2A69213200E754D8 /* MapsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewModel.swift; sourceTree = "<group>"; };
 		A4649ECB2A4580DA008E1EC9 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		A4658B032A62D72B00119935 /* women.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = women.json; sourceTree = "<group>"; };
 		A4658B052A62D73500119935 /* man.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = man.json; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				A4F0C8552A5D3F3E00DAE697 /* AyarlarViewModel.swift */,
 				A42B4ED52A5FE38E00EE2358 /* FavorilerViewModel.swift */,
 				A40E282D2A67DF4600F2B8F6 /* KesfetViewModel.swift */,
+				A438460C2A69213200E754D8 /* MapsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				A4EF18402A5C366E0083B04A /* RegisterViewModel.swift in Sources */,
 				A4EF183E2A5C2DF40083B04A /* LoginViewModel.swift in Sources */,
 				A4E0A3C82A3DA14600E7E3EF /* KategoriCVCell.swift in Sources */,
+				A438460D2A69213200E754D8 /* MapsViewModel.swift in Sources */,
 				A4EF18462A5C480E0083B04A /* AltBaslikViewModel.swift in Sources */,
 				A4197F9D2A446DC00067BFB0 /* VideoViewController.swift in Sources */,
 				A4E0A3CA2A3DA89B00E7E3EF /* KategoriViewController.swift in Sources */,

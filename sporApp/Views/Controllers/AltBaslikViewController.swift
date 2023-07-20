@@ -13,8 +13,7 @@ class AltBaslikViewController: UIViewController {
 
     
     var altBaslikViewModel = AltBaslikViewModel()
-    var favoriler: [String: [AltBaslik]] = [:]
-
+    var favViewModel = FavorilerViewModel()
     var kategori: Kategoriler?
     var gelen: Int?
     let db = Firestore.firestore()
@@ -23,7 +22,7 @@ class AltBaslikViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(kategori?.id!)
+        
 
         altBaslikListe()
         searchBar.barTintColor = UIColor.systemGray
@@ -118,17 +117,38 @@ extension AltBaslikViewController: UITableViewDelegate,UITableViewDataSource {
                    completion(false)
                    return
                }
-               
-            self.altBaslikViewModel.addFavorite(userID: currentUserID, rowData: rowData)
+               if self.favViewModel.favList.contains(where: {$0.ad == rowData.ad  }){
+                  print("hata")
+               } else {
+                   self.altBaslikViewModel.addFavorite(userID: currentUserID, rowData: rowData)
+               }
+//               for x in self.favViewModel.favList {
+//                   for y in self.altBaslikViewModel.bosList {
+//                       if x.ad != y.ad {
+//                           self.altBaslikViewModel.addFavorite(userID: currentUserID, rowData: rowData)
+//                       } else {
+//                           print("hata")
+//                       }
+//                   }
+//
+//               }
+
+
             completion(true)
            }
-           
+
         favEkle.backgroundColor = .red
         favEkle.image = UIImage(systemName: "heart")
-           
+
            let configuration = UISwipeActionsConfiguration(actions: [favEkle])
            return configuration
        }
+
+
+
+    
+
+    
 
 
 }

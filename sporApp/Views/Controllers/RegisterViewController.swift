@@ -22,6 +22,11 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         
+        
+        kullaniciAdTextField.delegate = self
+        kullaniciSifreTextField.delegate = self
+        kullaniciSoyadTextField.delegate = self
+        kullaniciMailTextField.delegate = self
         registerViewModel.registerViewController = self
         
         super.viewDidLoad()
@@ -43,8 +48,26 @@ class RegisterViewController: UIViewController {
         }
     }
 
-
-
-
-
+}
+extension RegisterViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField == kullaniciAdTextField{
+            let currentText = textField.text ?? ""
+            let updatedText = (currentText as NSString).replacingCharacters(in: range, with: string)
+            return updatedText.count <= 20
+        } else if textField == kullaniciSoyadTextField {
+            let currentText = textField.text ?? ""
+            let updateText = (currentText as NSString).replacingCharacters(in: range, with: string)
+            return updateText.count <= 13
+        } else if textField == kullaniciMailTextField {
+            let currentText = textField.text ?? ""
+            let updateText = (currentText as NSString).replacingCharacters(in: range, with: string)
+            return updateText.count <= 25
+        } else {
+            let currentText = textField.text ?? ""
+            let updateText = (currentText as NSString).replacingCharacters(in: range, with: string)
+            return updateText.count <= 15
+        }
+        return true
+    }
 }

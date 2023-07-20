@@ -23,25 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    /*func applyCurrentInterfaceStyle() {
-        if #available(iOS 13.0, *) {
-            let currentStyle = UIApplication.shared.windows.first?.traitCollection.userInterfaceStyle
-            applyInterfaceStyle(currentStyle)
-        }
-    }
-
-    func applyInterfaceStyle(_ style: UIUserInterfaceStyle?) {
-        guard let style = style else {
-            return
-        }
-
-        if style == .dark {
-            window?.overrideUserInterfaceStyle = .dark
-        } else {
-            window?.overrideUserInterfaceStyle = .light
-        }
-    }*/
-
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

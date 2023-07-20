@@ -14,11 +14,13 @@ class MapsViewController: UIViewController {
     var span: MKCoordinateSpan?
     var gelenKategori:String?
     
+    var mapViewModel = MapsViewModel()
     var alerts = AlertAction()
-    var mapViewController: MapsViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        mapViewModel.mapsViewController = self
         searchBar.delegate = self
         mapView.delegate = self
         
@@ -29,83 +31,24 @@ class MapsViewController: UIViewController {
         searchBar.isHidden = true
        
         
-        
-        
     }
     
     @IBAction func hemenBulTiklandi(_ sender: Any) {
         
-        searchBarCalis()
+        mapViewModel.searchBarCalis(mapView: mapView, searchBar: searchBar, gelenKategori: gelenKategori ?? "", locationManager: locationManager)
     }
     
-    
-    func searchBarCalis() {
-        if mapView.annotations.count > 0 {
-            mapView.removeAnnotations(mapView.annotations)
-        }
-        self.view.endEditing(true)
-        var deger = searchBar.text
-        deger = gelenKategori
-        istek.naturalLanguageQuery = deger
-        
-        if let currentLocation = locationManager.location?.coordinate {
-            let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
-            let region = MKCoordinateRegion(center: currentLocation, span: span)
-            
-            mapView.setRegion(region, animated: true)
-            istek.region = region
-        }
-        
-        if mapView.annotations.count > 0 {
-            mapView.removeAnnotations(mapView.annotations)
-        }
-        
-        let arama = MKLocalSearch(request: istek)
-        
-        arama.start { response, error in
-            if error != nil {
-                print("Hata")
-            } else if let mapItems = response?.mapItems, !mapItems.isEmpty {
-                for mekan in mapItems {
-                    if let ad = mekan.name, let tel = mekan.phoneNumber {
-                        let pin = MKPointAnnotation()
-                        pin.coordinate = mekan.placemark.coordinate
-                        pin.title = ad
-                        pin.subtitle = tel
-                        self.mapView.addAnnotation(pin)
-                    }
-                }
-            } else {
-                self.alerts.girisHata(mesaj: "Mekan yok.", viewControllers: self.mapViewController)
-                print("Mekan Yok")
-            }
-        }
-        
-    }
     @IBAction func konumTiklandi(_ sender: Any) {
-        guard let _ = bolge else{return}
-        mapView.setRegion(bolge!, animated: true)
-        mapView.setVisibleMapRect(mapView.visibleMapRect, animated: true)
+        mapViewModel.konumTiklandi(mapView: mapView,bolge: bolge)
     }
     
     @IBAction func modeTiklandi(_ sender: Any) {
-        if mapTip == .standard {
-            mapTip = .hybrid
-            mapView.mapType = mapTip
-        } else {
-            mapTip = .standard
-            mapView.mapType = mapTip
-        }
+        mapViewModel.modeTiklandi(mapView: mapView)
     }
     
     
 }
 extension MapsViewController: UISearchBarDelegate, CLLocationManagerDelegate, MKMapViewDelegate {
-    
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-
-    }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let currentLocation = locations.last?.coordinate else { return }

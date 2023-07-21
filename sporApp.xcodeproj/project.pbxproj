@@ -523,6 +523,7 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sporApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FitPulse;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Bu uygulama, nabız verisini okumak için sağlık verilerine erişim talep ediyor.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Kullanıcı Konum İzni";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -558,6 +559,7 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sporApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FitPulse;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Bu uygulama, nabız verisini okumak için sağlık verilerine erişim talep ediyor.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Kullanıcı Konum İzni";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

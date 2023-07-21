@@ -11,7 +11,8 @@ import HealthKit
 
 class FavorilerViewController: UIViewController {
     var gelenDeger:AltBaslik?
-    var favList = [AltBaslik]()
+   
+    var favGelenList = [AltBaslik]()
     let db = Firestore.firestore()
     
     var favViewModel = FavorilerViewModel()
@@ -19,21 +20,20 @@ class FavorilerViewController: UIViewController {
     @IBOutlet weak var favTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        fetchFavoriteData()
         favViewModel.favoriViewController = self
-       
+      
         favTableView.delegate = self
         favTableView.dataSource = self
         favTableView.backgroundColor = nil
-        
-        
        
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
-        fetchFavoriteData()
-      
-        
+        DispatchQueue.main.async {
+            print("Fav sayfası gelen veriler\(self.favViewModel.favori) ")
+        }
+       
     }
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if segue.identifier == "toVideo" {
@@ -44,16 +44,19 @@ class FavorilerViewController: UIViewController {
 //            }
 //        }
 //    }
-    
     func fetchFavoriteData() {
         favViewModel.fetchFavoriteData { [weak self] (fetchedFavorites) in
-            self?.favTableView.reloadData()
+            self!.favGelenList = fetchedFavorites
+            DispatchQueue.main.async { // Ana iş parçacığına dönüş yaparak güncellemeyi yapın
+                self?.favTableView.reloadData()
+
+            }
         
         }
     }
     func deleteData(rowData: AltBaslik, indexPath: IndexPath) {
-            favViewModel.deleteData(rowData: rowData) { [weak self] in
-                self?.favViewModel.favList.remove(at: indexPath.row)
+        favViewModel.deleteData(rowData: rowData) { [weak self] in
+            self?.favViewModel.favList.remove(at: indexPath.row)
                 self?.favTableView.reloadData()
             }
         }   
@@ -73,7 +76,7 @@ extension FavorilerViewController: UITableViewDelegate,UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let gelenVeri = self.favViewModel.getFavorite(at: indexPath.row)
-        favList = [gelenVeri]
+       
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "favoriCell", for: indexPath) as! FavoriTableViewCell
         

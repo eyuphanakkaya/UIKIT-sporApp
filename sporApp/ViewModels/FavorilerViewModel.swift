@@ -11,6 +11,7 @@ class FavorilerViewModel {
     
     var alerts = AlertAction()
     var favList = [AltBaslik]()
+    var favori = [AltBaslik]()
     
     var favoriViewController: FavorilerViewController?
     
@@ -44,6 +45,7 @@ class FavorilerViewModel {
             }
             
             self.favList = fetchedFavorites
+            self.favori.append(contentsOf: fetchedFavorites)
            
             completion(fetchedFavorites)
         }

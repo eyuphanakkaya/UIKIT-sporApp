@@ -20,13 +20,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login" translatesAutoresizingMaskIntoConstraints="NO" id="wfN-eh-Ioj">
-                                <rect key="frame" x="0.0" y="-1" width="393" height="903"/>
+                                <rect key="frame" x="-65" y="-1" width="515" height="903"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="akkaya@gmail.com" borderStyle="roundedRect" placeholder="Mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d9W-EH-nLN">
                                 <rect key="frame" x="77" y="208" width="291" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="tintColor" systemColor="linkColor"/>
                                 <color key="textColor" name="LighGray"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
@@ -62,6 +63,7 @@
                                 <rect key="frame" x="77" y="281" width="291" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="tintColor" systemColor="linkColor"/>
                                 <color key="textColor" name="LighGray"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
@@ -123,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3295.419847328244" y="-30.281690140845072"/>
+            <point key="canvasLocation" x="3671" y="-27"/>
         </scene>
         <!--Register-->
         <scene sceneID="0H8-ob-gvc">
@@ -172,6 +174,7 @@
                                 <rect key="frame" x="67" y="203" width="291" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="tintColor" systemColor="tintColor"/>
                                 <color key="textColor" name="LighGray"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="name"/>
@@ -180,6 +183,7 @@
                                 <rect key="frame" x="67" y="265" width="291" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="tintColor" systemColor="tintColor"/>
                                 <color key="textColor" name="LighGray"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="name"/>
@@ -188,6 +192,7 @@
                                 <rect key="frame" x="70" y="383" width="291" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="tintColor" systemColor="tintColor"/>
                                 <color key="textColor" name="LighGray"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
@@ -196,6 +201,7 @@
                                 <rect key="frame" x="67" y="323" width="291" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="tintColor" systemColor="tintColor"/>
                                 <color key="textColor" name="LighGray"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
@@ -217,7 +223,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4e-Iy-nBP">
                                 <rect key="frame" x="0.0" y="59" width="51" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" name="color 1"/>
+                                <color key="tintColor" name="LighGray"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.backward" catalog="system"/>
                                 <connections>
@@ -244,7 +250,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QiX-OA-AMB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4258.7786259541981" y="-30.281690140845072"/>
+            <point key="canvasLocation" x="4650" y="-27"/>
         </scene>
         <!--Kategoriler-->
         <scene sceneID="g4o-fX-Iwq">
@@ -272,7 +278,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="210" height="280"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gym" translatesAutoresizingMaskIntoConstraints="NO" id="FWD-UU-VzZ">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FWD-UU-VzZ">
                                                     <rect key="frame" x="0.0" y="0.0" width="210" height="280"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fitness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FaG-Yd-uft">
@@ -380,7 +386,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Hareketler" id="Cfi-67-xbn">
                         <barButtonItem key="backBarButtonItem" title="Geri Dön" id="JlP-Sz-at3"/>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="cNd-mt-o91">
+                        <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="cNd-mt-o91">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="w6V-sp-pNI">
                                 <rect key="frame" x="327.33333333333331" y="0.0" width="49.666666666666686" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -666,7 +672,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ofi-KW-Ifm">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ofi-KW-Ifm">
                                 <rect key="frame" x="0.0" y="56" width="393" height="713"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -712,7 +718,6 @@
                     <connections>
                         <outlet property="favTableView" destination="ofi-KW-Ifm" id="xur-G3-m3L"/>
                         <segue destination="PPS-vL-wft" kind="show" identifier="toVideo" id="QIS-64-4hu"/>
-                        <segue destination="G1M-Q3-JVt" kind="show" identifier="toVeri" id="4vN-Ug-CBI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ok-em-wTg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -759,6 +764,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kullanıcı Adı" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Zm-Js-hbw">
                                         <rect key="frame" x="35" y="179" width="290" height="40"/>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <color key="tintColor" systemColor="linkColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="MEf-U4-dMR"/>
                                             <constraint firstAttribute="width" constant="290" id="MsM-39-XIH"/>
@@ -802,8 +808,8 @@
                                             <action selector="kayitOlusturTiklandi:" destination="0rA-IP-jar" eventType="touchUpInside" id="j1Z-v6-jfn"/>
                                         </connections>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="update" translatesAutoresizingMaskIntoConstraints="NO" id="MrS-wh-mLo">
-                                        <rect key="frame" x="15" y="532" width="35" height="27"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="goforward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MrS-wh-mLo">
+                                        <rect key="frame" x="15" y="531" width="35" height="27.666666666666742"/>
                                         <color key="tintColor" name="LighGray"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="Ef9-PK-ead"/>
@@ -817,8 +823,8 @@
                                             <action selector="onClickedSwitch:" destination="5tH-TI-e2q" eventType="valueChanged" id="gtX-Oa-RiS"/>
                                         </connections>
                                     </switch>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exit" translatesAutoresizingMaskIntoConstraints="NO" id="paf-zH-rtF">
-                                        <rect key="frame" x="15" y="624" width="35" height="27"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangle.portrait.and.arrow.forward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="paf-zH-rtF">
+                                        <rect key="frame" x="15" y="624.33333333333337" width="35" height="26.666666666666629"/>
                                         <color key="tintColor" name="LighGray"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="27" id="cwf-lS-Nkv"/>
@@ -908,8 +914,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="ifn-1u-XXb" kind="relationship" relationship="viewControllers" id="6Pn-n3-7Vo"/>
-                        <segue destination="OQz-yB-YrN" kind="relationship" relationship="viewControllers" id="tLx-G9-VzE"/>
                         <segue destination="M0e-4u-o4I" kind="relationship" relationship="viewControllers" id="t2C-oA-kQ0"/>
+                        <segue destination="OQz-yB-YrN" kind="relationship" relationship="viewControllers" id="tLx-G9-VzE"/>
                         <segue destination="5tH-TI-e2q" kind="relationship" relationship="viewControllers" id="Qh0-XN-rFr"/>
                     </connections>
                 </tabBarController>
@@ -967,6 +973,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="vnv-Zy-mH3">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="116.33333333333334"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="LighGray"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -980,18 +987,17 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="QIS-64-4hu"/>
-        <segue reference="4vN-Ug-CBI"/>
+        <segue reference="E7O-sU-ToL"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowshape.turn.up.backward" catalog="system" width="128" height="104"/>
         <image name="bookmark.fill" catalog="system" width="110" height="128"/>
         <image name="bookmark.slash" catalog="system" width="113" height="128"/>
-        <image name="exit" width="256" height="256"/>
         <image name="figure.play" catalog="system" width="128" height="117"/>
         <image name="figure.strengthtraining.traditional" catalog="system" width="128" height="119"/>
         <image name="gear.circle" catalog="system" width="128" height="123"/>
         <image name="gear.circle.fill" catalog="system" width="128" height="123"/>
-        <image name="gym" width="640" height="427"/>
+        <image name="goforward" catalog="system" width="119" height="128"/>
         <image name="homekit" catalog="system" width="128" height="104"/>
         <image name="key.horizontal" catalog="system" width="128" height="68"/>
         <image name="location" catalog="system" width="128" height="121"/>
@@ -1004,7 +1010,6 @@
         <image name="person.badge.plus" catalog="system" width="128" height="125"/>
         <image name="person.fill.checkmark" catalog="system" width="128" height="89"/>
         <image name="rectangle.portrait.and.arrow.forward" catalog="system" width="128" height="109"/>
-        <image name="update" width="256" height="256"/>
         <namedColor name="LighGray">
             <color red="0.12999999523162842" green="0.12999999523162842" blue="0.12999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -1012,19 +1017,22 @@
             <color red="0.92100000381469727" green="0.92100000381469727" blue="0.92100000381469727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="SignInSpecial">
-            <color red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="color 1">
-            <color red="0.22699999809265137" green="0.22599999606609344" blue="0.25400000810623169" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.26100000739097595" green="0.26100000739097595" blue="0.26100000739097595" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

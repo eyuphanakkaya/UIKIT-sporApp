@@ -11,7 +11,6 @@ import Alamofire
 
 class AltBaslikViewController: UIViewController {
 
-    
     var altBaslikViewModel = AltBaslikViewModel()
     var favViewModel = FavorilerViewModel()
     var kategori: Kategoriler?
@@ -22,7 +21,6 @@ class AltBaslikViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
 
         altBaslikListe()
         searchBar.barTintColor = UIColor.systemGray
@@ -37,6 +35,8 @@ class AltBaslikViewController: UIViewController {
         
 
     }
+    override func viewWillAppear(_ animated: Bool) {
+    }
     func altBaslikListe() {
         if let gelenInt = gelen as? Int {
             altBaslikViewModel.gelen = gelenInt
@@ -48,6 +48,7 @@ class AltBaslikViewController: UIViewController {
         altBaslikViewModel.fetchData { [weak self] result in
             switch result {
             case .success:
+                
                 // Veriler başarıyla alındı, View güncellemelerini yapabilirsiniz
                 DispatchQueue.main.async {
                     self?.tableView.reloadData()
@@ -117,22 +118,7 @@ extension AltBaslikViewController: UITableViewDelegate,UITableViewDataSource {
                    completion(false)
                    return
                }
-               if self.favViewModel.favList.contains(where: {$0.ad == rowData.ad  }){
-                  print("hata")
-               } else {
-                   self.altBaslikViewModel.addFavorite(userID: currentUserID, rowData: rowData)
-               }
-//               for x in self.favViewModel.favList {
-//                   for y in self.altBaslikViewModel.bosList {
-//                       if x.ad != y.ad {
-//                           self.altBaslikViewModel.addFavorite(userID: currentUserID, rowData: rowData)
-//                       } else {
-//                           print("hata")
-//                       }
-//                   }
-//
-//               }
-
+               self.altBaslikViewModel.addFavorite(userID: currentUserID, rowData: rowData)
 
             completion(true)
            }

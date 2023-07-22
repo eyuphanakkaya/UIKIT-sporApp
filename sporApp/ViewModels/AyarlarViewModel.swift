@@ -15,7 +15,7 @@ protocol AyarlarViewDelegate: AnyObject {
     func didFetchGirisBilgi(_ girisBilgileri: Kullanicilar?)
 }
 class AyarlarViewModel {
-
+    var durum = true
     var ref: DatabaseReference?
     var ayarlarViewController: AyarlarViewController?
     var alerts = AlertAction()
@@ -55,12 +55,16 @@ class AyarlarViewModel {
         if #available(iOS 13.0, *) {
             let appDelegate = UIApplication.shared.windows.first
             if sender.isOn {
+                durum = true
                 appDelegate?.overrideUserInterfaceStyle = .light
+                return
+            } else {
+                durum = false
+                appDelegate?.overrideUserInterfaceStyle = .dark
                 return
             }
             
-            appDelegate?.overrideUserInterfaceStyle = .dark
-            return
+          
         }
     }
     func kisiGuncelle(kullanici_ad: String, kullanici_soyisim: String, kullanici_sifre: String, kullanici_mail: String) {

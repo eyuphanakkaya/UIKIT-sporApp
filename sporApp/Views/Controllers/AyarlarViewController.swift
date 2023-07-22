@@ -13,6 +13,7 @@ class AyarlarViewController: UIViewController {
     var ref: DatabaseReference?
     var ayarlarViewModel = AyarlarViewModel()
     
+    @IBOutlet weak var modeLabel: UILabel!
     @IBOutlet weak var viewComp: UIView!
     @IBOutlet weak var modeSwitch: UISwitch!
     @IBOutlet weak var kullaniciSifreTextField: UITextField!
@@ -41,8 +42,14 @@ class AyarlarViewController: UIViewController {
     }
     
     @IBAction func onClickedSwitch(_ sender: UISwitch) {
+        modeSwitch = sender
+
         ayarlarViewModel.darkMode(sender: sender)
-        
+        if ayarlarViewModel.durum {
+            modeLabel.text = "Light"
+        } else {
+            modeLabel.text = "Dark"
+        }
     }
     @IBAction func guncelleTiklandi(_ sender: Any) {
         if let kullanici_ad = kullaniciAdTextField.text , let kullanici_soyisim = kullaniciSoyadTextField.text,let kullanici_sifre =

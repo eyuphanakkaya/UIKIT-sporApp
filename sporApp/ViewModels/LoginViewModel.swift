@@ -18,7 +18,7 @@ final class LoginViewModel {
                 // Giriş sırasında bir hata oluştu
                 if mail == "" && sifre == "" {
                     self.alerts.girisHata(title: "Hata", mesaj: "Lütfen boş bırakmayınız.", viewControllers: self.loginViewController)
-                   
+                    
                 } else if mail == "" {
                     self.alerts.girisHata(title: "Hata", mesaj: "Lütfen Mail'i boş bırakmayınız.", viewControllers: self.loginViewController)
                 } else if sifre == "" {
@@ -26,13 +26,12 @@ final class LoginViewModel {
                 } else {
                     self.alerts.girisHata(title: "Hata", mesaj: "Lütfen geçerli değerler giriniz veya kayıtlı değilseniz kayolunuz.", viewControllers: self.loginViewController)
                 }
-               
+                
             } else {
-                print("Giriş başarılı. Kullanıcı: \(user?.user.uid ?? "")")
+                UserDefaults.standard.set(user?.user.uid ?? "", forKey: "userId")
                 self.loginViewController?.performSegue(withIdentifier: "toKateVC", sender: nil)
+                
             }
         }
     }
-
-
 }

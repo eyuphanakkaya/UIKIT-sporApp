@@ -21,6 +21,7 @@ class LoginViewController: UIViewController {
         sifreTextField.delegate = self
         buttonTasarim()
         
+        
     }
     
     func buttonTasarim() {

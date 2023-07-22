@@ -32,9 +32,6 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.titleView?.tintColor = .white
-       /* registerView.contentMode = .scaleToFill
-        registerView.loopMode = .loop
-        registerView.play()*/
     }
     
     @IBAction func geriTiklandi(_ sender: Any) {

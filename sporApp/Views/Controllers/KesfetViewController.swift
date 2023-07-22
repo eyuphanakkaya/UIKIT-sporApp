@@ -17,9 +17,8 @@ class KesfetViewController: UIViewController {
     @IBOutlet weak var yasTextField: UITextField!
     @IBOutlet weak var boyTextField: UITextField!
     @IBOutlet weak var genderView: LottieAnimationView!
+    
     var kesfetViewModel =  KesfetViewModel()
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         genderView.play()
@@ -37,8 +36,6 @@ class KesfetViewController: UIViewController {
         }
         
     }
-
-    
     @IBAction func segmentedClicked(_ sender: Any) {
         if genderSegmented.selectedSegmentIndex == 0 {
             genderView.animation = LottieAnimation.named("women")
@@ -53,7 +50,7 @@ class KesfetViewController: UIViewController {
     func bosKontrol() {
         if let kiloString = kiloTextField.text ,let yasString = yasTextField.text, let boyString = boyTextField.text {
             if kiloString == "" || yasString == "" || boyString == "" {
-                alerts.girisHata(mesaj: "Lütfen boş bırakmayınız.", viewControllers: self)
+                alerts.girisHata(title: "Hata", mesaj: "Lütfen boş bırakmayınız.", viewControllers: self)
             }
         }
     }

@@ -7,15 +7,12 @@ class MapsViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     var istek = MKLocalSearch.Request()
     var locationManager: CLLocationManager!
-    var currentPlace: CLPlacemark!
-    var mapTip: MKMapType = .standard
     var bolge: MKCoordinateRegion?
     var konum: CLLocationCoordinate2D?
     var span: MKCoordinateSpan?
     var gelenKategori:String?
     
     var mapViewModel = MapsViewModel()
-    var alerts = AlertAction()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +31,6 @@ class MapsViewController: UIViewController {
     }
     
     @IBAction func hemenBulTiklandi(_ sender: Any) {
-        
         mapViewModel.searchBarCalis(mapView: mapView, searchBar: searchBar, gelenKategori: gelenKategori ?? "", locationManager: locationManager)
     }
     
@@ -55,12 +51,10 @@ extension MapsViewController: UISearchBarDelegate, CLLocationManagerDelegate, MK
                
         konum = currentLocation
         span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
-               bolge = MKCoordinateRegion(center: konum!, span: span!)
-               
-               mapView.setRegion(bolge!, animated: true)
-               
-               istek.region = mapView.region
-               mapView.showsUserLocation = true
+        bolge = MKCoordinateRegion(center: konum!, span: span!)
+        mapView.setRegion(bolge!, animated: true)
+        istek.region = mapView.region
+        mapView.showsUserLocation = true
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

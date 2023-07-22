@@ -6,7 +6,9 @@
 //
 
 import Foundation
-struct RowData: Codable {
-    let id: String // Satır ID'si
-    let title: String // Satır başlığı
+
+
+struct RowDt: Codable {
+    let id: String
+    let title: String
 }

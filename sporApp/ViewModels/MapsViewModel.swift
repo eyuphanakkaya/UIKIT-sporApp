@@ -54,7 +54,7 @@ class MapsViewModel {
                     }
                 }
             } else {
-                self.alerts.girisHata(mesaj: "Mekan yok.", viewControllers: self.mapsViewController)
+                self.alerts.girisHata(title: "Hata", mesaj: "Mekan yok.", viewControllers: self.mapsViewController)
                 print("Mekan Yok")
             }
         }

@@ -40,7 +40,7 @@ class KesfetViewModel {
             alert.yonlendir(mesaj: "Boy Kilo ve Yaşınız Bale için uygundur.", viewControllers: kesfetViewController, hucreNo: hucreNo ?? 0, identifier: "goToAltBaslik")
             return
         } else {
-            alerts.girisHata(mesaj: "Boy Kilo ve Yaşınıza uygun bir spor bulunamadı.", viewControllers: kesfetViewController)
+            alerts.girisHata(title: "Hata", mesaj: "Boy Kilo ve Yaşınıza uygun bir spor bulunamadı.", viewControllers: kesfetViewController)
             return
         }
     }
@@ -66,7 +66,7 @@ class KesfetViewModel {
             alert.yonlendir(mesaj: "Boy Kilo ve Yaşınız Bale için uygundur.", viewControllers: kesfetViewController, hucreNo: hucreNo ?? 0, identifier: "goToAltBaslik")
             return
         } else {
-            alerts.girisHata(mesaj: "Boy Kilo ve Yaşınıza uygun bir spor bulunamadı.", viewControllers: kesfetViewController)
+            alerts.girisHata(title: "Hata", mesaj: "Boy Kilo ve Yaşınıza uygun bir spor bulunamadı.", viewControllers: kesfetViewController)
             return
         }
     }

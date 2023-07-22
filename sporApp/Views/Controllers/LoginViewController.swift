@@ -8,9 +8,6 @@
 import UIKit
 import FirebaseAuth
 
-
-
-
 class LoginViewController: UIViewController {
     
     private var loginViewModel = LoginViewModel()
@@ -20,20 +17,18 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         loginViewModel.loginViewController = self
-        
         mailTextField.delegate = self
         sifreTextField.delegate = self
+        buttonTasarim()
         
+    }
+    
+    func buttonTasarim() {
         mailTextField.layer.cornerRadius = 20
         mailTextField.frame = CGRect(x: mailTextField.frame.origin.x, y: mailTextField.frame.origin.y, width: mailTextField.frame.size.width, height: 55)
         sifreTextField.layer.cornerRadius = 20
         sifreTextField.frame = CGRect(x: sifreTextField.frame.origin.x, y: sifreTextField.frame.origin.y, width: sifreTextField.frame.size.width, height: 55)
-        
-        
     }
-    
-
-    
     @IBAction func girisYapTiklandi(_ sender: Any) {
         girisYap()
     }

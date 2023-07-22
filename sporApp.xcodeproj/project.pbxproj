@@ -32,7 +32,6 @@
 		A4A0A10C2A3C8B7F008ABA86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4A0A10A2A3C8B7F008ABA86 /* Main.storyboard */; };
 		A4A0A10E2A3C8B7F008ABA86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4A0A10D2A3C8B7F008ABA86 /* Assets.xcassets */; };
 		A4A0A1112A3C8B7F008ABA86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4A0A10F2A3C8B7F008ABA86 /* LaunchScreen.storyboard */; };
-		A4A0A11C2A3C9061008ABA86 /* login.json in Resources */ = {isa = PBXBuildFile; fileRef = A4A0A11B2A3C9061008ABA86 /* login.json */; };
 		A4D75C872A56AEF60046CE00 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A4D75C862A56AEF60046CE00 /* Alamofire */; };
 		A4D75C8C2A56BFC00046CE00 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = A4D75C8B2A56BFC00046CE00 /* AlamofireImage */; };
 		A4DC4F8A2A499364001A0361 /* FavoriTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC4F892A499364001A0361 /* FavoriTableViewCell.swift */; };
@@ -49,7 +48,6 @@
 		A4EF18462A5C480E0083B04A /* AltBaslikViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EF18452A5C480E0083B04A /* AltBaslikViewModel.swift */; };
 		A4F0C8562A5D3F3E00DAE697 /* AyarlarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F0C8552A5D3F3E00DAE697 /* AyarlarViewModel.swift */; };
 		A4F0C8582A5D463300DAE697 /* Kullanicilar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F0C8572A5D463300DAE697 /* Kullanicilar.swift */; };
-		A4F0C85A2A5D52CA00DAE697 /* RowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F0C8592A5D52CA00DAE697 /* RowData.swift */; };
 		A4F3312F2A599FDF0074823B /* SporModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F3312E2A599FDF0074823B /* SporModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +56,6 @@
 		A40E282B2A67CC2800F2B8F6 /* YonlendirmeAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YonlendirmeAlert.swift; sourceTree = "<group>"; };
 		A40E282D2A67DF4600F2B8F6 /* KesfetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KesfetViewModel.swift; sourceTree = "<group>"; };
 		A4197F9C2A446DC00067BFB0 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
-		A425FCA62A4F522D00DE40CD /* register.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = register.json; sourceTree = "<group>"; };
 		A425FCB62A4F57C500DE40CD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A42B4ED52A5FE38E00EE2358 /* FavorilerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavorilerViewModel.swift; sourceTree = "<group>"; };
 		A42B4ED82A5FE73100EE2358 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
@@ -75,7 +72,6 @@
 		A4A0A10D2A3C8B7F008ABA86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4A0A1102A3C8B7F008ABA86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4A0A1122A3C8B7F008ABA86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A4A0A11B2A3C9061008ABA86 /* login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = login.json; sourceTree = "<group>"; };
 		A4DC4F892A499364001A0361 /* FavoriTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriTableViewCell.swift; sourceTree = "<group>"; };
 		A4E0A3C72A3DA14600E7E3EF /* KategoriCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KategoriCVCell.swift; sourceTree = "<group>"; };
 		A4E0A3C92A3DA89B00E7E3EF /* KategoriViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KategoriViewController.swift; sourceTree = "<group>"; };
@@ -90,7 +86,6 @@
 		A4EF18452A5C480E0083B04A /* AltBaslikViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltBaslikViewModel.swift; sourceTree = "<group>"; };
 		A4F0C8552A5D3F3E00DAE697 /* AyarlarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AyarlarViewModel.swift; sourceTree = "<group>"; };
 		A4F0C8572A5D463300DAE697 /* Kullanicilar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kullanicilar.swift; sourceTree = "<group>"; };
-		A4F0C8592A5D52CA00DAE697 /* RowData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowData.swift; sourceTree = "<group>"; };
 		A4F3312E2A599FDF0074823B /* SporModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SporModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,10 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				A42B4ED72A5FE72000EE2358 /* Alerts */,
-				A425FCA62A4F522D00DE40CD /* register.json */,
 				A4658B032A62D72B00119935 /* women.json */,
 				A4658B052A62D73500119935 /* man.json */,
-				A4A0A11B2A3C9061008ABA86 /* login.json */,
 			);
 			path = FileHelper;
 			sourceTree = "<group>";
@@ -242,7 +235,6 @@
 			children = (
 				A4F3312E2A599FDF0074823B /* SporModel.swift */,
 				A4F0C8572A5D463300DAE697 /* Kullanicilar.swift */,
-				A4F0C8592A5D52CA00DAE697 /* RowData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -329,7 +321,6 @@
 				A425FCB72A4F57C500DE40CD /* GoogleService-Info.plist in Resources */,
 				A4A0A10C2A3C8B7F008ABA86 /* Main.storyboard in Resources */,
 				A4658B042A62D72B00119935 /* women.json in Resources */,
-				A4A0A11C2A3C9061008ABA86 /* login.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,7 +342,6 @@
 				A4F0C8562A5D3F3E00DAE697 /* AyarlarViewModel.swift in Sources */,
 				A4F3312F2A599FDF0074823B /* SporModel.swift in Sources */,
 				A4A0A1072A3C8B7F008ABA86 /* SceneDelegate.swift in Sources */,
-				A4F0C85A2A5D52CA00DAE697 /* RowData.swift in Sources */,
 				A4F0C8582A5D463300DAE697 /* Kullanicilar.swift in Sources */,
 				A4EF18442A5C42960083B04A /* KategoriViewModel.swift in Sources */,
 				A40E282E2A67DF4600F2B8F6 /* KesfetViewModel.swift in Sources */,

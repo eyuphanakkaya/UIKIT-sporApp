@@ -77,7 +77,7 @@ class FavorilerViewModel {
                     if let error = error {
                         print("Veri silinirken hata oluştu: \(error.localizedDescription)")
                     } else {
-                        self.alerts.girisHata(mesaj: "Veri başarıyla silindi", viewControllers: self.favoriViewController)
+                        self.alerts.girisHata(title: "Hata", mesaj: "Veri başarıyla silindi", viewControllers: self.favoriViewController)
                         completion()
                     }
                 }

@@ -13,7 +13,6 @@ import Firebase
 class KategoriViewController: UIViewController {
 
     var kategoriList = [Kategoriler]()
-    
     var kategoriViewModel = KategoriViewModel()
     
     @IBOutlet weak var kategoriCollectionView: UICollectionView!
@@ -24,36 +23,20 @@ class KategoriViewController: UIViewController {
         kategoriCollectionView.backgroundColor = nil
         kategoriCollectionView.dataSource = self
         kategoriCollectionView.delegate = self
-        
-
+        tasarim()
+    }
+    
+    func tasarim(){
         let tasarim = UICollectionViewFlowLayout()
 
         let genislik = self.kategoriCollectionView.frame.size.width
         tasarim.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        //(genislik-30)/2*1.85
-        print(genislik)
-
         tasarim.itemSize = CGSize(width: (genislik - 50), height: (genislik - 30)/2)
-
         tasarim.minimumLineSpacing = 5
         tasarim.minimumInteritemSpacing = 5
 
-        print(kategoriViewModel.kate)
-        //print(kategoriList.count)
-
         kategoriCollectionView.collectionViewLayout = tasarim
-//
-
-        
-        // Do any additional setup after loading the view.
     }
-    override func viewDidAppear(_ animated: Bool) {
-        print(kategoriList.count)
-      
-    }
- 
-
-
     func kategoriListele() {
         kategoriViewModel.fetchKategoriler { [weak self] result in
             switch result {
@@ -113,7 +96,5 @@ extension KategoriViewController : UICollectionViewDelegate,UICollectionViewData
         let hucreNo = kategoriList[indexPath.row].id
         self.performSegue(withIdentifier: "toAltBaslik", sender: hucreNo)
     }
-
-    
     
 }

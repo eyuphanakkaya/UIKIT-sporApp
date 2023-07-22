@@ -9,12 +9,12 @@ import Foundation
 import UIKit
 
 class AlertAction {
-    func girisHata(mesaj:String,viewControllers: UIViewController?){
+    func girisHata(title: String,mesaj:String,viewControllers: UIViewController?){
         guard let viewController = viewControllers else {
             return
         }
         
-        let hataUyari = UIAlertController(title: "Uyarı", message: mesaj, preferredStyle: .alert)
+        let hataUyari = UIAlertController(title: title, message: mesaj, preferredStyle: .alert)
         let hataAction = UIAlertAction(title: "Tamam", style: .cancel)
         hataUyari.addAction(hataAction)
         viewController.present(hataUyari, animated: true)

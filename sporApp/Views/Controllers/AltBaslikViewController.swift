@@ -12,10 +12,9 @@ import Alamofire
 class AltBaslikViewController: UIViewController {
 
     var altBaslikViewModel = AltBaslikViewModel()
-    var favViewModel = FavorilerViewModel()
+   // var favViewModel = FavorilerViewModel()
     var kategori: Kategoriler?
     var gelen: Int?
-    let db = Firestore.firestore()
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
@@ -26,6 +25,7 @@ class AltBaslikViewController: UIViewController {
         searchBar.barTintColor = UIColor.systemGray
         searchBar.layer.cornerRadius = 20
         searchBar.layer.masksToBounds = true
+        altBaslikViewModel.altbaslikViewController = self
 
     
         tableView.backgroundColor = nil
@@ -34,8 +34,6 @@ class AltBaslikViewController: UIViewController {
         searchBar.delegate = self
         
 
-    }
-    override func viewWillAppear(_ animated: Bool) {
     }
     func altBaslikListe() {
         if let gelenInt = gelen as? Int {
@@ -84,7 +82,6 @@ class AltBaslikViewController: UIViewController {
 extension AltBaslikViewController: UITableViewDelegate,UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
         return altBaslikViewModel.bosList.count
     }
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -129,14 +126,6 @@ extension AltBaslikViewController: UITableViewDelegate,UITableViewDataSource {
            let configuration = UISwipeActionsConfiguration(actions: [favEkle])
            return configuration
        }
-
-
-
-    
-
-    
-
-
 }
 extension AltBaslikViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

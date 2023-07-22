@@ -63,9 +63,6 @@ class AyarlarViewModel {
             return
         }
     }
-    
-
-    
     func kisiGuncelle(kullanici_ad: String, kullanici_soyisim: String, kullanici_sifre: String, kullanici_mail: String) {
         ref = Database.database().reference()
         if let currentUser = Auth.auth().currentUser {
@@ -81,17 +78,23 @@ class AyarlarViewModel {
                 "kullanici_mail": kullanici_mail
             ]
 
-            // Veriyi güncelleme işlemi
-            ref!.child(dataPath).updateChildValues(dict) { (error, _) in
-                if let error = error {
-                    print("Veri güncellenirken hata oluştu: \(error)")
-                } else {
-                    self.alerts.girisHata(mesaj: "Kullanıcı Güncellendi.", viewControllers: self.ayarlarViewController)
-                    
+            if !kullanici_ad.isEmpty && !kullanici_soyisim.isEmpty && !kullanici_sifre.isEmpty && !kullanici_mail.isEmpty && kullanici_sifre.count >= 7 {
+                ref!.child(dataPath).updateChildValues(dict) { (error, _) in
+                    if let error = error {
+                        print("Veri güncellenirken hata oluştu: \(error)")
+                    } else {
+                        self.alerts.girisHata(title: "Bilgi", mesaj: "Kullanıcı Güncellendi.", viewControllers: self.ayarlarViewController)
+                        
+                    }
                 }
+                currentUser.updateEmail(to: kullanici_mail)
+                currentUser.updatePassword(to: kullanici_sifre)
+            } else if kullanici_sifre.count < 7  {
+                alerts.girisHata(title: "Hata", mesaj: "Lütfen şifreyi yedi karakterden az girmeyin", viewControllers: ayarlarViewController)
+            } else {
+                alerts.girisHata(title: "Hata", mesaj: "Lütfen değerleri boş bırakmayınız", viewControllers: ayarlarViewController)
             }
-            currentUser.updateEmail(to: kullanici_mail)
-            currentUser.updatePassword(to: kullanici_sifre)
+
         }
     }
     

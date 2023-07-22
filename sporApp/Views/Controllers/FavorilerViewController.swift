@@ -10,19 +10,15 @@ import Firebase
 import HealthKit
 
 class FavorilerViewController: UIViewController {
-    var gelenDeger:AltBaslik?
    
     var favGelenList = [AltBaslik]()
-    let db = Firestore.firestore()
-    
     var favViewModel = FavorilerViewModel()
     
     @IBOutlet weak var favTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchFavoriteData()
+        
         favViewModel.favoriViewController = self
-      
         favTableView.delegate = self
         favTableView.dataSource = self
         favTableView.backgroundColor = nil
@@ -30,27 +26,16 @@ class FavorilerViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
-        DispatchQueue.main.async {
-            print("Fav sayfası gelen veriler\(self.favViewModel.favori) ")
-        }
-       
-    }
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "toVideo" {
-//            if let index = sender as? Int {
-//                print(index)
-//                let destinationVC = segue.destination as? VideoViewController
-//                destinationVC?.baslik = favViewModel.getFavorite(at: index)
-//            }
+//        DispatchQueue.main.async {
+//            print("Fav sayfası gelen veriler\(self.favViewModel.favori) ")
 //        }
-//    }
+        fetchFavoriteData()
+    }
     func fetchFavoriteData() {
         favViewModel.fetchFavoriteData { [weak self] (fetchedFavorites) in
-            self!.favGelenList = fetchedFavorites
-            DispatchQueue.main.async { // Ana iş parçacığına dönüş yaparak güncellemeyi yapın
-                self?.favTableView.reloadData()
+            self!.favGelenList = fetchedFavorites// Ana iş parçacığına dönüş yaparak güncellemeyi yapın
+            self?.favTableView.reloadData()
 
-            }
         
         }
     }
@@ -61,9 +46,6 @@ class FavorilerViewController: UIViewController {
             }
         }   
 }
-
-
-
 extension FavorilerViewController: UITableViewDelegate,UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -108,7 +90,7 @@ extension FavorilerViewController: UITableViewDelegate,UITableViewDataSource {
             completion(true)
         }
         deleteAction.image = UIImage(systemName: "trash")
-      //  deleteAction.backgroundColor = .red
+        deleteAction.backgroundColor = .red
         
         let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
         configuration.performsFirstActionWithFullSwipe = false

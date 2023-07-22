@@ -16,8 +16,8 @@ class AltBaslikViewModel {
     var gelen: Int?
     var bosList = [AltBaslik]()
     var searchList = [AltBaslik]()
-    
     var altbaslikViewController: AltBaslikViewController?
+    var alerts = AlertAction()
     
     func addFavorite(userID: String, rowData: AltBaslik) {
         let db = Firestore.firestore()
@@ -31,7 +31,7 @@ class AltBaslikViewModel {
             if let error = error {
                 print("Favori eklenirken hata oluştu: \(error.localizedDescription)")
             } else {
-                print("Favori başarıyla eklendi.")
+                self.alerts.girisHata(title: "Bilgi", mesaj: "Favori başarıyla eklendi", viewControllers: self.altbaslikViewController)
             }
         }
     }
@@ -64,15 +64,5 @@ class AltBaslikViewModel {
                 }
             }
         }
-    }
-    
-    func hata(isim:String){
-        
-        guard let viewController = altbaslikViewController else {return}
-        
-        let uyari = UIAlertController(title: "HATA", message: "\(isim) favoriler içerisinde mevcut", preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "Tamam", style: .cancel)
-        uyari.addAction(alertAction)
-        viewController.present(uyari, animated: true)
     }
 }

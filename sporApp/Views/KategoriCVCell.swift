@@ -10,8 +10,6 @@ import UIKit
 
 class KategoriCVCell: UICollectionViewCell {
     
-    
-    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var kategoriAdLabel: UILabel!
     

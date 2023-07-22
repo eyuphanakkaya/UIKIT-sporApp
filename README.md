@@ -1,4 +1,4 @@
-<img width="364" alt="Ekran Resmi 2023-07-22 14 11 17" src="https://github.com/eyuphanakkaya/sporApp/assets/96181594/786872d5-f425-4699-b145-2fa70a27e52b">
+
 # sporApp
 Fit Pulse 
 Firebase üzerinden kayıtlı kullanıcıların giriş veya kayıt olabildiği bir API üzerinden verileri çekerek kategorilerin ve alt başlıkların listelendiği bir uygulama geliştirdim. 

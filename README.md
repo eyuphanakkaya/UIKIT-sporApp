@@ -1,4 +1,4 @@
-
+<img width="364" alt="Ekran Resmi 2023-07-22 14 11 17" src="https://github.com/eyuphanakkaya/sporApp/assets/96181594/786872d5-f425-4699-b145-2fa70a27e52b">
 # sporApp
 Fit Pulse 
 Firebase üzerinden kayıtlı kullanıcıların giriş veya kayıt olabildiği bir API üzerinden verileri çekerek kategorilerin ve alt başlıkların listelendiği bir uygulama geliştirdim. 
@@ -15,16 +15,22 @@ Proje İçerisinde Kullanılan Teknolojiler
 -Lottie Framework
 
 Görseller
-![Uploading Ekran Resmi 2023-07-22 14.11.17.png…]()
-![Uploading Ekran Resmi 2023-07-22 14.10.54.png…]()
-<img width="364" alt="Ekran Resmi 2023-07-22 14 12 37" src="https://github.com/eyuphanakkaya/sporApp/assets/96181594/d0c6d984-c8cb-40e8-8ca2-8aed497a6d41">
-![<img width="364" alt="Ekran Resmi 2023-07-22 14 12 06" src="https://github.com/eyuphanakkaya/sporApp/assets/96181594/331ccd80-7bcd-4944-bac8-04ec8d2f903b">
-Uploading Ekran Resmi 2023-07-22 14.11.42.png…]()
-![Uploading Ekran Resmi 2023-07-22 14.12.06.png…]()
-<img width="364" alt="Ekran Resmi 2023-07-22 14 13 22" src="https://github.com/eyuphanakkaya/sporApp/assets/96181594/cb945a9e-5a69-4b71-bc29-cdee73ecd2b1">
-<img width="364" alt="Ekran Resmi 2023-07-22 14 13 02" src="https://github.com/eyuphanakkaya/sporApp/assets/96181594/bac5f0d7-0585-4dd0-945e-75babecb7ca7">
-<img width="364" alt="Ekran Resmi 2023-07-22 14 13 37" src="https://github.com/eyuphanakkaya/sporApp/assets/96181594/529d3563-2f31-44d4-a461-e3ca9d04dd63">
-<img width="364" alt="Ekran Resmi 2023-07-22 14 13 37" src="https://github.com/eyuphanakkaya/sporApp/assets/96181594/d878591d-5d90-4418-9fe5-d46952fa1f89"><img width="364" alt="Ekran Resmi 2023-07-22 14 13 02" src="https://github.com/eyuphanakkaya/sporApp/assets/96181594/f6e24d83-a7e3-4aa7-b51b-0ea3a327e441">
+
+<img width="364" alt="Ekran Resmi 2023-07-22 14 10 54" src="https://github.com/eyuphanakkaya/sporApp/assets/96181594/d685e2df-c799-497f-8be7-fd63a10f8ef3">
+<img width="364" alt="Ekran Resmi 2023-07-22 14 11 17" src="https://github.com/eyuphanakkaya/sporApp/assets/96181594/a43f8c01-a6dd-49c8-93a6-16e67343cae7">
+<img width="364" alt="Ekran Resmi 2023-07-22 14 11 42" src="https://github.com/eyuphanakkaya/sporApp/assets/96181594/c7ffd02d-a30d-4963-ac3d-5cc6f3fd9afc">
+<img width="364" alt="Ekran Resmi 2023-07-22 14 12 37" src="https://github.com/eyuphanakkaya/sporApp/assets/96181594/a30bcd83-80bf-48b1-a0dd-ac80f2d9ce94">
+<img width="364" alt="Ekran Resmi 2023-07-22 14 13 02" src="https://github.com/eyuphanakkaya/sporApp/assets/96181594/a61e6064-cbfe-44d8-9073-13f4cdcf2916">
+<img width="364" alt="Ekran Resmi 2023-07-22 14 12 06" src="https://github.com/eyuphanakkaya/sporApp/assets/96181594/258cd843-d573-464e-a883-56d7fc8bdd62">
+<img width="364" alt="Ekran Resmi 2023-07-22 14 13 22" src="https://github.com/eyuphanakkaya/sporApp/assets/96181594/8ebfe109-1e01-4400-81e6-f98adb13fa49">
+<img width="364" alt="Ekran Resmi 2023-07-22 14 13 37" src="https://github.com/eyuphanakkaya/sporApp/assets/96181594/11d35c2f-8f42-4da9-82af-9e16ef4306ef">
+
+
+
+
+
+
+
 
 
 
